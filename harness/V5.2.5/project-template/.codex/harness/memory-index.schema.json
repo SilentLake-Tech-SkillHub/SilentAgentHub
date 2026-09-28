@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "updatedAt", "conversations"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "version": {"type": "string", "minLength": 1},
+    "updatedAt": {"type": ["string", "null"], "format": "date-time"},
+    "conversations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["conversationId", "workspaceId", "sessionId", "state", "location", "updatedAt", "contentHash"],
+        "properties": {
+          "conversationId": {"type": "string", "minLength": 1},
+          "workspaceId": {"type": "string", "minLength": 1},
+          "sessionId": {"type": "string", "minLength": 1},
+          "state": {"type": "string", "minLength": 1},
+          "location": {"enum": ["short", "long"]},
+          "updatedAt": {"type": "string", "format": "date-time"},
+          "contentHash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "tags": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

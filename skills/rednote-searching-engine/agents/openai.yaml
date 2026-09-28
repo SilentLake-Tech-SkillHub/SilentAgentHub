@@ -1,0 +1,4 @@
+interface:
+  display_name: "【小红书评论搜索】"
+  short_description: "检索小红书帖子评论与评价并生成Markdown研究报告"
+  default_prompt: "Use $rednote-searching-engine to search Xiaohongshu notes and comments for my topic, then produce a Markdown report."

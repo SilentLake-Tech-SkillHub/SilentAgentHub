@@ -1,0 +1,7 @@
+interface:
+  display_name: "【Google Drive 快照同步】google-drive-sync-snapshot"
+  short_description: "双向同步 Google Drive 项目快照并校验版本差异"
+  default_prompt: "Use $google-drive-sync-snapshot to push or pull a Google Drive project snapshot with version checks, file-diff checks, sensitive-file confirmation, and incremental sync."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Knowledge Sync Reconciler"
+  short_description: "Reconcile project and hub knowledge with conflict recovery"
+  default_prompt: "Use $knowledge-sync-reconciler to safely synchronize project and hub knowledge."

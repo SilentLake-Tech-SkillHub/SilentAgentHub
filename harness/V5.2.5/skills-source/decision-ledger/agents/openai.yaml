@@ -1,0 +1,4 @@
+interface:
+  display_name: "Decision Ledger"
+  short_description: "Compare options and persist user-approved decisions"
+  default_prompt: "Use $decision-ledger to compare options and record the approved decision."

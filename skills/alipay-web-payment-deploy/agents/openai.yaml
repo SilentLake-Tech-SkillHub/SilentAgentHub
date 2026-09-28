@@ -1,0 +1,4 @@
+interface:
+  display_name: "支付宝电脑网站支付部署"
+  short_description: "企业支付宝电脑网站支付从商户开通到生产闭环的部署与验收"
+  default_prompt: "Use $alipay-web-payment-deploy to audit this project and integrate Alipay computer website payment through sandbox and production acceptance."

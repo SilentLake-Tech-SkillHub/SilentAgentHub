@@ -1,0 +1,4 @@
+interface:
+  display_name: "doc-readme"
+  short_description: "Harness V5 candidate skill"
+  default_prompt: "Use this skill according to the project Router."

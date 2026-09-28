@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Library Router"
+  short_description: "Select reusable global, project, and knowledge-hub skills"
+  default_prompt: "Use $skill-library-router to find the best existing skill before creating new work."

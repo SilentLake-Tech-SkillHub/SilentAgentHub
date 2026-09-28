@@ -1,0 +1,4 @@
+interface:
+  display_name: "Module Context Loader"
+  short_description: "Load minimal module rules, architecture, code, and history"
+  default_prompt: "Use $module-context-loader to load only the module context needed for this task."

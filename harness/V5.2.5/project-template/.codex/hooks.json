@@ -1,0 +1,100 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -File \"$(git rev-parse --show-toplevel)/.codex/hooks/session-start-dispatcher.ps1\"",
+            "commandWindows": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& (Join-Path ((git rev-parse --show-toplevel) | Select-Object -First 1) '.codex/hooks/session-start-dispatcher.ps1')\"",
+            "timeout": 30,
+            "statusMessage": "Loading project Router, active governance, and current Short Memory"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -File \"$(git rev-parse --show-toplevel)/.codex/hooks/user-prompt-dispatcher.ps1\"",
+            "commandWindows": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& (Join-Path ((git rev-parse --show-toplevel) | Select-Object -First 1) '.codex/hooks/user-prompt-dispatcher.ps1')\"",
+            "timeout": 30,
+            "statusMessage": "Capturing the sanitized prompt and checking requirement and Plan routing"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash|apply_patch|Edit|Write|mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -File \"$(git rev-parse --show-toplevel)/.codex/hooks/pretool-policy-advisor.ps1\"",
+            "commandWindows": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& (Join-Path ((git rev-parse --show-toplevel) | Select-Object -First 1) '.codex/hooks/pretool-policy-advisor.ps1')\"",
+            "timeout": 30,
+            "statusMessage": "Advising on scope, secrets, and destructive operations"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "Bash|apply_patch|mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -File \"$(git rev-parse --show-toplevel)/.codex/hooks/pretool-policy-advisor.ps1\"",
+            "commandWindows": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& (Join-Path ((git rev-parse --show-toplevel) | Select-Object -First 1) '.codex/hooks/pretool-policy-advisor.ps1')\"",
+            "timeout": 30,
+            "statusMessage": "Checking requested permission against project boundaries"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash|apply_patch|Edit|Write|mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -File \"$(git rev-parse --show-toplevel)/.codex/hooks/posttool-change-capture.ps1\"",
+            "commandWindows": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& (Join-Path ((git rev-parse --show-toplevel) | Select-Object -First 1) '.codex/hooks/posttool-change-capture.ps1')\"",
+            "timeout": 30,
+            "statusMessage": "Capturing change and validation evidence candidates"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "manual|auto",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -File \"$(git rev-parse --show-toplevel)/.codex/hooks/precompact-handoff.ps1\"",
+            "commandWindows": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& (Join-Path ((git rev-parse --show-toplevel) | Select-Object -First 1) '.codex/hooks/precompact-handoff.ps1')\"",
+            "timeout": 30,
+            "statusMessage": "Checking Plan progress and handoff readiness"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pwsh -NoProfile -File \"$(git rev-parse --show-toplevel)/.codex/hooks/stop-closeout-dispatcher.ps1\"",
+            "commandWindows": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& (Join-Path ((git rev-parse --show-toplevel) | Select-Object -First 1) '.codex/hooks/stop-closeout-dispatcher.ps1')\"",
+            "timeout": 60,
+            "statusMessage": "Checking full Plan disclosure, rechecking the prompt, migrating closed records, and validating closeout"
+          }
+        ]
+      }
+    ]
+  }
+}
