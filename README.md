@@ -46,4 +46,4 @@ templates/     任务管理、问题流水、验收清单、版本控制等管�
 
 ## 关于本仓库
 
-本仓库整理自作者日常使用的 Harness 运行态（根规则 V5.2.6，Harness 包 V5.2.5），已移除认证配置、个人记忆、运行日志、自动化任务、第三方插件缓存和第三方 Skill，并去除个人路径信息。由 [SilentLake-Tech-SkillHub](https://github.com/SilentLake-Tech-SkillHub) 维护。
+本仓库整理自作者日常使用的 Harness 运行态（根规则 V5.2.6（AGENTS 与 CLAUDE 一致），Harness 包 V5.2.5），已移除认证配置、个人记忆、运行日志、自动化任务、第三方插件缓存和第三方 Skill，并去除个人路径信息。由 [SilentLake-Tech-SkillHub](https://github.com/SilentLake-Tech-SkillHub) 维护。

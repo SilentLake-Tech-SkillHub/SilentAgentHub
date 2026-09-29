@@ -1,6 +1,6 @@
-# SYSTEM-LEVEL AGENT RULES V5.2.5
+# SYSTEM-LEVEL AGENT RULES V5.2.6
 
-> 目标位置：Codex 系统根目录下的 `AGENTS.md`。2026-07-16 经用户批准精简生产 Hook；V5.2.5 保留 Query/Plan、主动 Memory 收尾、按风险验证和审批分级，将性能诊断降级为按需工具；V5.2.4 保留为直接回滚基线。
+> 目标位置：Codex 系统根目录下的 `AGENTS.md`。2026-09-27 用户纠正 Plan 时机：明确需求澄清、需求评审、技术评审、建设四阶段；V5.2.5 保留 Query/Plan、主动 Memory 收尾、按风险验证和审批分级，作为本次修改前基线。
 > 本文件只保留跨项目入口、强制 Skill 路由和不可绕过门禁；模板、字段、目录职责、状态迁移和平台操作由 Skills、Hooks、Schema 与脚本承担。
 
 ## 0. 总则
@@ -24,10 +24,10 @@
 
 ## 2. Skill 路由
 
-- 新增或变化的用户需求：调用 `requirement-clarification`，并由 `doc-clarification` 维护 `产品管理/clarification.md` 流水；澄清结论再按编号进入需求池、Decision、Plan、研究或任务。
+- 新增或变化的用户需求：调用 `requirement-clarification`，并由 `doc-clarification` 维护 `产品管理/clarification.md` 流水；澄清结论按编号进入需求池、方案、研究或任务。Plan 仅在 4.1 规定的阶段建立。
 - 外部事实、竞品、页面、政策、价格、当前版本或真实交互：调用 `product-research`。
-- 功能维护或迭代：先调用 `module-context-loader`；缺陷同时调用 `problem-ledger-closure`；复杂工程进入 Plan。
-- 复杂工程：必须调用 `plan-orchestrator`，由 `doc-plan` 创建并维护 `流程管理/执行计划/<任务ID>_<任务名>/plans.md`。
+- 功能维护或迭代：先调用 `module-context-loader`；缺陷同时调用 `problem-ledger-closure`；复杂度不替代需求评审与技术评审，Plan 时机见 4.1。
+- 复杂工程在需求评审与技术评审通过、准备建设时，必须调用 `plan-orchestrator`，由 `doc-plan` 创建并维护 `流程管理/执行计划/<任务ID>_<任务名>/plans.md`。需求澄清、需求评审或技术评审本身不因复杂度触发建设 Plan；需求评审前的设计方案/Demo 例外见 4.1。
 - 工程执行：先调用 `skill-library-router` 和 `reusable-asset-selector`，再按模块选择领域 Skill；完成后调用 `project-validation` 和 `code-review-closeout`。涉及页面时调用 `browser-acceptance-screenshot`。
 - Debug：调用 `problem-ledger-closure`；运维、部署或发布调用 `deployment-router`；版本和发布身份由 `version-release-manager` 维护。
 - Git 与环境推广：Verify 和 Final 阶段调用 `git-environment-promotion`；Vercel 项目按需调用 Vercel 的 CLI、部署、验证和可观测性 Skills。
@@ -39,7 +39,9 @@
 
 完整闭环为：
 
-`用户需求 → requirement-clarification → clarification 流水与需求池 → 复杂度判断 → 用户共同讨论 Plan → Plan 审批 → 工程 Skills/plugins → smoke/模块/集成/E2E/eval/截图验证 → Verify 测试环境与 Git → 用户验收 → Final 生产环境与 Git → 发布、版本、知识和流水归档`。
+`用户需求 → 需求澄清（问题、目标、候选方案与约束）→ 需求评审（产品方案与范围确认）→ 技术评审（可行性、实现选择、成本、风险与验证）→ 建设 Plan 与审批 → 建设 → smoke/模块/集成/E2E/eval/截图验证 → Verify 测试环境与 Git → 用户验收 → Final 生产环境与 Git → 发布、版本、知识和流水归档`。
+
+需求澄清结束后、需求评审前，如用户明确决定制作设计方案或 Demo，可仅针对该已确定范围的设计/Demo 建立并审批 Plan；该 Plan 不代表整体产品方案通过需求评审，也不授权后续正式建设。需求澄清、需求评审和技术评审的讨论与文档本身不使用 Plan。
 
 - 产品管理负责需求入口、澄清流水、做/Waitlist/不做的需求池、素材、建设框架、Design 和产品验收。
 - 流程管理负责 Plan、任务、Decision、进入开发后的范围状态、问题、Debug、风险、验证、验收、环境、Git 推广、发布、版本、规则候选和交接。
@@ -67,9 +69,9 @@
 
 ### 4.1 Plan
 
-以下任一条件成立即为复杂工程：跨模块、新功能或重构、架构调整、设计/前端/后端/数据/AI 联动、超过一个简单修改、高不确定性或高返工风险、用户明确要求 Plan/方案/分阶段推进。
+跨模块、新功能或重构、架构调整、设计/前端/后端/数据/AI 联动、超过一个简单修改、高不确定性或高返工风险，可用于判断建设阶段是否属于复杂工程；这项复杂度判断不决定当前所处阶段。“讨论方案”“分阶段梳理”或提出最终交付目标，均不自动触发 Plan。
 
-复杂工程必须先调用 `plan-orchestrator` 并创建 `plans.md`；Plan 首次建立或发生实质修改时，必须把当前 conversation/turn 与该 Plan 的路径和 Hash 显式绑定。Stop Hook 只校验当前 Query 的绑定，不得按全局 `awaiting_review` 或文件修改时间猜测 Plan。当前规划轮的最终回复必须显式完整输出本轮 Plan 正文和审批请求；如 Memory 同时需要收尾，必须在同一次 continuation 中完成，使完整 Plan 成为最终可见回复。只有用户明确批准后才能进入工程；“直接执行”“持续推进”或最终交付意图不能替代 Plan review。
+Plan 只允许在两处建立：（1）需求评审及技术评审通过后、正式建设前，为已确认方案制定建设执行计划；（2）需求澄清完成后、需求评审前，用户决定制作范围已确定的设计方案或 Demo 时，为该设计/Demo 的制作制定计划。其他状态不得创建或注册 Plan。符合窗口的复杂建设必须先调用 `plan-orchestrator` 并创建 `plans.md`；Plan 首次建立或发生实质修改时，必须把当前 conversation/turn 与该 Plan 的路径和 Hash 显式绑定。Stop Hook 只校验当前 Query 的绑定，不得按全局 `awaiting_review` 或文件修改时间猜测 Plan。当前规划轮的最终回复必须显式完整输出本轮 Plan 正文和审批请求；如 Memory 同时需要收尾，必须在同一次 continuation 中完成，使完整 Plan 成为最终可见回复。只有用户明确批准后才能进入对应的建设或设计/Demo 制作；“直接执行”“持续推进”或最终交付意图不能替代 Plan review。
 
 只有同时满足单模块、低风险、无架构或范围变化且验证路径明确的小改才能免 Plan；任务流水必须记录 `plan_required: false` 及理由。
 
