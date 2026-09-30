@@ -38,7 +38,7 @@ templates/     任务管理、问题流水、验收清单、版本控制等管�
 ## 怎么用
 
 1. **安装根规则**：把 `core/AGENTS.md` 放到 `~/.codex/AGENTS.md`（Codex），或把 `core/CLAUDE.md` 放到 `~/.claude/CLAUDE.md`（Claude Code）；`core/PLANS.md` 放在同一目录。
-2. **安装 Skill**：把 `skills/` 下的目录复制到 `~/.codex/skills/`（或 Claude Code 的 `~/.claude/skills/`）。
+2. **安装 Skill**：把 `skills/` 下的目录复制到 `~/.codex/skills/`（或 Claude Code 的 `~/.claude/skills/`）。目录名开头的【中文】只是方便浏览，安装时请去掉，用后面的英文名作目录名（例如 `【需求澄清】requirement-clarification` 装成 `requirement-clarification`）：Harness 的 macOS 适配层和 Skill 之间的互相引用都按英文目录定位。
 3. **安装 Harness 包**：把 `harness/V5.2.5` 放到 `~/.codex/harness/V5.2.5`，并新建 `~/.codex/harness/current.json` 指向它（字段见 `project-initialization` Skill）。macOS 用户再按 `harness/overlays/mac-adaptation/Apply-Overlay.ps1` 应用适配层（需要 PowerShell 7）。
 4. **初始化项目**：在新项目里对 AI 说"初始化项目"，`project-initialization` 会建立 Router、管理文档、记忆文件和项目级 Hooks。之后直接提需求即可。
 
