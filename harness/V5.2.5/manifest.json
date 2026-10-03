@@ -5,14 +5,15 @@
     "createdAt":  "2026-07-16T16:16:27.3376355+08:00",
     "sourceWorkspace":  "E:\\项目文件\\20260714  Harness 工程升级",
     "sourceGitHead":  "baa5dec9e876ab33885f62ec64eecea1ca654d1a",
-    "agentsSha256":  "9E0F399BCE9055DE4251FF5DABB0FD012EEB2D71132B1C459BFFC679F333404C",
+    "agentsSha256":  "AAA7892A9E00DAD1D32546304BC321F95A69FB601D55D1A0811F1E44B5B3A013",
     "skillCount":  82,
-    "skillSourceFileCount":  231,
+    "skillSourceFileCount":  232,
     "hookScriptCount":  22,
     "hookTestCount":  3,
     "harnessJsonCount":  14,
     "diagnosticFileCount":  3,
-    "fileCount":  277,
+    "fileCount":  278,
+    "technicalDesignIntegration": {"version": "1.0.1", "updatedAt": "2026-10-03", "issue": "SilentAgentHub#14", "scope": "targeted rules and five Skill copies; other historical manifest entries not revalidated"},
     "files":  [
                   {
                       "path":  "skills-source/doc-router/assets/template.md",
@@ -406,8 +407,8 @@
                   },
                   {
                       "path":  "skills-source/plan-orchestrator/SKILL.md",
-                      "bytes":  2900,
-                      "sha256":  "186C52D63BB64369151FEDC561177555AC93285DB275F231C9ACBB201C9599F2"
+                      "bytes":  3904,
+                      "sha256":  "6BEB3EC99CB9A66BD9FCDA3932E1CF47F4ED39F71B2262F1DA72D39F668B4487"
                   },
                   {
                       "path":  "skills-source/memory-turn-closeout/agents/openai.yaml",
@@ -556,8 +557,8 @@
                   },
                   {
                       "path":  "skills-source/harness-router/SKILL.md",
-                      "bytes":  1501,
-                      "sha256":  "2F116337122ADFACF6FFAC09857DE6CC90D1269E15CB7C8EBF87CFD1A2342DD9"
+                      "bytes":  1843,
+                      "sha256":  "F54E9A93D0DEBB5A73B3F792E8BB966362D1D7FDA4752AF3F9CF9CFB31B24A8C"
                   },
                   {
                       "path":  "skills-source/harness-router/agents/openai.yaml",
@@ -926,8 +927,8 @@
                   },
                   {
                       "path":  "AGENTS.md",
-                      "bytes":  11402,
-                      "sha256":  "9E0F399BCE9055DE4251FF5DABB0FD012EEB2D71132B1C459BFFC679F333404C"
+                      "bytes":  18541,
+                      "sha256":  "AAA7892A9E00DAD1D32546304BC321F95A69FB601D55D1A0811F1E44B5B3A013"
                   },
                   {
                       "path":  "retired-project-assets.json",
@@ -1379,9 +1380,14 @@
                       "bytes":  2053,
                       "sha256":  "97DE8D931FDA15CD52AF734F99D7679D08B8BC0E8BFCEBCE55AC3FC5B27BE590"
                   },
-                  {"path": "skills-source/technical-design-authoring/SKILL.md", "bytes": 3097, "sha256": "CDAB5152DA7B32962CC391676BFCF0F4D56F067090659045FC6A99FA4CA89C5D"},
+                  {"path": "skills-source/technical-design-authoring/SKILL.md", "bytes": 3415, "sha256": "4CF0B217AA51F6928FC0371648AEFC3A064F0C30B48FB6CC03F41E2701CD4FC7"},
                   {"path": "skills-source/technical-design-authoring/agents/openai.yaml", "bytes": 301, "sha256": "0790355151A03CE231708C235653DF97FD042874A8D1AA9696E47B9327F73283"},
                   {"path": "skills-source/technical-design-authoring/references/design-guide.md", "bytes": 3578, "sha256": "A85837AE8A18A61947AE1875390091B4D6A3FC3D23CDA11E190AA94E97FE7BF4"},
-                  {"path": "skills-source/technical-design-authoring/references/review-guide.md", "bytes": 2273, "sha256": "97621FE3C36BA446841E757CB72C6F33D8527B286B83BBECFDB6483CEDE613BF"}
+                  {"path": "skills-source/technical-design-authoring/references/review-guide.md", "bytes": 2273, "sha256": "97621FE3C36BA446841E757CB72C6F33D8527B286B83BBECFDB6483CEDE613BF"},
+                  {
+                      "path":  "skills-source/technical-design-authoring/references/harness-integration.md",
+                      "bytes":  3746,
+                      "sha256":  "30261606094760D28F09FB5EBC4A4A40C0A95FB8D74F1EF365A8F6FB3A9CED30"
+                  }
               ]
 }

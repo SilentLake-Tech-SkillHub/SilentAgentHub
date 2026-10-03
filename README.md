@@ -10,7 +10,8 @@ SilentAgentHub 是一套装在 Coding Agent（Codex、Claude Code 等）上的�
 |---|---|---|
 | 需求 | 先澄清目标用户、场景、范围和验收标准，登记进需求池（做 / Waitlist / 不做） | `产品管理/clarification.md` 与需求池里每条需求都有编号和状态 |
 | 研究分析 | 对竞品、技术、价格、政策用一手来源调研，写明"是什么、怎么用、花多少钱" | 研究记录与来源清单 |
-| 设计与 Plan | 复杂工程先写 living Plan，并完整展示给你审批；批准前不动代码 | `流程管理/执行计划/<任务>/plans.md` |
+| 技术方案与评审 | 逐项说明需求如何实现和交付，记录技术评审与用户决定 | 技术方案、评审记录及需求追踪 |
+| 建设 Plan | 需求和技术评审通过后，复杂工程写 living Plan 并展示审批；有界设计/Demo按已批准例外处理 | `流程管理/执行计划/<任务>/plans.md` |
 | 开发 | 先找可复用的 Skill 和代码资产，再按模块规则开发 | 模块规则、复用选型记录 |
 | 测试 | 按改动风险选择 smoke / 模块 / E2E / 截图验证；页面改动必须附截图 | 验证记录与截图证据 |
 | 发布 | Verify（测试环境）与 Final（生产）两道门禁，生产发布须你授权，并记录回滚方案 | 版本记录、发布与回滚记录 |
@@ -50,4 +51,4 @@ templates/     任务管理、问题流水、验收清单、版本控制等管�
 
 ## 技术方案与评审
 
-`technical-design-authoring`把已确认需求和当前系统事实写成可实施的技术方案，并提供技术评审入口；每项需求有实现、交付与验收去向。技术方案评审后再制定工程执行Plan。使用说明见[Skill入口](skills/【技术方案与评审】technical-design-authoring/SKILL.md)，结构、实际使用及副本校验见[验证记录](validation/technical-design-authoring-1.0.0/README.md)。
+`technical-design-authoring`把已确认需求和当前系统事实写成可实施的技术方案，并提供技术评审入口；每项需求有实现、交付与验收去向。技术方案评审后再制定工程执行Plan。使用说明见[Skill入口](skills/【技术方案与评审】technical-design-authoring/SKILL.md)，结构、实际使用及副本校验见[验证记录](validation/technical-design-authoring-1.0.0/README.md)。Harness接入1.0.1的位置、启动条件与调用关系见[接入说明](skills/【技术方案与评审】technical-design-authoring/references/harness-integration.md)。

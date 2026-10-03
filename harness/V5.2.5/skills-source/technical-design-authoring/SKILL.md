@@ -2,7 +2,7 @@
 name: technical-design-authoring
 description: Write or review technical designs from approved requirements and verified system facts, tracing each requirement through implementation, delivery and acceptance. Use for technical方案、选型、开发路线 and technical评审; use execution Plans only after the applicable reviews.
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Technical Design Authoring
@@ -14,6 +14,10 @@ Produce an implementable design whose coverage can be reviewed against the actua
 - **Write or revise a technical design:** read [design-guide.md](references/design-guide.md). Inputs are the approved requirements, their later amendments and the current system facts. An engineering Plan can supply historical context; it cannot replace these inputs or determine the design backwards.
 - **Write a technical review:** read [review-guide.md](references/review-guide.md). Review the design against the requirements and evidence. A written review conclusion does not authorize implementation or release on the user's behalf.
 - A status question or ordinary document clarification does not create a construction Plan. After the applicable requirement and technical reviews pass, use the available engineering planning workflow for the approved build scope.
+
+## Harness integration
+
+When locating this Skill, its callers or document ownership, read [harness-integration.md](references/harness-integration.md). Resolve actual project paths with `harness-router`; use the installed English Skill directory, not a personal source-store path. Automatic discovery remains enabled.
 
 ## Shared responsibilities
 

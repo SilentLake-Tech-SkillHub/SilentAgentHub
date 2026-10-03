@@ -1,13 +1,15 @@
 ---
 name: plan-orchestrator
-description: Create, route, obtain user review for, and maintain a living execution Plan for complex engineering work. Use when a task crosses modules, exceeds a simple change, includes architecture or refactoring, carries uncertainty or rollback risk, or the user requests a plan or staged delivery.
+description: Create and maintain an execution Plan after product and technical reviews approve a build, or for an explicitly scoped design or demo before product review. Do not use during ordinary requirement clarification or review.
 ---
 
 # Plan Orchestrator
 
 ## Mandatory gate
 
-For every complex engineering task, create:
+First identify the lifecycle stage. Create a Plan only (1) after requirement review and technical review have approved a solution and before its build, or (2) after requirement clarification, before requirement review, when the user has chosen a bounded design or Demo to make. Complexity determines whether a build in either window needs a Plan; it does not advance the lifecycle stage. Requests to discuss a solution, perform research, or review requirements/technology do not trigger a Plan. A pre-review design/Demo Plan authorizes only that artifact, not full product implementation.
+
+For every complex construction task in an allowed Plan window, create:
 
 ```text
 流程管理/执行计划/<任务ID>_<任务名>/plans.md
@@ -34,3 +36,7 @@ The same registered turn's final response must reproduce the complete current `p
 ## Maintenance
 
 Update Progress after each stage, Decision Log after each material choice, and Surprises immediately when execution differs from plan. Reconcile the Plan with task, requirement-status, issue, risk, acceptance, version, and handoff records. A partially completed Plan cannot be reported as final completion.
+
+## Technical-design handoff
+
+For the post-review build window, consume the approved technical design and recorded review decision produced via `technical-design-authoring`. The Plan governs engineering execution; requirements and the approved technical design govern product scope and implementation contracts. Return an unresolved technical design/review to that Skill before planning construction; preserve the existing bounded design/Demo exception.

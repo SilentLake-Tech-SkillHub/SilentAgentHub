@@ -28,6 +28,7 @@
 - 外部事实、竞品、页面、政策、价格、当前版本或真实交互：调用 `product-research`。
 - 功能维护或迭代：先调用 `module-context-loader`；缺陷同时调用 `problem-ledger-closure`；复杂度不替代需求评审与技术评审，Plan 时机见 4.1。
 - 复杂工程在需求评审与技术评审通过、准备建设时，必须调用 `plan-orchestrator`，由 `doc-plan` 创建并维护 `流程管理/执行计划/<任务ID>_<任务名>/plans.md`。需求澄清、需求评审或技术评审本身不因复杂度触发建设 Plan；需求评审前的设计方案/Demo 例外见 4.1。
+- 技术方案撰写、修订及技术评审：调用 `technical-design-authoring`，以已确认需求、后续决定和当前系统事实为输入；按对应模式加载参考文档，由项目注册的 `doc-*` Skill维护文档和评审流水。作者自查不能代替用户批准；技术评审通过后才进入工程 Plan。
 - 工程执行：先调用 `skill-library-router` 和 `reusable-asset-selector`，再按模块选择领域 Skill；完成后调用 `project-validation` 和 `code-review-closeout`。涉及页面时调用 `browser-acceptance-screenshot`。
 - Debug：调用 `problem-ledger-closure`；运维、部署或发布调用 `deployment-router`；版本和发布身份由 `version-release-manager` 维护。
 - Git 与环境推广：Verify 和 Final 阶段调用 `git-environment-promotion`；Vercel 项目按需调用 Vercel 的 CLI、部署、验证和可观测性 Skills。
@@ -107,3 +108,11 @@ Plan 只允许在两处建立：（1）需求评审及技术评审通过后、�
 - 收尾顺序：语义 review、验证、文档流水同步、Verify/Final 推广、版本/发布、知识候选和最终汇报。
 - Stop 在流水同步后调用归档治理，把已注册终态记录迁入 `流程管理/历史记录库/`；活动流水只保留未关闭项，历史库默认 cold，仅在显式追溯、审计、回滚或稳定 ID 引用时读取。
 - 最终汇报先讲用户结果与影响，再讲可见效果、已做/未做、验证证据、修改文件、流程/版本记录、风险和需审批事项。未验证、未验收或未对齐时不得使用最终完成口吻。
+
+## 所有Skill的更新闭环（2026-10-03用户批准）
+
+- 适用于所有用户要求的新建、修正与更新Skill。先调用`skill-creator`并定位实际源、项目/安装副本、个人网站副本及该Skill的GitHub仓库；保留用户改动和恢复基线。
+- 在已授权的更新范围内，先复用或创建对应仓库的中文Issue，记录问题、修复范围与验收条件；更新父Skill、子Skill及必要的引用/脚本，并修正本次授权的实际产物。
+- 验证Skill结构、真实使用场景和受影响产物；公开副本通过隐私检查后，同步到项目/安装端和个人网站端，逐文件读回Hash。已有专用同步脚本、独立仓库及受管路径继续沿用。
+- 仅提交本轮已验证且归属明确的改动，推送对应GitHub项目；读回远端版本与文件后，填写中文验证结果并关闭Issue。Issue关闭不代替业务产物的用户验收。
+- 路径、仓库或发布授权确实缺失时，提出最小必要确认并完成不依赖该信息的工作；不得擅自创建远端仓库、公开个人素材或覆盖其他项目改动。每次更新均记录版本、Issue、提交、验证、同步目标及下一步。

@@ -1,0 +1,101 @@
+{
+  "scope": "five affected Skills, root rules and affected manifest entries",
+  "skill_files": [
+    {
+      "skill": "technical-design-authoring",
+      "file": "SKILL.md",
+      "sha256": "4CF0B217AA51F6928FC0371648AEFC3A064F0C30B48FB6CC03F41E2701CD4FC7",
+      "copies": 4
+    },
+    {
+      "skill": "technical-design-authoring",
+      "file": "agents/openai.yaml",
+      "sha256": "0790355151A03CE231708C235653DF97FD042874A8D1AA9696E47B9327F73283",
+      "copies": 4
+    },
+    {
+      "skill": "technical-design-authoring",
+      "file": "references/design-guide.md",
+      "sha256": "A85837AE8A18A61947AE1875390091B4D6A3FC3D23CDA11E190AA94E97FE7BF4",
+      "copies": 4
+    },
+    {
+      "skill": "technical-design-authoring",
+      "file": "references/harness-integration.md",
+      "sha256": "30261606094760D28F09FB5EBC4A4A40C0A95FB8D74F1EF365A8F6FB3A9CED30",
+      "copies": 4
+    },
+    {
+      "skill": "technical-design-authoring",
+      "file": "references/review-guide.md",
+      "sha256": "97621FE3C36BA446841E757CB72C6F33D8527B286B83BBECFDB6483CEDE613BF",
+      "copies": 4
+    },
+    {
+      "skill": "workflow-orchestrator",
+      "file": "SKILL.md",
+      "sha256": "1F4DDDF9627797473768FE3C95FEE47CDD7144DC36505DA80B402017F6598DDD",
+      "copies": 4
+    },
+    {
+      "skill": "workflow-orchestrator",
+      "file": "agents/openai.yaml",
+      "sha256": "44678C5EFBE58B241122D318888ADBAF7AE225D44D79A351BEB5082334BA9BCB",
+      "copies": 4
+    },
+    {
+      "skill": "skill-library-router",
+      "file": "SKILL.md",
+      "sha256": "738F68692C2F24A749621AB2C5FE2C240EDF4EE543076653BC7ABB822F9A09FE",
+      "copies": 4
+    },
+    {
+      "skill": "skill-library-router",
+      "file": "agents/openai.yaml",
+      "sha256": "F46047D8B5F8F4C354CB16B7F346A9E20B82BAD0096264B12518E52F8291CFCC",
+      "copies": 4
+    },
+    {
+      "skill": "harness-router",
+      "file": "SKILL.md",
+      "sha256": "F54E9A93D0DEBB5A73B3F792E8BB966362D1D7FDA4752AF3F9CF9CFB31B24A8C",
+      "copies": 4
+    },
+    {
+      "skill": "harness-router",
+      "file": "agents/openai.yaml",
+      "sha256": "E1204D9B10320A0D824530DF006418BDEBC9F0C5B589637517B207C03197C145",
+      "copies": 4
+    },
+    {
+      "skill": "plan-orchestrator",
+      "file": "SKILL.md",
+      "sha256": "6BEB3EC99CB9A66BD9FCDA3932E1CF47F4ED39F71B2262F1DA72D39F668B4487",
+      "copies": 4
+    },
+    {
+      "skill": "plan-orchestrator",
+      "file": "agents/openai.yaml",
+      "sha256": "D4A3C4F608A562BAD92850B5D440290CA23E53AC5CC305E9C4A5A218F01FA2F7",
+      "copies": 4
+    }
+  ],
+  "references": [
+    {
+      "from": "technical-design-authoring/SKILL.md",
+      "to": "references/design-guide.md"
+    },
+    {
+      "from": "technical-design-authoring/SKILL.md",
+      "to": "references/review-guide.md"
+    },
+    {
+      "from": "technical-design-authoring/SKILL.md",
+      "to": "references/harness-integration.md"
+    }
+  ],
+  "root_copies": 5,
+  "affected_manifest_entries": 14,
+  "paid_calls": 0,
+  "passed": true
+}

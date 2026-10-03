@@ -16,3 +16,7 @@ description: Resolve the actual project root and load the minimum relevant rules
 7. Return a concise context packet containing root, task, stage, plan state, module, required Skills, write targets, validation, and blockers.
 
 Do not load all management files by default. Router is an index and dispatcher, not another copy of their content.
+
+## Technical-design context
+
+When the request concerns implementation design or technical review, locate the current requirements, design/review records and registered controllers, then route to `technical-design-authoring`. A technical-document request or status/path clarification does not by itself create or load a new engineering Plan.

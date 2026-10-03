@@ -36,3 +36,7 @@ The same registered turn's final response must reproduce the complete current `p
 ## Maintenance
 
 Update Progress after each stage, Decision Log after each material choice, and Surprises immediately when execution differs from plan. Reconcile the Plan with task, requirement-status, issue, risk, acceptance, version, and handoff records. A partially completed Plan cannot be reported as final completion.
+
+## Technical-design handoff
+
+For the post-review build window, consume the approved technical design and recorded review decision produced via `technical-design-authoring`. The Plan governs engineering execution; requirements and the approved technical design govern product scope and implementation contracts. Return an unresolved technical design/review to that Skill before planning construction; preserve the existing bounded design/Demo exception.

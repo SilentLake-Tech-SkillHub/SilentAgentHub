@@ -1,0 +1,15 @@
+{
+  "profile": "simple_change",
+  "scope": "single Harness routing integration patch within approved Skill work",
+  "quick_validate": {
+    "definitions": 5,
+    "passed": 5
+  },
+  "isolated_rollback": {
+    "affected_paths": 25,
+    "passed": true
+  },
+  "semantic_review": "author routing walkthrough; not independent model eval",
+  "paid_calls": 0,
+  "hooks_changed": false
+}
