@@ -102,6 +102,7 @@
   ],
   "skill_validations": 3,
   "manifest_scope": "only three changed packages; historical unrelated entries not revalidated",
-  "personal_website": "pending_target_confirmation",
-  "paid_model_calls": 0
+  "personal_website": "user_confirmed_local_SilentAgentHub_source_already_synced",
+  "paid_model_calls": 0,
+  "separate_skill_store": "out_of_scope_unchanged"
 }

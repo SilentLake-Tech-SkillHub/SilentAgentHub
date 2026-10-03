@@ -22,4 +22,4 @@
 
 先前基线commit 80533aa7a02eec7a891e0bc5f1c02ed388281d88。两父Skill和manifest原件另已在本机临时目录保存。恢复时从基线仅取本次父Skill/打包和manifest受影响文件，移除本次新Skill及安装副本，核对Hash后恢复路由；不重置仓库，不删除其他Skills或用户readme-writer。若有后续改动，先比对再恢复，不能整包覆盖。
 
-个人网站准确入口尚待用户确认，未同步、未发布网页；公司主页不是已确认目标。两个Issue保留开放，验证结果和提交读回以Issue追加记录为准。Git发布仅本轮已验证范围，不包含用户未跟踪readme-writer、凭据、私人素材或其他项目代码。
+2026-10-03用户澄清：本次修改目标仅为个人项目集中的SilentAgentHub，已经完成；SilentLake公司主页/SKILLS为独立存放目录，不在本轮范围。此前“个人网站待确认/待同步”为Agent误解，已取消该待办。两个Skill Issue的验证和关闭以Issue最终记录为准，R.ai业务技术评审单独跟踪。Git发布仅本轮已验证范围，不包含用户未跟踪readme-writer、凭据、私人素材或其他项目代码。
