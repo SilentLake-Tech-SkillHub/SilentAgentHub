@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-03",
+  "version": "1.0.0",
+  "validation_profile": "complex_engineering",
+  "checks": [
+    {
+      "skill": "technical-design-authoring",
+      "file": "SKILL.md",
+      "sha256": "cdab5152da7b32962cc391676bfcf0f4d56f067090659045fc6a99fa4ca89c5d",
+      "copies": [
+        "source",
+        "repository_package",
+        "local_install",
+        "local_package"
+      ],
+      "match": true
+    },
+    {
+      "skill": "technical-design-authoring",
+      "file": "agents/openai.yaml",
+      "sha256": "0790355151a03ce231708c235653df97fd042874a8d1aa9696e47b9327f73283",
+      "copies": [
+        "source",
+        "repository_package",
+        "local_install",
+        "local_package"
+      ],
+      "match": true
+    },
+    {
+      "skill": "technical-design-authoring",
+      "file": "references/design-guide.md",
+      "sha256": "a85837ae8a18a61947ae1875390091b4d6a3fc3d23cda11e190aa94e97fe7bf4",
+      "copies": [
+        "source",
+        "repository_package",
+        "local_install",
+        "local_package"
+      ],
+      "match": true
+    },
+    {
+      "skill": "technical-design-authoring",
+      "file": "references/review-guide.md",
+      "sha256": "97621fe3c36ba446841e757cb72c6f33d8527b286b83bbecfdb6483cede613bf",
+      "copies": [
+        "source",
+        "repository_package",
+        "local_install",
+        "local_package"
+      ],
+      "match": true
+    },
+    {
+      "skill": "workflow-orchestrator",
+      "file": "SKILL.md",
+      "sha256": "1f4dddf9627797473768fe3c95fee47cdd7144dc36505da80b402017f6598ddd",
+      "copies": [
+        "source",
+        "repository_package",
+        "local_install",
+        "local_package"
+      ],
+      "match": true
+    },
+    {
+      "skill": "workflow-orchestrator",
+      "file": "agents/openai.yaml",
+      "sha256": "44678c5efbe58b241122d318888adbaf7ae225d44d79a351beb5082334ba9bcb",
+      "copies": [
+        "source",
+        "repository_package",
+        "local_install",
+        "local_package"
+      ],
+      "match": true
+    },
+    {
+      "skill": "skill-library-router",
+      "file": "SKILL.md",
+      "sha256": "738f68692c2f24a749621ab2c5fe2c240edf4ee543076653bc7abb822f9a09fe",
+      "copies": [
+        "source",
+        "repository_package",
+        "local_install",
+        "local_package"
+      ],
+      "match": true
+    },
+    {
+      "skill": "skill-library-router",
+      "file": "agents/openai.yaml",
+      "sha256": "f46047d8b5f8f4c354cb16b7f346a9e20b82bad0096264b12518e52f8291cfcc",
+      "copies": [
+        "source",
+        "repository_package",
+        "local_install",
+        "local_package"
+      ],
+      "match": true
+    }
+  ],
+  "skill_validations": 3,
+  "manifest_scope": "only three changed packages; historical unrelated entries not revalidated",
+  "personal_website": "pending_target_confirmation",
+  "paid_model_calls": 0
+}

@@ -7,9 +7,9 @@ description: Orchestrate the complete Harness lifecycle from requirement classif
 
 ## Workflow
 
-1. Classify the request with `requirement-clarification`; use `doc-clarification` to append the intake lifecycle to `产品管理/clarification.md`, then route the result by stable ID to the requirement pool, Decision, Plan, research, or task.
+1. Classify the request with `requirement-clarification`; use `doc-clarification` to append the intake lifecycle to `产品管理/clarification.md`, then route the result by stable ID to the requirement pool, solution review, research, or task. Do not route directly from intake to a build Plan.
 2. Preserve the sanitized prompt and current conversation state in project SHORT_MEMORY. Session routing may load only the matching activity block; Long Memory and historical ledgers remain cold.
-3. Determine complexity. Complex engineering must call `plan-orchestrator`, create the task `plans.md`, show the first Plan to the user, and wait for explicit approval.
+3. Complete requirement clarification and requirement review. For technical design authoring and written technical review, call `technical-design-authoring` against the approved requirements and verified system facts, with the registered doc-* controllers managing the artifacts. Review the design before drafting its engineering execution Plan. After both reviews pass, determine build complexity; complex construction must call `plan-orchestrator`, create the task `plans.md`, show it to the user, and wait for explicit approval. The only earlier Plan window is a user-chosen, bounded design/Demo after clarification and before requirement review; that Plan does not approve the full build.
 4. Route approved work through domain Skills, reusable assets, and required plugins. Each module must load its local rules first.
 5. Run validation in applicable layers: smoke, module/unit, integration/E2E, AI eval, browser screenshot, and test-environment closed loop.
 6. At Verify, call `code-review-closeout` and `git-environment-promotion`; update Validation, CodeReview, ChangeOwnership, GitPromotion, task, issue, risk, and version evidence.

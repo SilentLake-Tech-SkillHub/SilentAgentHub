@@ -22,8 +22,8 @@ SilentAgentHub 是一套装在 Coding Agent（Codex、Claude Code 等）上的�
 
 ```text
 core/          根规则：AGENTS.md（Codex）、CLAUDE.md（Claude Code）、PLANS.md（Plan 规范）
-skills/        86 个 Skill
-  ├─ 流程 Skill（32 个）   需求澄清、产品研究、Plan 编排、模块上下文、复用选型、验证、代码评审、
+skills/        88 个已发布 Skill
+  ├─ 流程与语义 Skill（34 个）   需求澄清、产品研究、Plan 编排、模块上下文、复用选型、验证、代码评审、
   │                        问题闭环、Git/环境推广、版本发布、记忆记录与收尾、知识沉淀与同步等
   └─ 文档控制 Skill（54 个，doc-*）  每份受管文档一个 Skill，负责创建、追加、字段校验和关联
 harness/
@@ -47,3 +47,7 @@ templates/     任务管理、问题流水、验收清单、版本控制等管�
 ## 关于本仓库
 
 本仓库整理自作者日常使用的 Harness 运行态（根规则 V5.2.6（AGENTS 与 CLAUDE 一致），Harness 包 V5.2.5），已移除认证配置、个人记忆、运行日志、自动化任务、第三方插件缓存和第三方 Skill，并去除个人路径信息。由 [SilentLake-Tech-SkillHub](https://github.com/SilentLake-Tech-SkillHub) 维护。
+
+## 技术方案与评审
+
+`technical-design-authoring`把已确认需求和当前系统事实写成可实施的技术方案，并提供技术评审入口；每项需求有实现、交付与验收去向。技术方案评审后再制定工程执行Plan。使用说明见[Skill入口](skills/【技术方案与评审】technical-design-authoring/SKILL.md)，结构、实际使用及副本校验见[验证记录](validation/technical-design-authoring-1.0.0/README.md)。

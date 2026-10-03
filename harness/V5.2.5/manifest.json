@@ -6,13 +6,13 @@
     "sourceWorkspace":  "E:\\项目文件\\20260714  Harness 工程升级",
     "sourceGitHead":  "baa5dec9e876ab33885f62ec64eecea1ca654d1a",
     "agentsSha256":  "9E0F399BCE9055DE4251FF5DABB0FD012EEB2D71132B1C459BFFC679F333404C",
-    "skillCount":  81,
-    "skillSourceFileCount":  227,
+    "skillCount":  82,
+    "skillSourceFileCount":  231,
     "hookScriptCount":  22,
     "hookTestCount":  3,
     "harnessJsonCount":  14,
     "diagnosticFileCount":  3,
-    "fileCount":  273,
+    "fileCount":  277,
     "files":  [
                   {
                       "path":  "skills-source/doc-router/assets/template.md",
@@ -451,8 +451,8 @@
                   },
                   {
                       "path":  "skills-source/skill-library-router/SKILL.md",
-                      "bytes":  1135,
-                      "sha256":  "745EE9BD2EF6274639B7667C15486FC478B061E5F2A08F79BDB1B8B8E7B470B9"
+                      "bytes":  1680,
+                      "sha256":  "738F68692C2F24A749621AB2C5FE2C240EDF4EE543076653BC7ABB822F9A09FE"
                   },
                   {
                       "path":  "skills-source/skill-library-router/agents/openai.yaml",
@@ -461,8 +461,8 @@
                   },
                   {
                       "path":  "skills-source/workflow-orchestrator/SKILL.md",
-                      "bytes":  2467,
-                      "sha256":  "E06BEDDFA5D3A4618E0A488CE95266C06F418A08DE01CD0F7FE21F6EB3F9C705"
+                      "bytes":  3043,
+                      "sha256":  "1F4DDDF9627797473768FE3C95FEE47CDD7144DC36505DA80B402017F6598DDD"
                   },
                   {
                       "path":  "skills-source/workflow-orchestrator/agents/openai.yaml",
@@ -1378,6 +1378,10 @@
                       "path":  "skills-source/doc-design/SKILL.md",
                       "bytes":  2053,
                       "sha256":  "97DE8D931FDA15CD52AF734F99D7679D08B8BC0E8BFCEBCE55AC3FC5B27BE590"
-                  }
+                  },
+                  {"path": "skills-source/technical-design-authoring/SKILL.md", "bytes": 3097, "sha256": "CDAB5152DA7B32962CC391676BFCF0F4D56F067090659045FC6A99FA4CA89C5D"},
+                  {"path": "skills-source/technical-design-authoring/agents/openai.yaml", "bytes": 301, "sha256": "0790355151A03CE231708C235653DF97FD042874A8D1AA9696E47B9327F73283"},
+                  {"path": "skills-source/technical-design-authoring/references/design-guide.md", "bytes": 3578, "sha256": "A85837AE8A18A61947AE1875390091B4D6A3FC3D23CDA11E190AA94E97FE7BF4"},
+                  {"path": "skills-source/technical-design-authoring/references/review-guide.md", "bytes": 2273, "sha256": "97621FE3C36BA446841E757CB72C6F33D8527B286B83BBECFDB6483CEDE613BF"}
               ]
 }
