@@ -14,3 +14,7 @@ description: Validate a real web user journey and capture reviewable screenshot 
 7. Log failures in problem and debug records; never crop evidence so tightly that location and state cannot be identified.
 
 A screenshot proves only the observed state. Pair it with interaction and console evidence when claiming functional acceptance.
+
+## Deployed Vercel CI/CD
+
+For repeatable Playwright checks of deployed Vercel pages, load the companion `vercel-playwright-cicd` Skill. It owns deployed-environment preconditions, authentication handoff, streaming checks and CI result reporting; this Skill continues to own reviewable browser and screenshot evidence. If the companion is unavailable, retain this workflow and report the missing repeatable CI integration.
