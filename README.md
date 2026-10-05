@@ -23,8 +23,8 @@ SilentAgentHub 是一套装在 Coding Agent（Codex、Claude Code 等）上的�
 
 ```text
 core/          根规则：AGENTS.md（Codex）、CLAUDE.md（Claude Code）、PLANS.md（Plan 规范）
-skills/        88 个已发布 Skill
-  ├─ 流程与语义 Skill（34 个）   需求澄清、产品研究、Plan 编排、模块上下文、复用选型、验证、代码评审、
+skills/        89 个已发布 Skill
+  ├─ 流程与语义 Skill（35 个）   需求澄清、产品研究、Plan 编排、模块上下文、复用选型、验证、代码评审、
   │                        问题闭环、Git/环境推广、版本发布、记忆记录与收尾、知识沉淀与同步等
   └─ 文档控制 Skill（54 个，doc-*）  每份受管文档一个 Skill，负责创建、追加、字段校验和关联
 harness/
@@ -52,3 +52,7 @@ templates/     任务管理、问题流水、验收清单、版本控制等管�
 ## 技术方案与评审
 
 `technical-design-authoring`把已确认需求和当前系统事实写成可实施的技术方案，并提供技术评审入口；每项需求有实现、交付与验收去向。技术方案评审后再制定工程执行Plan。使用说明见[Skill入口](skills/【技术方案与评审】technical-design-authoring/SKILL.md)，结构、实际使用及副本校验见[验证记录](validation/technical-design-authoring-1.0.0/README.md)。Harness接入1.0.1的位置、启动条件与调用关系见[接入说明](skills/【技术方案与评审】technical-design-authoring/references/harness-integration.md)。
+
+## 小红书发布
+
+[SilentSKILL - publish - rednot](skills/【小红书发布】silentskill-publish-rednot/SKILL.md) 将 GitHub 项目资料整理为忠于原文的小红书发布材料，核对原图、话题、可见范围与发布时间，并仅在当前授权内保存草稿、定时或发布后验证结果。

@@ -1,0 +1,14 @@
+interface:
+  display_name: SilentSKILL - publish - rednot
+  short_description: Prepare faithful GitHub project posts for Xiaohongshu
+  default_prompt: Use $silentskill-publish-rednot to prepare a source-faithful Xiaohongshu
+    post and publish only within my current authorization.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
