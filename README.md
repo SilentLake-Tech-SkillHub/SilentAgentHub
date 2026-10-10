@@ -1,3 +1,5 @@
+> **最新完整分析与待修复问题：** [2026-10-11 整合报告](reports/execution-reliability/20261011/analysis.md)，配套 [Job Application #23](https://github.com/SilentLake-Tech-SkillHub/job-application-assistant/issues/23) 与 [Harness #18](https://github.com/SilentLake-Tech-SkillHub/SilentAgentHub/issues/18)。报告整合Excel门禁、公开版本反例、运行依赖及完整版本交付边界。
+
 > **2026-10-11 当前本地运行版本已完整归档：** [迁移快照与干净环境修复入口](runtime-snapshots/current-local-20261011/README.md)。使用 `local-runtime-20261011` 标签固定这次交付；快照保留实际安装/项目差异、旧入口、清单及恢复材料。它用于复原与修复，不表示旧缺陷已解决。
 
 # SilentAgentHub
