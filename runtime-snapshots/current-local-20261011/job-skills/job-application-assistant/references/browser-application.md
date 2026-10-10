@@ -1,0 +1,45 @@
+# Browser preparation and submission
+
+Read when opening company sites, filling, reviewing or submitting. Prefer the user's requested browser and preserve its login state. Where the workspace specifies a browser priority, try its first tier and record an actual failure before changing tiers. Use [Chrome window grouping](chrome-window-grouping.md): open up to 10 webpage tabs in one Agent-owned Chrome window, then create a new window before page 11. Track company identity per tab, preserve other companies in shared windows, and never repurpose or close user-owned or review/receipt tabs. Headless navigation is only for public, read-only pages.
+
+Browser tab/window indexes drift whenever the user (or a parallel session) opens, closes or reorders tabs mid-run. Re-locate the target tab by URL match before every operation batch; never address a tab by an index remembered from an earlier step.
+
+## Page-init, reload and injection discipline
+
+These rules come from a live SuccessFactors/Workday application session; follow them on any heavy-SPA recruiting page.
+
+- **Wait for usable controls before writing.** Inspect the current DOM/accessibility state and use the execution platform’s documented locators or native inputs. Read-only inspection does not permit page mutation, synthetic event injection, hidden framework-state reads or private API requests. When controls stop responding, inspect the actual blocker and protect unsaved work before considering a reload; record the observed failure, not a guessed environment diagnosis.
+- **Predict the native resubmit dialog.** Pages entered via form POST (common after verification-code logins) raise the browser-native "confirm form resubmission" dialog on reload. That dialog is not in the page DOM; handle it at the OS accessibility layer, and prefer not to reload such pages at all unless the form is server-drafted.
+- **Upload through supported file controls.** Use the tool’s documented file chooser/upload API or the authorized native chooser. Do not synthesize files or mutate page inputs with scripts. Read back the uploaded filename and site result; inspect any open chooser before retrying.
+- **Use the verified tab’s documented controls.** Prefer URL-verified DOM locators/accessibility actions. Native clicks require a fresh observation of the actual company window; avoid stealing the user’s frontmost work. An unavailable tool does not authorize a different UI technology forbidden by the executing platform.
+- **Expect id renumbering after re-renders.** Resume upload (and its auto-parse), saves and section changes can rebuild the whole form with new element ids. After any such event, re-enumerate before filling; prefer upload-first then fill-fields. Once required fields are filled, save the server-side draft immediately and confirm its success message, so a later re-render cannot lose the work.
+- **Cross-check "data lost" reports through a second locator.** A readback script can have its own bug (e.g. concatenating a label name into an id) and produce a false "all fields GONE" panic. Before reporting data loss, re-read the same fields via an independent locator (by id vs. by label text) and compare.
+- **Check the sent folder before any application email.** A parallel executor or the user may already have sent the same application. Before sending, read the mail account's sent items for the same recipient/company and recent window; a hit means stop and reconcile instead of sending a duplicate.
+
+## 表单准备前的资格复核
+
+读取[任职资格核对](eligibility-check.md)，先把搜索记录中的硬性条件、个人依据和缺口落实为独立结论。JD或历史库已列出的必需条件不得忽略；待核和明确不符合不默认进入表单。只为读取JD/查历史的登录与投递准备分开，不把已登录当作已选岗通过。有效选择、用户剔除与已投保护继续保留。
+
+## Discover and prepare
+
+1. Verify that the page belongs to the employer or its named recruiting platform. Recheck cohort, employment type, location, title, plan and application window. Enumerate all in-scope pages or record a precise coverage limit. Open each candidate's real detail page and judge its title **and complete visible JD**.
+2. Use [application-login](../skills/application-login/SKILL.md) for login-state checks, phone/email verification and WeChat login. Read back the authenticated account, then check application history, plan relationship and current remaining attempts before a form is opened. Disclose the company's cooldown, résumé-refresh effects and preference-order rules before preparation; record an officially undisclosed rule as such. When a tracker says unsubmitted but the user or site indicates an earlier application, pause that role for reconciliation; do not create another application shell.
+3. Use [application-content-fill](../skills/application-content-fill/SKILL.md) for all form content. Default to the user's designated application résumé and follow their additional instructions. Run the read-only [control preflight](control-preflight.md) before writing and produce a private per-field action map. Inspect every required field and any auto-filled field; distinguish text entry from selects, searchable selects, cascaders, radio/checkbox choices, dates and uploads. Open dynamic choices and click their actual options; input text is not proof of selection. Rescan affected controls after upload/parsing, type changes or added/deleted rows. Date inputs must be selected through their actual picker controls, with the component selection and validation read back; assigning input text is insufficient. Report website drafts or shells that appear automatically. Upload or replace a résumé before manual corrections when upload triggers auto-parsing; afterwards recheck every field that parsing can overwrite.
+4. For upload, locate the visible and specific control. If multiple elements share a label, narrow to the visible exact button and handle the file chooser once. After any failure, inspect for an open OS dialog and existing uploaded filename before retrying. Count upload complete only when the site displays the correct file/success state.
+5. Route login through the login subskill, and agreement checkboxes and personal/contact fields through `terms-consent` and `privacy-info-fill` — each only if the user enabled it for this batch (see [automation-authorization.md](automation-authorization.md)); otherwise hand that step to the user. CAPTCHA challenges run through `captcha-solve` when enabled: ordinary clicks may proceed, graphical challenges default to the user, and Agent takeover needs three explicit confirmations plus platform permission; government ID numbers are always completed by the user. Request user participation for an actual missing input or site-required confirmation, personal attestation, signature or identity action. Never assert a work authorization status that the user has not supplied.
+
+## Review package
+
+For each role show company, plan, title, direct URL, quota/cross-plan impact, résumé/material filenames, consequential field answers, consent/declaration status, missing items and sanitized screenshots of the completed form and final button. Give the package a version or hash. Keep the page open; a changed material answer or upload creates a new version requiring review.
+
+## Submit and verify
+
+Approval covers only the exact named roles and reviewed form versions. Immediately before each click, recheck the title, account remaining quota, form version and unresolved warnings. Apply the parent's **application-count rule gate** (Issue #12) before presenting roles, then the **pre-submission target confirmation gate** (Issue #8): restate 公司、BU/业务集团/招聘主体、办公地、岗位 and every 意向部门/志愿槽位 in submission order, and wait for the user's explicit confirmation of that exact target before the final click. General instructions such as 「帮我填写打勾提交」 authorize mechanics only and never satisfy this gate; no automation mode (including fully automatic) waives it. Intention/preference slots are **user-choice fields**: propose options with reasoning, never select them unilaterally. Submit one role and wait. A quota modal, CAPTCHA, redirect or loading state is not a receipt. Verify the site's success page and application history or confirmation ID where available. If uncertain, stop that role's retry and inspect the application center. Record the receipt and only then update the tracker. Continue an unrelated role only when it cannot duplicate or interfere with the uncertain one.
+
+显示已填但仍报错、共享容器字段错位或联动丢值时，必须按[字段绑定恢复策略](field-binding-recovery.md)逐项恢复并记录分层证据。
+
+## 独立偏好与执行证据
+
+准备前读取 [偏好证据契约](preference-contract.md)，展示每岗公司、岗位、直链、BU 或未披露、城市、用工、方向、完整 JD 依据/理由及填/存/提交状态；先有 pre_form_report_ref 后操作表单。标题不能黑名单，AI 数据产品按实际 AI/Agent 产品职责判断。conversion_last 的已核转正实习在同一份报告最后；无论正式岗是否存在或覆盖充分，不移出报告。跨轴取舍由用户决定，已有明确选择不替换。Review 和 closeout 按每岗更新实际执行证据，与材料版本、名额、目标门禁一并读回；登录成功不能称表单准备完成。
+
+每批先向用户要默认岗位次序，保存同批确认，不沿用上一批。每家公司开始申请操作前，先用同一逐岗包展示公司/岗位/BU或未披露/办公地，确认相对默认次序有无变化；company_order_confirmation_ref 和 pre_form_report_ref 对应同一包。交接复用这份记录，最终具体目标和当前表单版本继续审核，不另建三套脱节清单。

@@ -1,0 +1,6 @@
+{
+  "$schema": "./memory-index.schema.json",
+  "version": "1.0.0",
+  "updatedAt": null,
+  "conversations": []
+}

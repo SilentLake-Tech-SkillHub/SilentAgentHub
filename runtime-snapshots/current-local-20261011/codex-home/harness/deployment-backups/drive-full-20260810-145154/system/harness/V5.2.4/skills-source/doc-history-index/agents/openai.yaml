@@ -1,0 +1,4 @@
+interface:
+  display_name: "doc-history-index"
+  short_description: "Harness V5.2 candidate skill"
+  default_prompt: "Use this Skill through the project Router and governed records."

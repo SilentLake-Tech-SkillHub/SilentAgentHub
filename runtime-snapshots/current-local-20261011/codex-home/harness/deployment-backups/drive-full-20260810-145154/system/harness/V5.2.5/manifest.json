@@ -1,0 +1,1383 @@
+{
+    "schemaVersion":  1,
+    "version":  "V5.2.5",
+    "identity":  "production",
+    "createdAt":  "2026-07-16T16:16:27.3376355+08:00",
+    "sourceWorkspace":  "E:\\项目文件\\20260714  Harness 工程升级",
+    "sourceGitHead":  "baa5dec9e876ab33885f62ec64eecea1ca654d1a",
+    "agentsSha256":  "9E0F399BCE9055DE4251FF5DABB0FD012EEB2D71132B1C459BFFC679F333404C",
+    "skillCount":  81,
+    "skillSourceFileCount":  227,
+    "hookScriptCount":  22,
+    "hookTestCount":  3,
+    "harnessJsonCount":  14,
+    "diagnosticFileCount":  3,
+    "fileCount":  273,
+    "files":  [
+                  {
+                      "path":  "skills-source/doc-router/assets/template.md",
+                      "bytes":  368,
+                      "sha256":  "62F30F9A5238CFBB92240D78272455E6FB600D84B1F8318A9785D725B20E165D"
+                  },
+                  {
+                      "path":  "skills-source/doc-rule-candidates/SKILL.md",
+                      "bytes":  1996,
+                      "sha256":  "A3858CAFC014097C3558F24BA17A3008632C68D229A997855986C28F1297BE7D"
+                  },
+                  {
+                      "path":  "skills-source/doc-router/SKILL.md",
+                      "bytes":  1994,
+                      "sha256":  "5D56F35985772BE9C99DEF1A35A7B0E5ED53FF7CCA5B6D9D56420F015BF99272"
+                  },
+                  {
+                      "path":  "skills-source/doc-router/agents/openai.yaml",
+                      "bytes":  162,
+                      "sha256":  "CA54DC2EDD74C0DB3DECA0860F2FA0DD1DBC91300FD360E0D8C4ECADF379DAD4"
+                  },
+                  {
+                      "path":  "skills-source/doc-scope-change/SKILL.md",
+                      "bytes":  2092,
+                      "sha256":  "59FBC6D38F52168B127EFEA4DF3735059199BB91EFF80431A6218279122300F0"
+                  },
+                  {
+                      "path":  "skills-source/doc-scope-change/agents/openai.yaml",
+                      "bytes":  168,
+                      "sha256":  "E9CB927CC3B78D6BFDBD6A4E3FB2F839A8833F3883CA4F24A3B1D8571313D83D"
+                  },
+                  {
+                      "path":  "skills-source/doc-rule-candidates/agents/openai.yaml",
+                      "bytes":  171,
+                      "sha256":  "7A41BA2DE7346EBF7A86B34B68660601174462939CF41E35CED6291F545E7DB5"
+                  },
+                  {
+                      "path":  "skills-source/doc-rule-candidates/assets/template.md",
+                      "bytes":  475,
+                      "sha256":  "9AA4BF8411E4D35FC8357C9966AB1D0513511B7AC5EDBF8CCD15BFDD12618479"
+                  },
+                  {
+                      "path":  "skills-source/doc-rnd-hub-operations/assets/template.md",
+                      "bytes":  613,
+                      "sha256":  "2F10FABE0E3330FDDFF3E207B0F4BA500D2B214ADB23DFA397E612D65A2BFAAC"
+                  },
+                  {
+                      "path":  "skills-source/doc-reuse-selection/assets/template.md",
+                      "bytes":  432,
+                      "sha256":  "1A7B0263A740DE95C34C42768E7D46106BFA0DD86F9C35381D1FE615E4903D2C"
+                  },
+                  {
+                      "path":  "skills-source/doc-risk/SKILL.md",
+                      "bytes":  2018,
+                      "sha256":  "6939301E49237C64F4A499E7E364C474D9E85D0A5B5746272AFF97DAA49469C2"
+                  },
+                  {
+                      "path":  "skills-source/doc-reuse-selection/SKILL.md",
+                      "bytes":  2024,
+                      "sha256":  "020BD5BC6F042AD076AD8FF2A6C7ADE14288FE1E4ECAC7B596777F40C9FD51CD"
+                  },
+                  {
+                      "path":  "skills-source/doc-reuse-selection/agents/openai.yaml",
+                      "bytes":  171,
+                      "sha256":  "B21E66368FD72B93333C45638DF2673D19E2FE61A9B0205E5854DFD176660E7E"
+                  },
+                  {
+                      "path":  "skills-source/doc-rnd-hub-operations/SKILL.md",
+                      "bytes":  440,
+                      "sha256":  "365403AE07FFA44F44167BAC2C11A98A954C8655F32E16DC6B3D9FC0B2D3D6EF"
+                  },
+                  {
+                      "path":  "skills-source/doc-rnd-hub-operations/agents/openai.yaml",
+                      "bytes":  192,
+                      "sha256":  "2E177D3B0BBD568A16D3E736DD97BDA66C27AFF80D426A813E52E5B5039A77D8"
+                  },
+                  {
+                      "path":  "skills-source/doc-risk/agents/openai.yaml",
+                      "bytes":  160,
+                      "sha256":  "9D7EC45F8DD404C0F9540DF66A44E06AADD5DAD4446F85C4F5FEEAC262676C14"
+                  },
+                  {
+                      "path":  "skills-source/doc-risk/assets/template.md",
+                      "bytes":  468,
+                      "sha256":  "DF9D67A534FFAFEFC7BDD158C17CE09E729E6900B86EECC4D162C0298E2AECA0"
+                  },
+                  {
+                      "path":  "skills-source/doc-skills-index/agents/openai.yaml",
+                      "bytes":  168,
+                      "sha256":  "05FE0570523CB9E37C7B6894A2B7F4354EE193D729327B06D57B4CBB7ACD17A2"
+                  },
+                  {
+                      "path":  "skills-source/doc-skills-index/assets/template.md",
+                      "bytes":  433,
+                      "sha256":  "B2BDE97B483D2C1A93D9322990EC273277A5F2621BD8D4C8E4D9442B7C0BE6D0"
+                  },
+                  {
+                      "path":  "skills-source/doc-skill-selection/assets/template.md",
+                      "bytes":  423,
+                      "sha256":  "D6A5B494B44C26806E7F8AAD9BBF269B50FB21601856C6A70BB1AA1C163557C4"
+                  },
+                  {
+                      "path":  "skills-source/doc-skills-index/SKILL.md",
+                      "bytes":  1989,
+                      "sha256":  "0B585B23154A4E491054BBEB7EB1C486875E3BF8E728DA5E550DBD88012F6049"
+                  },
+                  {
+                      "path":  "skills-source/doc-snapshot-restore/assets/template.md",
+                      "bytes":  460,
+                      "sha256":  "4FFE412921440219AB324293396730CABE9ABFFD07FAA85E5BCDB8B17FAF6B87"
+                  },
+                  {
+                      "path":  "skills-source/doc-sources/SKILL.md",
+                      "bytes":  2008,
+                      "sha256":  "B1E69CBDDB98C06013FFBCFC3419247657677B4031869F0673ADA6FAF9850185"
+                  },
+                  {
+                      "path":  "skills-source/doc-snapshot-restore/SKILL.md",
+                      "bytes":  1999,
+                      "sha256":  "2F53961D30AAE73ED7CCC08AF5B7BA6D67BE18F2C095C945DDF142B48B4DEE84"
+                  },
+                  {
+                      "path":  "skills-source/doc-snapshot-restore/agents/openai.yaml",
+                      "bytes":  172,
+                      "sha256":  "0271B362907F376630AA99717684F2552C67EF94D8EE42EC7D6C87FEE48AE8BF"
+                  },
+                  {
+                      "path":  "skills-source/doc-skill-selection/agents/openai.yaml",
+                      "bytes":  171,
+                      "sha256":  "213ACBB9A9E053553B05D25BD58A642662522633488A8DF88F090A4BDF24FA13"
+                  },
+                  {
+                      "path":  "skills-source/doc-short-memory/agents/openai.yaml",
+                      "bytes":  186,
+                      "sha256":  "73DE7361C872F03DA2E9C6AD23C46F89491DB12241CBB9B3E1696EE339F1216C"
+                  },
+                  {
+                      "path":  "skills-source/doc-short-memory/assets/template.md",
+                      "bytes":  388,
+                      "sha256":  "EBE9D6085AA1A6DE3FC577E4C2A5760BAB96EE143905605F852D64173B698CE6"
+                  },
+                  {
+                      "path":  "skills-source/doc-scope-change/assets/template.md",
+                      "bytes":  474,
+                      "sha256":  "64FCC73748B9432B9D6F6DAFFA5A56ED90197AFE33A1201BE4B4D7A19C6D3B49"
+                  },
+                  {
+                      "path":  "skills-source/doc-short-memory/SKILL.md",
+                      "bytes":  614,
+                      "sha256":  "43F573F1C03E88714364493E9ACF677F8557A897D1CED20DA09646776A340160"
+                  },
+                  {
+                      "path":  "skills-source/doc-skill-call-log/assets/template.md",
+                      "bytes":  529,
+                      "sha256":  "A6255A7EAEABFC8564B04E6EA7F10DDECB9F6912A2BDA55C844AC8518ED60553"
+                  },
+                  {
+                      "path":  "skills-source/doc-skill-selection/SKILL.md",
+                      "bytes":  1981,
+                      "sha256":  "1B2156D442FD90F6C40F45BE37228527536E222DEE0D5CFF82ECACE4C4E3B6C0"
+                  },
+                  {
+                      "path":  "skills-source/doc-skill-call-log/SKILL.md",
+                      "bytes":  909,
+                      "sha256":  "9615FA5E9F3EEF9D5E845DD046EF8B8A4F2B21A26AED4D066B67521EEFFE59AC"
+                  },
+                  {
+                      "path":  "skills-source/doc-skill-call-log/agents/openai.yaml",
+                      "bytes":  185,
+                      "sha256":  "6C5103B131967FB43AA3CDC6B344E674C2978A512552A37C17490F78BC07646F"
+                  },
+                  {
+                      "path":  "skills-source/doc-plan/agents/openai.yaml",
+                      "bytes":  160,
+                      "sha256":  "C31A2F30E444D8097DBF79504C0387DD688149B76024B4ABBE00C9471E6DB625"
+                  },
+                  {
+                      "path":  "skills-source/doc-plan/assets/template.md",
+                      "bytes":  560,
+                      "sha256":  "44453511091481A7D1385890750F043CC1058BD69A08ED894613EFAC6C25E6FA"
+                  },
+                  {
+                      "path":  "skills-source/doc-operations/assets/template.md",
+                      "bytes":  444,
+                      "sha256":  "2C559F2BB1E193E9A28D85D6B3FFCDDAB23AC7A9EC34E1AEC8C28106777A0A48"
+                  },
+                  {
+                      "path":  "skills-source/doc-plan/SKILL.md",
+                      "bytes":  2658,
+                      "sha256":  "0F0B162DB7F8F00801E55F6DF45E098535E6748B48A5F368B432BA5D051532FE"
+                  },
+                  {
+                      "path":  "skills-source/doc-product-acceptance/assets/template.md",
+                      "bytes":  447,
+                      "sha256":  "7FC9B43FB3107A0E389680641F6CEA910C96C0880FBCE1F76CACC002BFE1312E"
+                  },
+                  {
+                      "path":  "skills-source/doc-readme/SKILL.md",
+                      "bytes":  1949,
+                      "sha256":  "BEB7FEB4086F3AF7E0F7015E4263379F68940BAEF071B4EB65C1F59FCBEA453B"
+                  },
+                  {
+                      "path":  "skills-source/doc-product-acceptance/SKILL.md",
+                      "bytes":  2047,
+                      "sha256":  "B7FFB6A9FCEB52C46B6CAA8B432B2825C7F281479E93F77622301FB43FE04C37"
+                  },
+                  {
+                      "path":  "skills-source/doc-product-acceptance/agents/openai.yaml",
+                      "bytes":  174,
+                      "sha256":  "024E34A3151518A463D14DE6E95A602D4148E49D06DFF866C7B9C64702D1CA80"
+                  },
+                  {
+                      "path":  "skills-source/doc-operations/agents/openai.yaml",
+                      "bytes":  166,
+                      "sha256":  "A3BB4B4121169ED5AD99D5A7183649801109A9A20EC17499E64C306B0C42D544"
+                  },
+                  {
+                      "path":  "skills-source/doc-module-plan/agents/openai.yaml",
+                      "bytes":  167,
+                      "sha256":  "3B1A6D6424C35CFA59CAF714D866450DAAF1DB8C0AB538D7E824781C75F5B053"
+                  },
+                  {
+                      "path":  "skills-source/doc-module-plan/assets/template.md",
+                      "bytes":  453,
+                      "sha256":  "54CE14BF30C57E1CBC29431D81C4652F1BA6E13F3B7701BC77B5D4FF8FF34D37"
+                  },
+                  {
+                      "path":  "skills-source/doc-metrics/assets/template.md",
+                      "bytes":  477,
+                      "sha256":  "DEF3EB90CACE6B1A6A9F7C3343D05D5C6B4E02B1219A668752F60FDA5B0E831E"
+                  },
+                  {
+                      "path":  "skills-source/doc-module-plan/SKILL.md",
+                      "bytes":  1999,
+                      "sha256":  "484818B9107A0E251A95D501D0B387B7815904D3630DB0289F10246D0795D0FC"
+                  },
+                  {
+                      "path":  "skills-source/doc-module-rules/assets/template.md",
+                      "bytes":  514,
+                      "sha256":  "8D611465939C4D6EE7DA3E33C6D0218D045F343353D13FC9EE5CFABDE47D867B"
+                  },
+                  {
+                      "path":  "skills-source/doc-operations/SKILL.md",
+                      "bytes":  2015,
+                      "sha256":  "72027BAD0D312ECF0C4B41082069C3B65A26520F098037887A77C25597667EAD"
+                  },
+                  {
+                      "path":  "skills-source/doc-module-rules/SKILL.md",
+                      "bytes":  2001,
+                      "sha256":  "3AEF1C28A46EFA4C2E07D29AF2A2C1F25FCB511A6411C355AB9356707458D2BA"
+                  },
+                  {
+                      "path":  "skills-source/doc-module-rules/agents/openai.yaml",
+                      "bytes":  168,
+                      "sha256":  "DF538E3F2CC22950BB6641DCB727216ABFDCA181D74A45D0AA564CE2FF93AC45"
+                  },
+                  {
+                      "path":  "skills-source/doc-research/SKILL.md",
+                      "bytes":  1983,
+                      "sha256":  "2A0EB82A20EA774F295AA50D5F8F999291C0664FA47F1D04638EA9EA3D8D9BC4"
+                  },
+                  {
+                      "path":  "skills-source/doc-research/agents/openai.yaml",
+                      "bytes":  164,
+                      "sha256":  "9B03B3870343F805D9ED0CF255246CAD6EA00B0E067EF0E6470FF903241D74D6"
+                  },
+                  {
+                      "path":  "skills-source/doc-requirement-pool/agents/openai.yaml",
+                      "bytes":  172,
+                      "sha256":  "7C85BA3424892700794553B594D6ADE7861CB6B1FDC3819D9B6D8B3C5A2F9971"
+                  },
+                  {
+                      "path":  "skills-source/doc-requirement-pool/assets/template.md",
+                      "bytes":  417,
+                      "sha256":  "482CE257716972C8F7AD109DD58BD522741C70C6CFD2895AE6DB36586FFA5206"
+                  },
+                  {
+                      "path":  "skills-source/doc-research-summary/agents/openai.yaml",
+                      "bytes":  172,
+                      "sha256":  "8168723BBFDE6C3FEAC5C7F9177855C0EACE1DDECB64D3D350E38F09156332B8"
+                  },
+                  {
+                      "path":  "skills-source/doc-research-summary/assets/template.md",
+                      "bytes":  450,
+                      "sha256":  "27F6D4EC10A0E585B987FBB9B93FC21771C0FA9AEE017C578035BF83BE795CB1"
+                  },
+                  {
+                      "path":  "skills-source/doc-research/assets/template.md",
+                      "bytes":  441,
+                      "sha256":  "D6C5A0020C35DB013EA9914C676714E1DC13B92CF255436FD8008F629BFE6035"
+                  },
+                  {
+                      "path":  "skills-source/doc-research-summary/SKILL.md",
+                      "bytes":  1967,
+                      "sha256":  "B39A8606F4834FAEDCB91090D2CD26CEAA085C999D38139F19E0469AECB4E40C"
+                  },
+                  {
+                      "path":  "skills-source/doc-requirement-pool/SKILL.md",
+                      "bytes":  2008,
+                      "sha256":  "23EAA4D626A6ACFCEC8B967A58B9170B84AB010F262BCB2572BD14F1E535360F"
+                  },
+                  {
+                      "path":  "skills-source/doc-release/SKILL.md",
+                      "bytes":  2007,
+                      "sha256":  "9E85C5172D3F26A55EDE7650408C48715939A5F8033C8FDD6BAC49C416E0383E"
+                  },
+                  {
+                      "path":  "skills-source/doc-release/agents/openai.yaml",
+                      "bytes":  163,
+                      "sha256":  "72F06531A5DB4F993D10CA71477EAF934D163BE522DD6C63E91E57FA362CF4A3"
+                  },
+                  {
+                      "path":  "skills-source/doc-readme/agents/openai.yaml",
+                      "bytes":  162,
+                      "sha256":  "6C78B6E6B9607A5C7914A20AC8F50C699B1D77BF259FB9B01DA8C6CB9479512E"
+                  },
+                  {
+                      "path":  "skills-source/doc-readme/assets/template.md",
+                      "bytes":  392,
+                      "sha256":  "A6117022395DF3782AC0EEDA0BD7FEB82A9F8AE25F18F93A648E3EDC41DC1DFA"
+                  },
+                  {
+                      "path":  "skills-source/doc-requirement-assets/agents/openai.yaml",
+                      "bytes":  174,
+                      "sha256":  "14CD0E854EE19F3BFB46DA84A5CDF4A607CE596FB10B5C33538ECE60E86F8F41"
+                  },
+                  {
+                      "path":  "skills-source/doc-requirement-assets/assets/template.md",
+                      "bytes":  453,
+                      "sha256":  "99D2D37C5BE18A1714D064C05B9CA20372442B40FE083C63A275C6647499ADB6"
+                  },
+                  {
+                      "path":  "skills-source/doc-release/assets/template.md",
+                      "bytes":  439,
+                      "sha256":  "238F1E37197DF2152E7788E85A451CCBC818CFC00109D44080CA80B053A274B0"
+                  },
+                  {
+                      "path":  "skills-source/doc-requirement-assets/SKILL.md",
+                      "bytes":  2041,
+                      "sha256":  "7B56B8F95A33CED2224194A1E91E766A104E07CA4B99A7702D27FA1C30A92D14"
+                  },
+                  {
+                      "path":  "skills-source/project-initialization/assets/retired-project-assets.V5.2.5.json",
+                      "bytes":  240,
+                      "sha256":  "8436CA613779AA18763A8A770912AA213DD191E307E527C936A4BA40DE4CC296"
+                  },
+                  {
+                      "path":  "skills-source/project-initialization/assets/source-layout.manifest.json",
+                      "bytes":  3054,
+                      "sha256":  "ED8662F40113C298069FB75F877691D3EF6A7AD10B7D25C617751306D7399AF5"
+                  },
+                  {
+                      "path":  "skills-source/project-initialization/SKILL.md",
+                      "bytes":  6176,
+                      "sha256":  "84C73220A246D362FB32B8DF1A4FC74AB0504377132FDE82EA62C93C87376EB9"
+                  },
+                  {
+                      "path":  "skills-source/project-initialization/agents/openai.yaml",
+                      "bytes":  235,
+                      "sha256":  "B88EC76FE7A764195AFE2668D6C28C9B9A004EFC83ADDC0AB943028B3D390AFF"
+                  },
+                  {
+                      "path":  "skills-source/project-initialization/references/module-rule-contract.md",
+                      "bytes":  887,
+                      "sha256":  "DE7ABE97696FB2BD6ED6A0C0D5A2D7C5072B005823943EC6ADCBE0A0319393DE"
+                  },
+                  {
+                      "path":  "skills-source/project-initialization/references/project-structure.md",
+                      "bytes":  3004,
+                      "sha256":  "3D8711A9C06CE5BA976AC0C9F0105F54EE12826FA57B947B85C20C078CB15AD7"
+                  },
+                  {
+                      "path":  "skills-source/project-initialization/references/document-controller-registry.md",
+                      "bytes":  2102,
+                      "sha256":  "754F45A4245E2A99CF76E15842E5C2588EB7D8D9318F601EB7040B550794C29E"
+                  },
+                  {
+                      "path":  "skills-source/project-initialization/references/initialization-acceptance.md",
+                      "bytes":  2616,
+                      "sha256":  "12553A50778D35D86674F3FEECAA7C3C99B206FDCB73CE093344A0EC8E0EF3D3"
+                  },
+                  {
+                      "path":  "skills-source/product-research/agents/openai.yaml",
+                      "bytes":  234,
+                      "sha256":  "DCFB6F3AEAA4BD37A64C01D8D6A0384164B3F1276ABE948E83F14173FA7AAE7F"
+                  },
+                  {
+                      "path":  "skills-source/module-context-loader/agents/openai.yaml",
+                      "bytes":  238,
+                      "sha256":  "F87080843293463D93AB05038EE5F3C9F6F66DC6B2A3E31E724C2E016D69673D"
+                  },
+                  {
+                      "path":  "skills-source/plan-orchestrator/SKILL.md",
+                      "bytes":  2900,
+                      "sha256":  "186C52D63BB64369151FEDC561177555AC93285DB275F231C9ACBB201C9599F2"
+                  },
+                  {
+                      "path":  "skills-source/memory-turn-closeout/agents/openai.yaml",
+                      "bytes":  253,
+                      "sha256":  "B48C45CE951E5D18946291E9344D9B7F6D66C08ED4FE4A6991912105C625AE5F"
+                  },
+                  {
+                      "path":  "skills-source/module-context-loader/SKILL.md",
+                      "bytes":  1242,
+                      "sha256":  "5D734A4C4DE70EBDC38A447103F28645F5AAC0FC2E8A71168830E9910DFB2A89"
+                  },
+                  {
+                      "path":  "skills-source/problem-ledger-closure/agents/openai.yaml",
+                      "bytes":  235,
+                      "sha256":  "BD79F95D3EF7E8F3D3F1F74FB5DD5A537A23A5058E2FE9265AD66B6A26C81398"
+                  },
+                  {
+                      "path":  "skills-source/product-research/SKILL.md",
+                      "bytes":  1173,
+                      "sha256":  "383EAE89B6C5F65D5DBDDEDC63E7C3AB2E699FB01B79F07DCA0AE9C9CF05C7BE"
+                  },
+                  {
+                      "path":  "skills-source/plan-orchestrator/agents/openai.yaml",
+                      "bytes":  231,
+                      "sha256":  "D4A3C4F608A562BAD92850B5D440290CA23E53AC5CC305E9C4A5A218F01FA2F7"
+                  },
+                  {
+                      "path":  "skills-source/problem-ledger-closure/SKILL.md",
+                      "bytes":  1834,
+                      "sha256":  "60D931EACE236A67F053EA808128D6A8C688DC4B3B8E1DB7C921E74A3ECBCBE2"
+                  },
+                  {
+                      "path":  "skills-source/user-memory-recorder/SKILL.md",
+                      "bytes":  3115,
+                      "sha256":  "61C113C1C9832F28680F97BDED5FDE4FC44A8F1CC0BA52F1DAC696C714AF7716"
+                  },
+                  {
+                      "path":  "skills-source/user-memory-recorder/agents/openai.yaml",
+                      "bytes":  250,
+                      "sha256":  "470AE9A702B2127440D3F2A7CA7EBD732AF19376289DAA0BFC98F7E0501FB03A"
+                  },
+                  {
+                      "path":  "skills-source/skill-library-router/SKILL.md",
+                      "bytes":  1135,
+                      "sha256":  "745EE9BD2EF6274639B7667C15486FC478B061E5F2A08F79BDB1B8B8E7B470B9"
+                  },
+                  {
+                      "path":  "skills-source/skill-library-router/agents/openai.yaml",
+                      "bytes":  239,
+                      "sha256":  "F46047D8B5F8F4C354CB16B7F346A9E20B82BAD0096264B12518E52F8291CFCC"
+                  },
+                  {
+                      "path":  "skills-source/workflow-orchestrator/SKILL.md",
+                      "bytes":  2467,
+                      "sha256":  "E06BEDDFA5D3A4618E0A488CE95266C06F418A08DE01CD0F7FE21F6EB3F9C705"
+                  },
+                  {
+                      "path":  "skills-source/workflow-orchestrator/agents/openai.yaml",
+                      "bytes":  173,
+                      "sha256":  "44678C5EFBE58B241122D318888ADBAF7AE225D44D79A351BEB5082334BA9BCB"
+                  },
+                  {
+                      "path":  "skills-source/version-release-manager/SKILL.md",
+                      "bytes":  1427,
+                      "sha256":  "A6C783FC0365425DCDE965A9A179B2C76ED0E9E27CA85CB7FB58392B103D5620"
+                  },
+                  {
+                      "path":  "skills-source/version-release-manager/agents/openai.yaml",
+                      "bytes":  233,
+                      "sha256":  "D033EB77F4362386183B920AD3FE1390EE72A4F200FE80BCF1C009C5CD8BAF2F"
+                  },
+                  {
+                      "path":  "skills-source/reusable-asset-selector/agents/openai.yaml",
+                      "bytes":  235,
+                      "sha256":  "37BA4E8EFBBE5A3234AB26058A6A03C6C122B61C6F35222D3D8941AE0272BBF4"
+                  },
+                  {
+                      "path":  "skills-source/project-validation/SKILL.md",
+                      "bytes":  2653,
+                      "sha256":  "03BCFE464B6B2E852625B8F1C0D79ACDEA0AE4AA783BDD701E1369647ACC5E6A"
+                  },
+                  {
+                      "path":  "skills-source/project-validation/agents/openai.yaml",
+                      "bytes":  238,
+                      "sha256":  "48FEF1077C89F842521E9AFF055C30E60DDE0D2E333AF4C8FEA2A6557F06946B"
+                  },
+                  {
+                      "path":  "skills-source/project-initialization/references/source-layout.md",
+                      "bytes":  5219,
+                      "sha256":  "EE72B0057EB924EA9E575E784A477E4772458960B3C46F06086BABA1098695E1"
+                  },
+                  {
+                      "path":  "skills-source/project-initialization/scripts/install-harness-assets.ps1",
+                      "bytes":  5166,
+                      "sha256":  "245577985077A74534285DF636678894C8E14EF797B70850C6C129F3BA7D936C"
+                  },
+                  {
+                      "path":  "skills-source/requirement-clarification/agents/openai.yaml",
+                      "bytes":  250,
+                      "sha256":  "F629F6F2FBD249B8C25E1269267A9D0F959E0E46E315653C532A16346D63EA6B"
+                  },
+                  {
+                      "path":  "skills-source/reusable-asset-selector/SKILL.md",
+                      "bytes":  1082,
+                      "sha256":  "4A9070E2163C7FED3B5CD08E3758B286AE732948B9A1BE888EF0C7997E898529"
+                  },
+                  {
+                      "path":  "skills-source/project-validation/scripts/check_harness.ps1",
+                      "bytes":  834,
+                      "sha256":  "1F29741D14CF43A2C7AE7538E02727DF721EEC6AD3D353D5B22B8093D45C7F84"
+                  },
+                  {
+                      "path":  "skills-source/requirement-clarification/SKILL.md",
+                      "bytes":  1390,
+                      "sha256":  "08FB94352B1C9E12FB10BA7C93334DD5E845EED4E74AD53753B6C65C3BF300A4"
+                  },
+                  {
+                      "path":  "skills-source/git-environment-promotion/SKILL.md",
+                      "bytes":  1598,
+                      "sha256":  "6A364FE2A457A721A94B13DCB540CEAC41DD851A5A511AFA51AC6F12EB712772"
+                  },
+                  {
+                      "path":  "skills-source/git-environment-promotion/agents/openai.yaml",
+                      "bytes":  177,
+                      "sha256":  "414F2BEBC283F5EE6EE15E588D0C8956D32A11F11A96C9CE7E390DD9C67F86CB"
+                  },
+                  {
+                      "path":  "skills-source/doc-version/agents/openai.yaml",
+                      "bytes":  163,
+                      "sha256":  "E2809F42028D56C072C68E14EFEC931C714C9871C03C9C44A728D1211FA3D6EF"
+                  },
+                  {
+                      "path":  "skills-source/doc-version/assets/template.md",
+                      "bytes":  463,
+                      "sha256":  "45105C8F4154B8D2AB82F23600CECA34E3909D1623E0A23BE108497BC8E46131"
+                  },
+                  {
+                      "path":  "skills-source/history-record-query/SKILL.md",
+                      "bytes":  815,
+                      "sha256":  "7E6AFE8303ADBD161EE8686D6DBEB99724751561AB93A77E8E6A5FB1D92830E2"
+                  },
+                  {
+                      "path":  "skills-source/history-record-query/agents/openai.yaml",
+                      "bytes":  190,
+                      "sha256":  "60B12629FB823189F069390C57102D2A6582FEF46F2DF7735A4EE76548088751"
+                  },
+                  {
+                      "path":  "skills-source/harness-router/SKILL.md",
+                      "bytes":  1501,
+                      "sha256":  "2F116337122ADFACF6FFAC09857DE6CC90D1269E15CB7C8EBF87CFD1A2342DD9"
+                  },
+                  {
+                      "path":  "skills-source/harness-router/agents/openai.yaml",
+                      "bytes":  222,
+                      "sha256":  "E1204D9B10320A0D824530DF006418BDEBC9F0C5B589637517B207C03197C145"
+                  },
+                  {
+                      "path":  "skills-source/doc-version/SKILL.md",
+                      "bytes":  2022,
+                      "sha256":  "7DC49B6C7B88039979A1FCAFB7617AF8614BB72874B438CE91EBA48CFDD093EA"
+                  },
+                  {
+                      "path":  "skills-source/doc-task-ledger/SKILL.md",
+                      "bytes":  1968,
+                      "sha256":  "7C8EB3148F3D14D4B4EBB99B2A5264F2E0326F9BBDF32F2CB93DD6CC92790113"
+                  },
+                  {
+                      "path":  "skills-source/doc-task-ledger/agents/openai.yaml",
+                      "bytes":  167,
+                      "sha256":  "56445336918FE0081A9863D806102A9C2CF5E2F845FB14579B36D80A1BEE20F1"
+                  },
+                  {
+                      "path":  "skills-source/doc-sources/agents/openai.yaml",
+                      "bytes":  163,
+                      "sha256":  "4B13EB1C18C7C6C4AF7905D9AD0091BC9DA5FD9F508454F5178D447E29DAD12E"
+                  },
+                  {
+                      "path":  "skills-source/doc-sources/assets/template.md",
+                      "bytes":  474,
+                      "sha256":  "4DCDB282423EB3E2A6409F889CC7AF6013B1A86D88684B668DC835B3B1369979"
+                  },
+                  {
+                      "path":  "skills-source/doc-validation/agents/openai.yaml",
+                      "bytes":  166,
+                      "sha256":  "65631877501748E48A037D5C1AAF2ABA7EDB4CB0D0DC066F982E193D21DF6ABB"
+                  },
+                  {
+                      "path":  "skills-source/doc-validation/assets/template.md",
+                      "bytes":  454,
+                      "sha256":  "CD72246D01D4F48F375DB05A8EEFFD36AA5B958EA6229701A3B15D45FD4EC72E"
+                  },
+                  {
+                      "path":  "skills-source/doc-task-ledger/assets/template.md",
+                      "bytes":  396,
+                      "sha256":  "1B4F0AC502F8C26778FA802D1B9C93490CD1E49731B822403F420D6067086482"
+                  },
+                  {
+                      "path":  "skills-source/doc-validation/SKILL.md",
+                      "bytes":  1970,
+                      "sha256":  "6FBEBAD46D82DAAEC46CA91D4FE265E1284EB170079A40298BC7586A5B6AFB7D"
+                  },
+                  {
+                      "path":  "skills-source/llm-wiki-maintenance/references/api-operations.md",
+                      "bytes":  1587,
+                      "sha256":  "0AD2B2FECA660EFCB500389E4C33753AD7ED3ADC0C489DB418A8A744BF64E93C"
+                  },
+                  {
+                      "path":  "skills-source/long-memory-retriever/SKILL.md",
+                      "bytes":  1081,
+                      "sha256":  "AE1590107872E47CCE37D146D631529D6868D92759E225DE264A1866D4CA5136"
+                  },
+                  {
+                      "path":  "skills-source/llm-wiki-maintenance/SKILL.md",
+                      "bytes":  1959,
+                      "sha256":  "E80297A5ABD623BA97B042F6FE7A933CFDA0FBEC079E5546FAFF099DA055ADA4"
+                  },
+                  {
+                      "path":  "skills-source/llm-wiki-maintenance/agents/openai.yaml",
+                      "bytes":  235,
+                      "sha256":  "166035FC31A347426C55EDEC4584066C33F41AFCD9490196B7F95535B1C307AB"
+                  },
+                  {
+                      "path":  "skills-source/management-record-sync/agents/openai.yaml",
+                      "bytes":  238,
+                      "sha256":  "53ABEBBE090CE1AEF67FA77E78D8957B68140124B1561BBD33EB42B675C4D8E6"
+                  },
+                  {
+                      "path":  "skills-source/memory-turn-closeout/SKILL.md",
+                      "bytes":  2140,
+                      "sha256":  "41CDFEDB5E9D7AC483526C33D9051A20359B769E13DF6C7FE86F490E56471726"
+                  },
+                  {
+                      "path":  "skills-source/long-memory-retriever/agents/openai.yaml",
+                      "bytes":  191,
+                      "sha256":  "F41B96DC2D6EF78815EF9C3DBC119F438AE0DB3823D39B8CB7629BE39B17DEEA"
+                  },
+                  {
+                      "path":  "skills-source/management-record-sync/SKILL.md",
+                      "bytes":  1467,
+                      "sha256":  "7F81EA5934843498BBD5C116171E8D63F90B2A829AEB211320814F08520A8E15"
+                  },
+                  {
+                      "path":  "skills-source/ledger-history-archiver/agents/openai.yaml",
+                      "bytes":  193,
+                      "sha256":  "1107CC514E1170E95FE3A3D1E56ADDC61B48CE870A474A3659918FFC93BC788F"
+                  },
+                  {
+                      "path":  "skills-source/knowledge-query-router/SKILL.md",
+                      "bytes":  1106,
+                      "sha256":  "E2CC0B33EE9CB39AAB0F33832426449E7D511C49A797B01BAAF17A27B70DF3BA"
+                  },
+                  {
+                      "path":  "skills-source/knowledge-query-router/agents/openai.yaml",
+                      "bytes":  192,
+                      "sha256":  "04FA232143C7C5CDA4B97E18B6573A38EFFF52981E267592E3E35E82FCD65EC4"
+                  },
+                  {
+                      "path":  "skills-source/knowledge-deposition/SKILL.md",
+                      "bytes":  1402,
+                      "sha256":  "40470BDD49382FF607AB0EA26D52FA623AE322BD1B8A8AEC2517ED2A41B699F0"
+                  },
+                  {
+                      "path":  "skills-source/knowledge-deposition/agents/openai.yaml",
+                      "bytes":  239,
+                      "sha256":  "A837AC8588EAB4B7AFE66047D65FE47180831137F9E16E6D958E5FCFA3AF8A5D"
+                  },
+                  {
+                      "path":  "skills-source/knowledge-sync-reconciler/scripts/version_window.py",
+                      "bytes":  1778,
+                      "sha256":  "75B6B991EB8068797DE0F55D596684AC69EAD3DB857682716D4841A3A698599A"
+                  },
+                  {
+                      "path":  "skills-source/ledger-history-archiver/SKILL.md",
+                      "bytes":  1013,
+                      "sha256":  "2404EC877DF2728832207E67453E52FEE1379C3F0E2A00398693C1662792DFF7"
+                  },
+                  {
+                      "path":  "skills-source/knowledge-sync-reconciler/SKILL.md",
+                      "bytes":  1742,
+                      "sha256":  "D27F278350A192B6EB089DBD8598962139B4AF0E028BF15ABEA0E41CCCDAA4EE"
+                  },
+                  {
+                      "path":  "skills-source/knowledge-sync-reconciler/agents/openai.yaml",
+                      "bytes":  241,
+                      "sha256":  "2E13E3964F3853CDF51EC551058917381D355B8BA5DC152E3F6EC8E6034C57BF"
+                  },
+                  {
+                      "path":  "skills-source/doc-metrics/agents/openai.yaml",
+                      "bytes":  163,
+                      "sha256":  "029AB6281D9CD5EFAB2479645756F72C8D1D362ACE7A15A292F388E31F66CB69"
+                  },
+                  {
+                      "path":  "project-template/tools/diagnostics/tests/runtime-performance-e2e.ps1",
+                      "bytes":  2076,
+                      "sha256":  "150E380F66A461CCA3569E7EDC472B48A435BF305C8E17507348C22214408B53"
+                  },
+                  {
+                      "path":  "skills-source/browser-acceptance-screenshot/SKILL.md",
+                      "bytes":  1296,
+                      "sha256":  "A7F378CB66CB1CB4A2A0E185540A806A0EA57C683FCB284111ADD7A7630C53CB"
+                  },
+                  {
+                      "path":  "project-template/tools/diagnostics/README.md",
+                      "bytes":  1130,
+                      "sha256":  "22D5EFD06D124DFFA546AAE9B4E87B694F45036E625B353E128A2C5509EE9223"
+                  },
+                  {
+                      "path":  "project-template/tools/diagnostics/runtime-performance.ps1",
+                      "bytes":  5246,
+                      "sha256":  "C55A886C2648A7277ED6B5E2DA5F393D8787DAE5604E2F15CFD0D517262700C5"
+                  },
+                  {
+                      "path":  "skills-source/code-review-closeout/agents/openai.yaml",
+                      "bytes":  226,
+                      "sha256":  "06304167D8AF1F32331ABA1C1DAC6B14A7160BA162068D57E6F547FE339EC1F4"
+                  },
+                  {
+                      "path":  "skills-source/decision-ledger/SKILL.md",
+                      "bytes":  1008,
+                      "sha256":  "E19E5C8F3E19CB5859CCDCDFA29AC6996E47C632A605F761F78080EE68640818"
+                  },
+                  {
+                      "path":  "skills-source/browser-acceptance-screenshot/agents/openai.yaml",
+                      "bytes":  247,
+                      "sha256":  "76A23C59A2C3327363A35F95C7F574D06E22FD2CB18417853E546A3BFFDF9BEE"
+                  },
+                  {
+                      "path":  "skills-source/code-review-closeout/SKILL.md",
+                      "bytes":  1202,
+                      "sha256":  "250ADCCC40DE8364D6DA9DF764EBBD06FC2F5BDB842C4F8EF83070CFDCD89FE4"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/tests/query-routing-e2e.ps1",
+                      "bytes":  2278,
+                      "sha256":  "5E564E558B1B8F5EF82352372C9074F4B9C61FBCE935BDC47257DBCE8D686F62"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/session-start-dispatcher.ps1",
+                      "bytes":  2001,
+                      "sha256":  "0A3D93A76CF1DC977FEA31C7AC83436C6623B9B32405B71DE60DEE2CFFB09A97"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/source-layout-integrity.ps1",
+                      "bytes":  7349,
+                      "sha256":  "A3F8BD95C0E05C16AF95B745DBF8D400D29DF76805D22D4BB1D2B1E1EA7CED78"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/pretool-policy-advisor.ps1",
+                      "bytes":  1255,
+                      "sha256":  "04F6DF0F6683F69DD513D83E5A42340E0AB9D1120A23A62A779D63C8F9ED4A0C"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/runtime-event-repair.ps1",
+                      "bytes":  1887,
+                      "sha256":  "BA591AC296FD491E72684DEB0DE2F1AE94CAD1222E74B7AC2522DFF391714674"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/tests/memory-desktop-e2e.ps1",
+                      "bytes":  9475,
+                      "sha256":  "69488CE222AFB77B2B12F1A7DEEA496409304A8A5B61340E26D28979415DD687"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/tests/plan-disclosure-e2e.ps1",
+                      "bytes":  11548,
+                      "sha256":  "07F05E9C87F8DF15001E163DE46807FDE259D31C804B809E5361E31DBC9F194C"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/stop-closeout-dispatcher.ps1",
+                      "bytes":  9329,
+                      "sha256":  "E620EF24ED3DF1C1319B606627F654A9E84EF467CD42D13F76EE01281DC4E6E0"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/user-prompt-dispatcher.ps1",
+                      "bytes":  3085,
+                      "sha256":  "59D4ED3802D6F24085C6957B67E51FBAF7638D38BEF1E8C502DF4825E5A82342"
+                  },
+                  {
+                      "path":  "skills-source/doc-architecture/assets/template.md",
+                      "bytes":  404,
+                      "sha256":  "D56F2D779DA35F06CEF4B82126558E3400D91FE5BBAF4284AFAE5D7F94262992"
+                  },
+                  {
+                      "path":  "skills-source/doc-change-ownership/SKILL.md",
+                      "bytes":  2039,
+                      "sha256":  "6EA02558EFEAF21C714D777A65E34650705149E031336026FB57192ED1019813"
+                  },
+                  {
+                      "path":  "skills-source/doc-architecture/SKILL.md",
+                      "bytes":  2003,
+                      "sha256":  "38D8B95CCB8350AE804B3F35245581B843AA4417A9B6FDDF2834ECAAAC022486"
+                  },
+                  {
+                      "path":  "skills-source/doc-architecture/agents/openai.yaml",
+                      "bytes":  168,
+                      "sha256":  "1772D0DBC32FF38B8E446838AF4D70FF496D234DC3E45FFD64D2140D02CE37DF"
+                  },
+                  {
+                      "path":  "skills-source/doc-clarification/SKILL.md",
+                      "bytes":  1386,
+                      "sha256":  "D81B68D3B07B601CD6C6091F211EB4846F4920CEF60A28CE31F5DF41F4493909"
+                  },
+                  {
+                      "path":  "skills-source/doc-clarification/agents/openai.yaml",
+                      "bytes":  204,
+                      "sha256":  "EAAE0A9D82FB7ED60330DE6650C902C52528EDD7CBD21DA7E4B603092FE09824"
+                  },
+                  {
+                      "path":  "skills-source/doc-change-ownership/agents/openai.yaml",
+                      "bytes":  172,
+                      "sha256":  "863C6B0228225F62B672744F12069C90EB2641B94D6389A12E8CD95F92AF2EE0"
+                  },
+                  {
+                      "path":  "skills-source/doc-change-ownership/assets/template.md",
+                      "bytes":  434,
+                      "sha256":  "124147D84F2B1D5B8092A2680ED0891945EC2AE93C0DB4CA443D4620B8D7D8CC"
+                  },
+                  {
+                      "path":  "skills-source/doc-api/assets/template.md",
+                      "bytes":  456,
+                      "sha256":  "11418849F182C7335E825274E2C6370779454010AD3636D675B79D8442FD732D"
+                  },
+                  {
+                      "path":  "skills-source/deployment-router/agents/openai.yaml",
+                      "bytes":  231,
+                      "sha256":  "0C30132852AA9A6C22B6C6894DD59FC9C045DA99EAB77372862CC39872DA273C"
+                  },
+                  {
+                      "path":  "skills-source/doc-acceptance/SKILL.md",
+                      "bytes":  2003,
+                      "sha256":  "ED371203488E030A6CE0DBB8FC8DE120F97E2CC6AC390BD182730B84F03D4D8C"
+                  },
+                  {
+                      "path":  "skills-source/decision-ledger/agents/openai.yaml",
+                      "bytes":  218,
+                      "sha256":  "2AE4ABCB0F3FE95BFD038F372B2FA52EFB5947DC5108F21EE372F64E5643313F"
+                  },
+                  {
+                      "path":  "skills-source/deployment-router/SKILL.md",
+                      "bytes":  1284,
+                      "sha256":  "25733A0E054131CC11B5D4E7298ADE8313A0EDD3A38C3E5579A4CD87BE7DA844"
+                  },
+                  {
+                      "path":  "skills-source/doc-api/SKILL.md",
+                      "bytes":  1988,
+                      "sha256":  "EDDA736444D59DAD2F27D0FC6FFDB6DD09B4762F6D2C707EECADCFFBBB4DC346"
+                  },
+                  {
+                      "path":  "skills-source/doc-api/agents/openai.yaml",
+                      "bytes":  159,
+                      "sha256":  "BA7C464FE83B64B4D18DE609ED9187940BCDA720CB4F93F03B3D62416416FA88"
+                  },
+                  {
+                      "path":  "skills-source/doc-acceptance/agents/openai.yaml",
+                      "bytes":  166,
+                      "sha256":  "81C17D8F063304B711455F2AFB1397DFC56DB1E12CA8ABF2859A1404F7B33D9C"
+                  },
+                  {
+                      "path":  "skills-source/doc-acceptance/assets/template.md",
+                      "bytes":  429,
+                      "sha256":  "0475178B925CB8A82A7E894555C8C8B0721F5FB0C92C10E768ACFCEE9D61B018"
+                  },
+                  {
+                      "path":  "project-template/.codex/harness/memory-index.json",
+                      "bytes":  155,
+                      "sha256":  "0461468896544A3B18633325F648BB59951B67F1AD50DAC3B972FD2E8E144CB6"
+                  },
+                  {
+                      "path":  "project-template/.codex/harness/memory-index.schema.json",
+                      "bytes":  1141,
+                      "sha256":  "918C8BBDBFD2631CC94A014934FE4D4B8E1FE7F006F9E4B32BFB9CE8215ACBB3"
+                  },
+                  {
+                      "path":  "project-template/.codex/harness/lifecycle-state-machine.json",
+                      "bytes":  3244,
+                      "sha256":  "2B45F00CAE965AE6F5FCB2A7E4675730181E23678F1C056C3A0B497A2559D465"
+                  },
+                  {
+                      "path":  "project-template/.codex/harness/lifecycle-state-machine.schema.json",
+                      "bytes":  1193,
+                      "sha256":  "CE27ACD2445839B33E774C28914AE3060556C822CA3BBCA24BE5C8E753527950"
+                  },
+                  {
+                      "path":  "project-template/.codex/harness/plan-disclosure-state.json",
+                      "bytes":  115,
+                      "sha256":  "A9115717DE9A2F982C3A279E31217A7A93C43ECDB4201E7FA16917ECA7B978F5"
+                  },
+                  {
+                      "path":  "project-template/.codex/harness/plan-disclosure-state.schema.json",
+                      "bytes":  1437,
+                      "sha256":  "D7142AD28ADFD1B0B5D5735DCBFABB7114966E07022B89FD918590254BDF7E5C"
+                  },
+                  {
+                      "path":  "project-template/.codex/harness/memory-policy.json",
+                      "bytes":  1175,
+                      "sha256":  "438A0EEE00BF5CDA0EDE4D72A4AB8B838F416CB603FDF0F090E7A7E3B2175491"
+                  },
+                  {
+                      "path":  "project-template/.codex/harness/memory-policy.schema.json",
+                      "bytes":  2289,
+                      "sha256":  "D01EEEA1976AE26FD1E9718D001E43246B101971C888667CCEFBED00966A6D80"
+                  },
+                  {
+                      "path":  "project-template/.codex/harness/ledger-retention.schema.json",
+                      "bytes":  1204,
+                      "sha256":  "9D2211400731E6E280E91363FDF4843C63DDDA2B2C32BEC14B3B17B647A0D555"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks.json",
+                      "bytes":  4353,
+                      "sha256":  "6F9BA55E28C9F5FA8668E2E79A3BEC6F52FEC7720A481B5A8465F96462D21B22"
+                  },
+                  {
+                      "path":  "project-template/.codex/harness/document-controllers.json",
+                      "bytes":  36207,
+                      "sha256":  "037D3996752E6AB61C22A6EE158EB2A48C75ECDD531429052336CBC698301099"
+                  },
+                  {
+                      "path":  "AGENTS.md",
+                      "bytes":  11402,
+                      "sha256":  "9E0F399BCE9055DE4251FF5DABB0FD012EEB2D71132B1C459BFFC679F333404C"
+                  },
+                  {
+                      "path":  "retired-project-assets.json",
+                      "bytes":  240,
+                      "sha256":  "8436CA613779AA18763A8A770912AA213DD191E307E527C936A4BA40DE4CC296"
+                  },
+                  {
+                      "path":  "project-template/.codex/harness/index.schema.json",
+                      "bytes":  2336,
+                      "sha256":  "EB2F92A70B8A177695B23B41B24FBAD1ABE6271CB59A36EC2BF9F3EDF86966D3"
+                  },
+                  {
+                      "path":  "project-template/.codex/harness/ledger-retention.json",
+                      "bytes":  1245,
+                      "sha256":  "D98F1E9F3E9B52196BC2F7167DE5814AE8AC4A66898A1D77B397060CA664E354"
+                  },
+                  {
+                      "path":  "project-template/.codex/harness/document-controllers.schema.json",
+                      "bytes":  3425,
+                      "sha256":  "DB1B6F23E42BA8A8655C07EB860B7660663AB928A1938F7382E9082709A3E735"
+                  },
+                  {
+                      "path":  "project-template/.codex/harness/index.json",
+                      "bytes":  1388,
+                      "sha256":  "013FC7C899FF7D590219FDF184B6CF5C9537DE2FA59B20D4AE65278C45577456"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/memory-short-to-long.ps1",
+                      "bytes":  6692,
+                      "sha256":  "03CF9CBA640A1784D459AC2B18FE1D6A71751AC38A1FC2FD416A713494003D59"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/memory-turn-closeout.ps1",
+                      "bytes":  4268,
+                      "sha256":  "C6C5CE57D4B3373523C79CED8FAB4AAFFCBF3AA3AF40277DDA7351D9CFECEAF8"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/memory-prompt-capture.ps1",
+                      "bytes":  7178,
+                      "sha256":  "B1FB1B1FEE519078833BE42F8D89E9A05E8CB913BA258867E4B852CFA508C63A"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/memory-runtime.ps1",
+                      "bytes":  1714,
+                      "sha256":  "60CBE95C8791352423650C8F7AD16DBEC073BB41C35A2F4D36557BCC1F2850A6"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/posttool-change-capture.ps1",
+                      "bytes":  827,
+                      "sha256":  "C8F6FE175638E52D54D5C4801342D6011B511FFAFEA9438E736D378B94DE9516"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/precompact-handoff.ps1",
+                      "bytes":  2089,
+                      "sha256":  "4C4405F402D22FB11003F920840A6BCCC1515BA6AF31D423F4E3387C43211EDF"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/plan-disclosure-integrity.ps1",
+                      "bytes":  4862,
+                      "sha256":  "2FC3A265D321900BDFEB1E155774394AA3365DAFA0B21D679314C6C556BD70F3"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/plan-disclosure-runtime.ps1",
+                      "bytes":  10863,
+                      "sha256":  "05F25E938437C2F55B0FA6DE979C50F9FA51381F8230CD3B9F70E6510A83DB26"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/memory-orphan-repair.ps1",
+                      "bytes":  3642,
+                      "sha256":  "B89D43B541BB8ABA4D9FAE83EF7FE41F5C7D6335C31B5EA0FFC9443037A86E75"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/document-controller-integrity.ps1",
+                      "bytes":  2321,
+                      "sha256":  "99708333734DC695F72B72398943A1585FDCA622A7FCD1B847BD0738E3248CAE"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/ledger-history-archiver.ps1",
+                      "bytes":  7207,
+                      "sha256":  "68656975BBF1AFBDBC5343F8DD85A11FC149E2295C0AE179BE83635D839BF1FA"
+                  },
+                  {
+                      "path":  "project-template/.codex/harness/runtime-events.jsonl",
+                      "bytes":  0,
+                      "sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/common.ps1",
+                      "bytes":  11254,
+                      "sha256":  "3880BEB01DE87772FCEC35D086D87E30D262582657BF3BEFE1904C5E3D7FCD7D"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/memory-compact.ps1",
+                      "bytes":  3836,
+                      "sha256":  "207D410EDD34406ECB1F164498EA7A6DEFDB2B030468F1DDA0068BA23983ED9E"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/memory-integrity.ps1",
+                      "bytes":  6152,
+                      "sha256":  "F35532B5EFCE02EFDC52D5186F1F0B7C2F93D9915700BFAAFE35C1F89BDFEA2A"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/ledger-history-integrity.ps1",
+                      "bytes":  2021,
+                      "sha256":  "A3AC205F5247F2DF56AE6D0E6D751BFF654F5563411FA837F8BBEDEA917B49F4"
+                  },
+                  {
+                      "path":  "project-template/.codex/hooks/lifecycle-state-integrity.ps1",
+                      "bytes":  2023,
+                      "sha256":  "D8638C2DC93F3BD7ADE120C900C3C5520F03CDC76C486A6240AABC5FC65799E0"
+                  },
+                  {
+                      "path":  "skills-source/doc-issue/assets/template.md",
+                      "bytes":  456,
+                      "sha256":  "FC93427BE2E1165F95517FAF24F9D555AE9D7951B454A0AF1C44E3D26C973184"
+                  },
+                  {
+                      "path":  "skills-source/doc-knowledge-candidates/SKILL.md",
+                      "bytes":  2025,
+                      "sha256":  "B30A1DC2D4307D214F96FFEB2A81D42C574DC67A78FFACACDD2443A87B97B5AD"
+                  },
+                  {
+                      "path":  "skills-source/doc-issue/SKILL.md",
+                      "bytes":  2109,
+                      "sha256":  "6CB6CDD96438F7B5B9994D39EB8153D46EDBE960E5955C9A5EEA49039D5BD72E"
+                  },
+                  {
+                      "path":  "skills-source/doc-issue/agents/openai.yaml",
+                      "bytes":  161,
+                      "sha256":  "46FAB5C73F07138416CA9DF0EF48C18E9CE3662889F9FF5D64DDB9EE00A90C3C"
+                  },
+                  {
+                      "path":  "skills-source/doc-knowledge-hub/SKILL.md",
+                      "bytes":  2021,
+                      "sha256":  "2F24D4145ED6F1ADC63CFC88F0FA572B041223AAEDF458DE797C90F9A90A8C77"
+                  },
+                  {
+                      "path":  "skills-source/doc-knowledge-hub/agents/openai.yaml",
+                      "bytes":  169,
+                      "sha256":  "513DC80664CE56AA5CE597FFA85089C69BF7C746AB693411F00C57E981CC15EA"
+                  },
+                  {
+                      "path":  "skills-source/doc-knowledge-candidates/agents/openai.yaml",
+                      "bytes":  176,
+                      "sha256":  "7BF49496EA1ED23A13521E2441DD0F043EB36F38BBB532DE700D65BEBAE8D227"
+                  },
+                  {
+                      "path":  "skills-source/doc-knowledge-candidates/assets/template.md",
+                      "bytes":  471,
+                      "sha256":  "995C84239FDB6C348235AA74C24564D584B167C1AAFDFB8A31AA9C09188BA555"
+                  },
+                  {
+                      "path":  "skills-source/doc-hook-run-log/assets/template.md",
+                      "bytes":  461,
+                      "sha256":  "198D9E8AEE46DBA04E8E999F7BFE26E7AC3FABE864F6FFEB490A9D673533398F"
+                  },
+                  {
+                      "path":  "skills-source/doc-history-archive/assets/template.md",
+                      "bytes":  362,
+                      "sha256":  "1B1102D2C37B9AD9C533DB37F50EC174D574C4B278660CB20FB399E686464AFB"
+                  },
+                  {
+                      "path":  "skills-source/doc-history-index/SKILL.md",
+                      "bytes":  398,
+                      "sha256":  "4C07DF5B2B4B07DB84BA982CE062FF70D29D728655FC611C3489F79418054382"
+                  },
+                  {
+                      "path":  "skills-source/doc-history-archive/SKILL.md",
+                      "bytes":  446,
+                      "sha256":  "801E6E5A37F4EE1DF3481319AE9241BAF6091DB6D90AC15352ABA6AD9FCAE48A"
+                  },
+                  {
+                      "path":  "skills-source/doc-history-archive/agents/openai.yaml",
+                      "bytes":  189,
+                      "sha256":  "FCE155CE2D1637D47FDE4051BC43FC5EE8326553FE93BAB811BFEAAB105E0102"
+                  },
+                  {
+                      "path":  "skills-source/doc-hook-run-log/SKILL.md",
+                      "bytes":  899,
+                      "sha256":  "1A639EC7D7568A61093414F6051C8F45FE7F5CFF03ED2CC5AF71FB4B0BD3EA64"
+                  },
+                  {
+                      "path":  "skills-source/doc-hook-run-log/agents/openai.yaml",
+                      "bytes":  183,
+                      "sha256":  "320D35E1529144CBD478DC1DD4140FB56D12DB4D67458462E1409FADE1D45BD1"
+                  },
+                  {
+                      "path":  "skills-source/doc-history-index/agents/openai.yaml",
+                      "bytes":  187,
+                      "sha256":  "0C9FEDB15C1633FEE744E8BB9C0EFDE761C8B70C12E226E3FC424A881FB18A97"
+                  },
+                  {
+                      "path":  "skills-source/doc-history-index/assets/template.md",
+                      "bytes":  358,
+                      "sha256":  "F09F725C2CAEA3956F62890823B19A58C660665A62BB46264D0935F35D1CD9DA"
+                  },
+                  {
+                      "path":  "skills-source/doc-long-memory/agents/openai.yaml",
+                      "bytes":  185,
+                      "sha256":  "3E954D98118ED1F43B419B82D9611AEF6C6BB4C305768F95F1CA0824D242BD2F"
+                  },
+                  {
+                      "path":  "skills-source/doc-long-memory/assets/template.md",
+                      "bytes":  352,
+                      "sha256":  "3B2E05F9210AC688FC880A39A75CD11AFE4ADFEF2838B1713AC8F4E42FC98455"
+                  },
+                  {
+                      "path":  "skills-source/doc-llm-wiki-operations/assets/template.md",
+                      "bytes":  818,
+                      "sha256":  "9FE2EBED2BAC816A80AD64BBE8A4801031C14CC2DE6A033EBF133EA8CD247065"
+                  },
+                  {
+                      "path":  "skills-source/doc-long-memory/SKILL.md",
+                      "bytes":  558,
+                      "sha256":  "8E7DCB8481C0E8EF13E8D556DE544E8DA8E21E3C1C442F56CED4C5F97D384F1D"
+                  },
+                  {
+                      "path":  "skills-source/doc-memory-rules/assets/template.md",
+                      "bytes":  856,
+                      "sha256":  "275D527753C83706782AB4E169B5A2EE4C01BFCE0E962C75E23D43BA415F6391"
+                  },
+                  {
+                      "path":  "skills-source/doc-metrics/SKILL.md",
+                      "bytes":  1955,
+                      "sha256":  "6613DA19DC20CEBCFA213CAA3A952A48BCBC929D90281268C70901C5CF37097D"
+                  },
+                  {
+                      "path":  "skills-source/doc-memory-rules/SKILL.md",
+                      "bytes":  448,
+                      "sha256":  "9AC51A2C6DA7702148DF529DC2980D8A241EBF2813607000C2211606D6524E5F"
+                  },
+                  {
+                      "path":  "skills-source/doc-memory-rules/agents/openai.yaml",
+                      "bytes":  186,
+                      "sha256":  "FF5E5605326DB619C9D2F449AA87428A210CA32B9F9AF8497F3339384D3D256B"
+                  },
+                  {
+                      "path":  "skills-source/doc-llm-wiki-operations/agents/openai.yaml",
+                      "bytes":  193,
+                      "sha256":  "AB29787478C222AC024987E4B2D9B0C9129731669815BF388EB0C45B9D362E58"
+                  },
+                  {
+                      "path":  "skills-source/doc-knowledge-router/agents/openai.yaml",
+                      "bytes":  190,
+                      "sha256":  "D69BBD78A2BF78ECFEE7FA99A44F428420E5F8BBE4EBF78F22C40A5F5FF63D14"
+                  },
+                  {
+                      "path":  "skills-source/doc-knowledge-router/assets/template.md",
+                      "bytes":  716,
+                      "sha256":  "809221EC1BC51C01F887A94E25663DB84D856F491B727E9B31DC4131EEAA974B"
+                  },
+                  {
+                      "path":  "skills-source/doc-knowledge-hub/assets/template.md",
+                      "bytes":  429,
+                      "sha256":  "CF6175AEC78A74D719071F9BA8C80F8ED7B48EE21DF517D5DE9E16190052D01F"
+                  },
+                  {
+                      "path":  "skills-source/doc-knowledge-router/SKILL.md",
+                      "bytes":  455,
+                      "sha256":  "07C93E49277F72AF363F0E99659B11BD52D1EEBEDC765D522B91CB11CF3F09CC"
+                  },
+                  {
+                      "path":  "skills-source/doc-knowledge-sync/assets/template.md",
+                      "bytes":  472,
+                      "sha256":  "CC568D6B5EDCA4FDA93362C357A8A1ADF76CE4EC93DA8037E7054F30DB90346D"
+                  },
+                  {
+                      "path":  "skills-source/doc-llm-wiki-operations/SKILL.md",
+                      "bytes":  459,
+                      "sha256":  "47EC138E54FD3DDD19BE11DF5FAE66639A3F6A4F607D9368A4A7F6326C752BD1"
+                  },
+                  {
+                      "path":  "skills-source/doc-knowledge-sync/SKILL.md",
+                      "bytes":  2008,
+                      "sha256":  "C3F0FE87F8182B0350DEE8A60E0C0564600F85B04827C4FDEE3DF959EB6BFCD6"
+                  },
+                  {
+                      "path":  "skills-source/doc-knowledge-sync/agents/openai.yaml",
+                      "bytes":  170,
+                      "sha256":  "731BE8F78ED21C458ED3A72FC5F3C0F1057ACF0A66ABE12FB00BEE72142E6DDB"
+                  },
+                  {
+                      "path":  "skills-source/doc-data-model/agents/openai.yaml",
+                      "bytes":  166,
+                      "sha256":  "CD26F96079F58F4E6F317FA972478C620D3308C36E8386ABDAE6B99050BA3259"
+                  },
+                  {
+                      "path":  "skills-source/doc-data-model/assets/template.md",
+                      "bytes":  470,
+                      "sha256":  "B6364BA9ED26154ADD4D71B81E686AD64F87AE112B4330C9AFEA54745A276F5C"
+                  },
+                  {
+                      "path":  "skills-source/doc-data-lineage/assets/template.md",
+                      "bytes":  436,
+                      "sha256":  "B20D77702FC9897244B25A43580C6294836A7E42F32A2225DCD43B8D32C6CBEC"
+                  },
+                  {
+                      "path":  "skills-source/doc-data-model/SKILL.md",
+                      "bytes":  2002,
+                      "sha256":  "0EB7B2044FC89FB8DB69B84E2D81B42D743C1621E9FB342B85726524EB5D7F86"
+                  },
+                  {
+                      "path":  "skills-source/doc-debug/assets/template.md",
+                      "bytes":  443,
+                      "sha256":  "D188BCDF54A007916B5A314AA1A5BE7AED39E393B3E201ACB50CBD4C327ABED1"
+                  },
+                  {
+                      "path":  "skills-source/doc-decision/SKILL.md",
+                      "bytes":  2010,
+                      "sha256":  "7F2264F7FDC948BDCA9E2F75CE99253F61CAFCBA8EC574E652326A6C8D1947F5"
+                  },
+                  {
+                      "path":  "skills-source/doc-debug/SKILL.md",
+                      "bytes":  2036,
+                      "sha256":  "14D6ECA70ADA43D28E49567BEF1A3E51BED10D23600C00442BCF39283195193F"
+                  },
+                  {
+                      "path":  "skills-source/doc-debug/agents/openai.yaml",
+                      "bytes":  161,
+                      "sha256":  "D60CC37C14073B25AA997A245231E3119C245C803F917EAA07889D31FDC90D3B"
+                  },
+                  {
+                      "path":  "skills-source/doc-data-lineage/agents/openai.yaml",
+                      "bytes":  168,
+                      "sha256":  "37F3FB57921B4F5B61B3AFCCA9B894FD9AB1AA5E54A4AF76FF5057CF0E18D32D"
+                  },
+                  {
+                      "path":  "skills-source/doc-code-review/agents/openai.yaml",
+                      "bytes":  167,
+                      "sha256":  "4834E75092FD8CF70FB8E925106F83B5D1C4F1AE00EF778A7FC65C7DADBF4F2D"
+                  },
+                  {
+                      "path":  "skills-source/doc-code-review/assets/template.md",
+                      "bytes":  418,
+                      "sha256":  "D6D2971ECB2EB2077CA2C47FEB788B4073F172D7CFB753B94DD9B11D599513C4"
+                  },
+                  {
+                      "path":  "skills-source/doc-clarification/assets/template.md",
+                      "bytes":  634,
+                      "sha256":  "5B221A617BA0E360F0F859BAD680F2ED7E277FCB5590448B0739EEF1E774511D"
+                  },
+                  {
+                      "path":  "skills-source/doc-code-review/SKILL.md",
+                      "bytes":  2002,
+                      "sha256":  "0BA6E0DB0E53FD782D4142F982FED7E9A4C9355470591D75AFC28670412EF12E"
+                  },
+                  {
+                      "path":  "skills-source/doc-construction-framework/assets/template.md",
+                      "bytes":  480,
+                      "sha256":  "A742892A062CBDC82CF6F3FA4BAFF0471E25BE9F179B6677F0E51BFAB6DA22A4"
+                  },
+                  {
+                      "path":  "skills-source/doc-data-lineage/SKILL.md",
+                      "bytes":  1999,
+                      "sha256":  "178D283478DE54401622D300B0180880DD0E43FD7462192D0AC9B0BA59916787"
+                  },
+                  {
+                      "path":  "skills-source/doc-construction-framework/SKILL.md",
+                      "bytes":  2030,
+                      "sha256":  "3804541D20F977C667EFAE4966F4934DCC2597A54D4A0FC67F496B8D9B26861D"
+                  },
+                  {
+                      "path":  "skills-source/doc-construction-framework/agents/openai.yaml",
+                      "bytes":  178,
+                      "sha256":  "4D28D0A40E652578E00FFCFB1CBDE67748C141E866C3B2068D8825D752A77F53"
+                  },
+                  {
+                      "path":  "skills-source/doc-git-promotion/SKILL.md",
+                      "bytes":  2024,
+                      "sha256":  "EF1BD6A5433E082A355BEF289BDD7F4760A0F881DD9E5C35813D8D5C442A5E69"
+                  },
+                  {
+                      "path":  "skills-source/doc-git-promotion/agents/openai.yaml",
+                      "bytes":  169,
+                      "sha256":  "35E60BDC98AF433BD6BEC36903CB3395D975F1DAB7AFCBF8C1223DADD90292BF"
+                  },
+                  {
+                      "path":  "skills-source/doc-environment/agents/openai.yaml",
+                      "bytes":  167,
+                      "sha256":  "1B862128098BBD6A1894ACD14EFB700324985A7256737B75E8C8B3FE7C7BE590"
+                  },
+                  {
+                      "path":  "skills-source/doc-environment/assets/template.md",
+                      "bytes":  459,
+                      "sha256":  "10DF7C386AE8127F63A73DC29C20F7CDCDC499919EED9370084662D5CA6BC8C0"
+                  },
+                  {
+                      "path":  "skills-source/doc-handoff/agents/openai.yaml",
+                      "bytes":  163,
+                      "sha256":  "36C0A5CD884E0304556A45803819293CFB538B0F707E02BE18CB4618EA57E6D7"
+                  },
+                  {
+                      "path":  "skills-source/doc-handoff/assets/template.md",
+                      "bytes":  480,
+                      "sha256":  "A047F5EDBE02905385FCB3154E7818EB632CEE49874C3E8391CB80C4D6D90C3B"
+                  },
+                  {
+                      "path":  "skills-source/doc-git-promotion/assets/template.md",
+                      "bytes":  493,
+                      "sha256":  "E06B178A0A55EEB3ADE6E43E0F3AE53285E424200CE99C314F0A67D50B1DAB95"
+                  },
+                  {
+                      "path":  "skills-source/doc-handoff/SKILL.md",
+                      "bytes":  2001,
+                      "sha256":  "BC2B8A53FB48207033786137E28C5E62C5E43ACB6521A911B361A8C45E723568"
+                  },
+                  {
+                      "path":  "skills-source/doc-environment/SKILL.md",
+                      "bytes":  2020,
+                      "sha256":  "E2F7CBC6F1926DE233DF21EA2419EC39F171251B5B162D2A065F31ACC690F464"
+                  },
+                  {
+                      "path":  "skills-source/doc-deployment/SKILL.md",
+                      "bytes":  1982,
+                      "sha256":  "E097D842F6C0A299AC95CC7084E77D7812CEA66C3456D4AECAD4FE3BE19FC19B"
+                  },
+                  {
+                      "path":  "skills-source/doc-deployment/agents/openai.yaml",
+                      "bytes":  166,
+                      "sha256":  "9334273DB9DE4C465165845D7ECDE20A575E9FF48D7625C40C63720D9B2F81FF"
+                  },
+                  {
+                      "path":  "skills-source/doc-decision/agents/openai.yaml",
+                      "bytes":  164,
+                      "sha256":  "95773A01FF96C58FF5B7C4A6C19A6833AE0EE42835D989D86E3089155C0598EB"
+                  },
+                  {
+                      "path":  "skills-source/doc-decision/assets/template.md",
+                      "bytes":  464,
+                      "sha256":  "67B981B7B1A90625A91E718E9237191514082219999F887AC3D5A77A5A883C25"
+                  },
+                  {
+                      "path":  "skills-source/doc-design/agents/openai.yaml",
+                      "bytes":  162,
+                      "sha256":  "64A4B7C47C4C96886521ED78C285C343B62D04AC31BC046C817FB2EBCCB94FBC"
+                  },
+                  {
+                      "path":  "skills-source/doc-design/assets/template.md",
+                      "bytes":  486,
+                      "sha256":  "815AD3B9522EFDCB8DF68FC22A89FA996FED5134F356400467F3C9C6FFC41A0B"
+                  },
+                  {
+                      "path":  "skills-source/doc-deployment/assets/template.md",
+                      "bytes":  444,
+                      "sha256":  "AA88E297282285248868856F8B1E6F431E78BA87FD0949A696C01709B794D393"
+                  },
+                  {
+                      "path":  "skills-source/doc-design/SKILL.md",
+                      "bytes":  2053,
+                      "sha256":  "97DE8D931FDA15CD52AF734F99D7679D08B8BC0E8BFCEBCE55AC3FC5B27BE590"
+                  }
+              ]
+}

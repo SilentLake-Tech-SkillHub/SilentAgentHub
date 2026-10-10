@@ -1,0 +1,4 @@
+interface:
+  display_name: "Memory Turn Closeout"
+  short_description: "Close a turn using evidence and migrate terminal Memory"
+  default_prompt: "Use $memory-turn-closeout to verify this turn against formal evidence and update project Memory safely."

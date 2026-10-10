@@ -1,0 +1,4 @@
+interface:
+  display_name: "Harness Router"
+  short_description: "Route tasks to project records, modules, and skills"
+  default_prompt: "Use $harness-router to select the minimal project context and required skills."

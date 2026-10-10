@@ -1,0 +1,11 @@
+{
+  "version": "V5.2.5",
+  "identity": "production",
+  "packageRoot": "<HOME>/.codex/harness/V5.2.5",
+  "manifest": "<HOME>/.codex/harness/V5.2.5/manifest.json",
+  "installedAt": "2026-08-10T01:34:24+08:00",
+  "agentsSha256": "9E0F399BCE9055DE4251FF5DABB0FD012EEB2D71132B1C459BFFC679F333404C",
+  "rollbackPackage": "<HOME>/.codex/harness/V5.2.4",
+  "deploymentBackup": "<HOME>/.codex/harness/deployment-backups/portable-20260810-013424-macos-manual",
+  "installerMode": "macos-manual-compatible"
+}

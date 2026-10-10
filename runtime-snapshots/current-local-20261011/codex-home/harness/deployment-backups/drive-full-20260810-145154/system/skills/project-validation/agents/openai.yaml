@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Validation"
+  short_description: "Select and run project checks with evidence and fallbacks"
+  default_prompt: "Use $project-validation to validate this change with the project-appropriate checks."

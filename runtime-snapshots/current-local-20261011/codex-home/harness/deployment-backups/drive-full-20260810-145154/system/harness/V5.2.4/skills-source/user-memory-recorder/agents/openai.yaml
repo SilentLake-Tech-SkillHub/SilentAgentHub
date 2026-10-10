@@ -1,0 +1,4 @@
+interface:
+  display_name: "User Memory Recorder"
+  short_description: "Govern project Short and Long Memory lifecycle"
+  default_prompt: "Use $user-memory-recorder to capture, repair, close, migrate, or retrieve project conversation Memory safely."

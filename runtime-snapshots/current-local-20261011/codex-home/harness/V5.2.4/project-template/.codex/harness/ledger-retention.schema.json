@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "enabled", "historyRoot", "index", "transactions", "readPolicy", "ledgers"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "version": {"type": "string", "minLength": 1},
+    "enabled": {"type": "boolean"},
+    "historyRoot": {"type": "string", "minLength": 1},
+    "index": {"type": "string", "minLength": 1},
+    "transactions": {"type": "string", "minLength": 1},
+    "readPolicy": {"const": "cold_explicit_or_trace"},
+    "ledgers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "idField", "statusField", "terminalStates", "archiveName"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "idField": {"type": "string", "minLength": 1},
+          "statusField": {"type": "string", "minLength": 1},
+          "terminalStates": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true},
+          "archiveName": {"type": "string", "pattern": "\\.md$"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

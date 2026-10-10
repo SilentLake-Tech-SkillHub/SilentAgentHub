@@ -1,0 +1,4 @@
+interface:
+  display_name: "LLM Wiki Maintenance"
+  short_description: "Ingest, query, lint, and maintain the research knowledge hub"
+  default_prompt: "Use $llm-wiki-maintenance to update and validate the LLM Wiki knowledge hub."

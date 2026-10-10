@@ -1,0 +1,198 @@
+{
+  "schema_version": 3,
+  "profile": "default-compact-resume",
+  "precedence": [
+    "current_explicit_user_requirements",
+    "user_template_or_selected_accepted_format",
+    "default_profile"
+  ],
+  "purpose": "Fallback formatting for a compact resume; adopt only when a higher-priority source does not specify a property. Record the resolved role styles privately before building.",
+  "page": {
+    "size": "A4",
+    "orientation": "portrait",
+    "margins_pt": {
+      "top": 42.5,
+      "bottom": 35.5,
+      "left": 39.65,
+      "right": 36.85
+    }
+  },
+  "fonts": {
+    "latin": "Times New Roman",
+    "cjk": "Songti SC",
+    "verify_available_on_renderer_and_target_viewer": true
+  },
+  "roles": {
+    "name": {
+      "size_pt": 16,
+      "bold": true,
+      "line_spacing": {
+        "rule": "auto",
+        "multiple": 1.04
+      },
+      "space_after_pt": 2,
+      "color": "17365D"
+    },
+    "english_name": {
+      "size_pt": 9.5,
+      "bold": true
+    },
+    "role_headline": {
+      "size_pt": 12,
+      "bold": true,
+      "line_spacing": {
+        "rule": "auto",
+        "multiple": 1.04
+      },
+      "color": "174A7E"
+    },
+    "section_heading": {
+      "size_pt": 12,
+      "bold": true,
+      "space_before_pt": 7,
+      "space_after_pt": 3,
+      "keep_with_next": true,
+      "line_spacing": {
+        "rule": "auto",
+        "multiple": 1.04
+      },
+      "color": "17365D",
+      "paragraph_bottom_border": {
+        "style": "single",
+        "color": "17365D",
+        "size_eighth_pt": 8,
+        "space_pt": 2
+      }
+    },
+    "institution_company": {
+      "size_pt": 9.5,
+      "bold": true,
+      "space_before_pt": 5,
+      "space_after_pt": 2,
+      "line_spacing": {
+        "rule": "auto",
+        "multiple": 1.04
+      },
+      "alignment": "left",
+      "shading": "EFF3F8",
+      "keep_with_next": true
+    },
+    "project_heading": {
+      "size_pt": 9.5,
+      "bold": true,
+      "space_before_pt": 0.75,
+      "space_after_pt": 1.5,
+      "keep_with_next": true,
+      "line_spacing": {
+        "rule": "auto",
+        "multiple": 1.04
+      },
+      "color": "000000"
+    },
+    "body": {
+      "size_pt": 8.5,
+      "space_after_pt": 1,
+      "line_spacing": {
+        "rule": "auto",
+        "multiple": 1.04
+      },
+      "alignment": "left"
+    },
+    "date": {
+      "size_pt": 8.5,
+      "bold": false,
+      "alignment": "right_tab",
+      "tab_position": "effective_text_right_edge",
+      "trim_trailing_alignment_spaces": true
+    },
+    "body_list": {
+      "size_pt": 8.5,
+      "space_after_pt": 1.5,
+      "line_spacing": {
+        "rule": "auto",
+        "multiple": 1.04
+      },
+      "alignment": "both",
+      "native_numbering": {
+        "format": "bullet",
+        "marker": "•",
+        "left_indent_pt": 11.5,
+        "hanging_indent_pt": 8
+      }
+    }
+  },
+  "emphasis": {
+    "native_word_bold": true,
+    "selection": "ownership, consequential choices, evidence; avoid whole-paragraph bold",
+    "cjk_weight": {
+      "preserve_selected_family": true,
+      "stronger_face": "Select an available face only when required by the selected format or current feedback; record and verify it privately.",
+      "native_bold_flags": [
+        "b",
+        "bCs"
+      ],
+      "label_scope": "Only user-approved prefix through the colon; preserve the remaining bullet and dates."
+    }
+  },
+  "links": {
+    "native_hyperlink": true,
+    "display": "actual_domain_or_user_selected_label"
+  },
+  "images": {
+    "preserve_user_assets": true,
+    "include_without_asset": false,
+    "reserve_photo_area_in_header": true
+  },
+  "quality": {
+    "resolve_inherited_paragraph_and_run_properties": true,
+    "fixed_line_height_must_not_clip_larger_runs": true,
+    "dates_share_right_edge_by_role": true,
+    "never_align_dates_by_space_padding": true,
+    "render_all_pages": true,
+    "check_reported_viewer_when_available": true,
+    "do_not_shrink_text_to_meet_page_count": true,
+    "full_template_fidelity_by_semantic_role": true,
+    "verify_lists_indents_heading_colors_rules_spacing_and_page_furniture": true,
+    "read_back_actual_in_use_deliverables": true,
+    "verify_priority_and_ordinary_roles_as_pair": true,
+    "preserve_explicit_category_headings": true,
+    "verify_visible_cjk_bold_against_regular_text": true,
+    "verify_rendered_emphasis_face_not_only_bold_flags": true
+  },
+  "locale_spacing": "Follow the users explicit Chinese-Latin/numeric spacing preference; preserve English phrase spaces.",
+  "emphasis_profiles": {
+    "ai_focus": {
+      "activation": "Use only when selected by the current user or present in the selected accepted reference; classify by actual project work.",
+      "roles": {
+        "priority_category": {
+          "size_pt": 11,
+          "bold": true,
+          "color": "174A7E",
+          "space_before_pt": 5,
+          "space_after_pt": 1.75,
+          "keep_with_next": true
+        },
+        "priority_project": {
+          "size_pt": 10,
+          "bold": true,
+          "color": "174A7E",
+          "keep_with_next": true
+        },
+        "ordinary_category": {
+          "size_pt": 9.5,
+          "bold": true,
+          "color": "000000",
+          "space_before_pt": 5,
+          "space_after_pt": 1.75,
+          "keep_with_next": true
+        },
+        "ordinary_project": {
+          "size_pt": 9.5,
+          "bold": true,
+          "color": "000000",
+          "keep_with_next": true
+        }
+      }
+    }
+  }
+}

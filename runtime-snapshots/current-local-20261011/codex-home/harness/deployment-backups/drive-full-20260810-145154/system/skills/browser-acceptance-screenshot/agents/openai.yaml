@@ -1,0 +1,4 @@
+interface:
+  display_name: "Browser Acceptance Screenshot"
+  short_description: "Verify web flows and capture visible acceptance evidence"
+  default_prompt: "Use $browser-acceptance-screenshot to verify this web flow and capture screenshots."

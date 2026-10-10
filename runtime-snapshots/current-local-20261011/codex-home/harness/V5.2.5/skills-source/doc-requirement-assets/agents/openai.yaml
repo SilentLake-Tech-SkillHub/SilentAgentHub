@@ -1,0 +1,4 @@
+interface:
+  display_name: "doc-requirement-assets"
+  short_description: "Harness V5 candidate skill"
+  default_prompt: "Use this skill according to the project Router."

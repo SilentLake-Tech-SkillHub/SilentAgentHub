@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deployment Router"
+  short_description: "Route deployments with authorization, validation, and rollback"
+  default_prompt: "Use $deployment-router to prepare and verify the correct deployment path."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Management Record Sync"
+  short_description: "Synchronize task, plan, issue, risk, and acceptance records"
+  default_prompt: "Use $management-record-sync to reconcile all management records for this task."

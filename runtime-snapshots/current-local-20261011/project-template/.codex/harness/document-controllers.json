@@ -1,0 +1,657 @@
+﻿{
+    "$schema":  "./document-controllers.schema.json",
+    "version":  "1.1.0",
+    "policy":  {
+                   "oneControllerPerDocument":  true,
+                   "routerPathOnly":  true,
+                   "forbiddenMarkdownArtifacts":  [
+                                                      "状态机.md"
+                                                  ],
+                   "runtimeEventLog":  ".codex/harness/runtime-events.jsonl",
+                   "lifecycleMachine":  ".codex/harness/lifecycle-state-machine.json",
+                   "humanLedgerContract":  {
+                                               "requiredFields":  [
+                                                                      "记录时间",
+                                                                      "触发需求 / 事件",
+                                                                      "调用 Skills / plugins",
+                                                                      "当前状态",
+                                                                      "关联",
+                                                                      "本次结果",
+                                                                      "下一步"
+                                                                  ],
+                                               "rawRuntimeSource":  ".codex/harness/runtime-events.jsonl",
+                                               "rule":  "Skills/scripts govern; Markdown preserves human-readable evidence."
+                                           }
+               },
+    "controllers":  [
+                        {
+                            "skill":  "doc-router",
+                            "path":  "ROUTER.md",
+                            "area":  "root",
+                            "condition":  "always",
+                            "template":  "SKILLS/doc-router/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "index",
+                            "readPolicy":  "always",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-readme",
+                            "path":  "README.md",
+                            "area":  "root",
+                            "condition":  "always",
+                            "template":  "SKILLS/doc-readme/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "always",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-architecture",
+                            "path":  "ARCHITECTURE.md",
+                            "area":  "root",
+                            "condition":  "architecture",
+                            "template":  "SKILLS/doc-architecture/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-clarification",
+                            "path":  "产品管理/clarification.md",
+                            "area":  "product",
+                            "condition":  "always",
+                            "template":  "SKILLS/doc-clarification/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-requirement-pool",
+                            "path":  "产品管理/需求变更记录.md",
+                            "area":  "product",
+                            "condition":  "product",
+                            "template":  "SKILLS/doc-requirement-pool/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "terminal_to_history",
+                            "statusField":  "状态",
+                            "terminalStates":  [
+                                                   "不做",
+                                                   "已关闭",
+                                                   "已取消"
+                                               ]
+                        },
+                        {
+                            "skill":  "doc-requirement-assets",
+                            "path":  "产品管理/需求素材索引.md",
+                            "area":  "product",
+                            "condition":  "product",
+                            "template":  "SKILLS/doc-requirement-assets/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-construction-framework",
+                            "path":  "产品管理/建设框架.md",
+                            "area":  "product",
+                            "condition":  "complex",
+                            "template":  "SKILLS/doc-construction-framework/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-design",
+                            "path":  "产品管理/Design.md",
+                            "area":  "product",
+                            "condition":  "design",
+                            "template":  "SKILLS/doc-design/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-product-acceptance",
+                            "path":  "产品管理/产品验收标准.md",
+                            "area":  "product",
+                            "condition":  "delivery",
+                            "template":  "SKILLS/doc-product-acceptance/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-plan",
+                            "path":  "流程管理/执行计划/\u003c任务ID\u003e_\u003c任务名\u003e/plans.md",
+                            "area":  "flow",
+                            "condition":  "complex",
+                            "template":  "SKILLS/doc-plan/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "dynamic-ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-task-ledger",
+                            "path":  "流程管理/任务管理.md",
+                            "area":  "flow",
+                            "condition":  "always",
+                            "template":  "SKILLS/doc-task-ledger/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "terminal_to_history",
+                            "statusField":  "状态",
+                            "terminalStates":  [
+                                                   "已验收",
+                                                   "已关闭",
+                                                   "已取消"
+                                               ]
+                        },
+                        {
+                            "skill":  "doc-decision",
+                            "path":  "流程管理/Decision.md",
+                            "area":  "flow",
+                            "condition":  "decision",
+                            "template":  "SKILLS/doc-decision/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-issue",
+                            "path":  "流程管理/问题流水.md",
+                            "area":  "flow",
+                            "condition":  "always",
+                            "template":  "SKILLS/doc-issue/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "terminal_to_history",
+                            "statusField":  "当前状态",
+                            "terminalStates":  [
+                                                   "已关闭"
+                                               ]
+                        },
+                        {
+                            "skill":  "doc-debug",
+                            "path":  "流程管理/debug记录.md",
+                            "area":  "flow",
+                            "condition":  "debug",
+                            "template":  "SKILLS/doc-debug/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-risk",
+                            "path":  "流程管理/风险阻塞清单.md",
+                            "area":  "flow",
+                            "condition":  "always",
+                            "template":  "SKILLS/doc-risk/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "terminal_to_history",
+                            "statusField":  "状态",
+                            "terminalStates":  [
+                                                   "已解除",
+                                                   "已关闭",
+                                                   "已接受"
+                                               ]
+                        },
+                        {
+                            "skill":  "doc-validation",
+                            "path":  "流程管理/Validation.md",
+                            "area":  "flow",
+                            "condition":  "engineering",
+                            "template":  "SKILLS/doc-validation/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-acceptance",
+                            "path":  "流程管理/验收清单.md",
+                            "area":  "flow",
+                            "condition":  "delivery",
+                            "template":  "SKILLS/doc-acceptance/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-environment",
+                            "path":  "流程管理/环境状态.md",
+                            "area":  "flow",
+                            "condition":  "deployable",
+                            "template":  "SKILLS/doc-environment/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-operations",
+                            "path":  "流程管理/运维记录.md",
+                            "area":  "flow",
+                            "condition":  "operations",
+                            "template":  "SKILLS/doc-operations/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-release",
+                            "path":  "流程管理/发布记录.md",
+                            "area":  "flow",
+                            "condition":  "deployable",
+                            "template":  "SKILLS/doc-release/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-scope-change",
+                            "path":  "流程管理/需求与范围变更记录.md",
+                            "area":  "flow",
+                            "condition":  "engineering",
+                            "template":  "SKILLS/doc-scope-change/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "terminal_to_history",
+                            "statusField":  "状态",
+                            "terminalStates":  [
+                                                   "已验收",
+                                                   "已关闭",
+                                                   "已取消"
+                                               ]
+                        },
+                        {
+                            "skill":  "doc-rule-candidates",
+                            "path":  "流程管理/规则补充待审.md",
+                            "area":  "flow",
+                            "condition":  "always",
+                            "template":  "SKILLS/doc-rule-candidates/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-handoff",
+                            "path":  "流程管理/上下文交接记录.md",
+                            "area":  "flow",
+                            "condition":  "always",
+                            "template":  "SKILLS/doc-handoff/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-version",
+                            "path":  "流程管理/版本控制.md",
+                            "area":  "flow",
+                            "condition":  "always",
+                            "template":  "SKILLS/doc-version/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-code-review",
+                            "path":  "流程管理/CodeReview.md",
+                            "area":  "flow",
+                            "condition":  "engineering",
+                            "template":  "SKILLS/doc-code-review/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-change-ownership",
+                            "path":  "流程管理/ChangeOwnership.md",
+                            "area":  "flow",
+                            "condition":  "git",
+                            "template":  "SKILLS/doc-change-ownership/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-git-promotion",
+                            "path":  "流程管理/GitPromotion.md",
+                            "area":  "flow",
+                            "condition":  "git",
+                            "template":  "SKILLS/doc-git-promotion/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-snapshot-restore",
+                            "path":  "流程管理/SnapshotRestore.md",
+                            "area":  "flow",
+                            "condition":  "versioned",
+                            "template":  "SKILLS/doc-snapshot-restore/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-research",
+                            "path":  "知识管理/研究记录.md",
+                            "area":  "knowledge",
+                            "condition":  "research",
+                            "template":  "SKILLS/doc-research/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-sources",
+                            "path":  "知识管理/来源索引.md",
+                            "area":  "knowledge",
+                            "condition":  "research",
+                            "template":  "SKILLS/doc-sources/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-research-summary",
+                            "path":  "知识管理/研究摘要.md",
+                            "area":  "knowledge",
+                            "condition":  "research",
+                            "template":  "SKILLS/doc-research-summary/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-knowledge-candidates",
+                            "path":  "知识管理/中台沉淀候选.md",
+                            "area":  "knowledge",
+                            "condition":  "knowledge",
+                            "template":  "SKILLS/doc-knowledge-candidates/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-skills-index",
+                            "path":  "知识管理/SKILLS_INDEX.md",
+                            "area":  "knowledge",
+                            "condition":  "skills",
+                            "template":  "SKILLS/doc-skills-index/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-skill-selection",
+                            "path":  "知识管理/Skill选型记录.md",
+                            "area":  "knowledge",
+                            "condition":  "skills",
+                            "template":  "SKILLS/doc-skill-selection/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-knowledge-hub",
+                            "path":  "知识管理/研究知识中台链接.md",
+                            "area":  "knowledge",
+                            "condition":  "knowledge",
+                            "template":  "SKILLS/doc-knowledge-hub/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-knowledge-sync",
+                            "path":  "知识管理/同步记录.md",
+                            "area":  "knowledge",
+                            "condition":  "knowledge",
+                            "template":  "SKILLS/doc-knowledge-sync/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-module-plan",
+                            "path":  "代码管理/模块规划.md",
+                            "area":  "code",
+                            "condition":  "engineering",
+                            "template":  "SKILLS/doc-module-plan/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-module-rules",
+                            "path":  "代码管理/模块规则/\u003c模块\u003e/AGENTS.md",
+                            "area":  "code",
+                            "condition":  "module",
+                            "template":  "SKILLS/doc-module-rules/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "dynamic-ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-reuse-selection",
+                            "path":  "代码管理/可复用模块选型记录.md",
+                            "area":  "code",
+                            "condition":  "complex",
+                            "template":  "SKILLS/doc-reuse-selection/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-data-model",
+                            "path":  "代码管理/docs/DataModel.md",
+                            "area":  "code",
+                            "condition":  "data",
+                            "template":  "SKILLS/doc-data-model/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-metrics",
+                            "path":  "代码管理/docs/Metrics.md",
+                            "area":  "code",
+                            "condition":  "metrics",
+                            "template":  "SKILLS/doc-metrics/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-data-lineage",
+                            "path":  "代码管理/docs/DataLineage.md",
+                            "area":  "code",
+                            "condition":  "data",
+                            "template":  "SKILLS/doc-data-lineage/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-api",
+                            "path":  "代码管理/docs/API.md",
+                            "area":  "code",
+                            "condition":  "api",
+                            "template":  "SKILLS/doc-api/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-deployment",
+                            "path":  "代码管理/docs/Deployment.md",
+                            "area":  "code",
+                            "condition":  "deployable",
+                            "template":  "SKILLS/doc-deployment/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "spec",
+                            "readPolicy":  "conditional",
+                            "archivePolicy":  "none"
+                        },
+                        {
+                            "skill":  "doc-hook-run-log",
+                            "path":  "流程管理/Hook运行记录.md",
+                            "area":  "flow",
+                            "condition":  "hooks",
+                            "template":  "SKILLS/doc-hook-run-log/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "skill":  "doc-skill-call-log",
+                            "path":  "流程管理/Skill调用记录.md",
+                            "area":  "flow",
+                            "condition":  "skills",
+                            "template":  "SKILLS/doc-skill-call-log/assets/template.md",
+                            "status":  "candidate",
+                            "documentType":  "ledger",
+                            "readPolicy":  "active",
+                            "archivePolicy":  "controller_defined"
+                        },
+                        {
+                            "documentType":  "spec",
+                            "path":  "MEMORY.md",
+                            "template":  "SKILLS/doc-memory-rules/assets/template.md",
+                            "readPolicy":  "always",
+                            "condition":  "always",
+                            "archivePolicy":  "none",
+                            "area":  "root",
+                            "status":  "candidate",
+                            "skill":  "doc-memory-rules"
+                        },
+                        {
+                            "documentType":  "ledger",
+                            "path":  "SHORT_MEMORY.md",
+                            "statusField":  "status",
+                            "template":  "SKILLS/doc-short-memory/assets/template.md",
+                            "readPolicy":  "active",
+                            "condition":  "always",
+                            "archivePolicy":  "short_to_long",
+                            "area":  "root",
+                            "status":  "candidate",
+                            "terminalStates":  [
+                                                   "completed",
+                                                   "cancelled",
+                                                   "superseded",
+                                                   "closed_unresolved"
+                                               ],
+                            "skill":  "doc-short-memory"
+                        },
+                        {
+                            "documentType":  "dynamic-ledger",
+                            "path":  "LONG_MEMORY.md",
+                            "template":  "SKILLS/doc-long-memory/assets/template.md",
+                            "readPolicy":  "cold",
+                            "condition":  "always",
+                            "archivePolicy":  "none",
+                            "area":  "root",
+                            "status":  "candidate",
+                            "skill":  "doc-long-memory"
+                        },
+                        {
+                            "documentType":  "index",
+                            "path":  "知识管理/KnowledgeRouter.md",
+                            "template":  "SKILLS/doc-knowledge-router/assets/template.md",
+                            "readPolicy":  "conditional",
+                            "condition":  "knowledge",
+                            "archivePolicy":  "none",
+                            "area":  "knowledge",
+                            "status":  "candidate",
+                            "skill":  "doc-knowledge-router"
+                        },
+                        {
+                            "documentType":  "spec",
+                            "path":  "知识管理/LLM-Wiki使用与运维.md",
+                            "template":  "SKILLS/doc-llm-wiki-operations/assets/template.md",
+                            "readPolicy":  "conditional",
+                            "condition":  "knowledge",
+                            "archivePolicy":  "none",
+                            "area":  "knowledge",
+                            "status":  "candidate",
+                            "skill":  "doc-llm-wiki-operations"
+                        },
+                        {
+                            "documentType":  "spec",
+                            "path":  "知识管理/研发中台使用与同步.md",
+                            "template":  "SKILLS/doc-rnd-hub-operations/assets/template.md",
+                            "readPolicy":  "conditional",
+                            "condition":  "knowledge",
+                            "archivePolicy":  "none",
+                            "area":  "knowledge",
+                            "status":  "candidate",
+                            "skill":  "doc-rnd-hub-operations"
+                        },
+                        {
+                            "documentType":  "index",
+                            "path":  "流程管理/历史记录库/INDEX.md",
+                            "template":  "SKILLS/doc-history-index/assets/template.md",
+                            "readPolicy":  "cold",
+                            "condition":  "always",
+                            "archivePolicy":  "none",
+                            "area":  "flow",
+                            "status":  "candidate",
+                            "skill":  "doc-history-index"
+                        },
+                        {
+                            "documentType":  "dynamic-ledger",
+                            "path":  "流程管理/历史记录库/\u003cYYYY\u003e/\u003cMM\u003e/\u003c来源流水\u003e.md",
+                            "template":  "SKILLS/doc-history-archive/assets/template.md",
+                            "readPolicy":  "cold",
+                            "condition":  "history",
+                            "archivePolicy":  "none",
+                            "area":  "flow",
+                            "status":  "candidate",
+                            "skill":  "doc-history-archive"
+                        }
+                    ]
+}

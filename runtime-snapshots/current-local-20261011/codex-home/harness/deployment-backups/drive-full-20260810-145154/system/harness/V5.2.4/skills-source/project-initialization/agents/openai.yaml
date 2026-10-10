@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Initialization"
+  short_description: "Initialize project harness, Git, plans, and governance records"
+  default_prompt: "Use $project-initialization to audit and initialize this project safely."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "doc-skill-call-log"
+  short_description: "Harness V5 runtime governance ledger"
+  default_prompt: "Maintain the governed human-readable runtime ledger."

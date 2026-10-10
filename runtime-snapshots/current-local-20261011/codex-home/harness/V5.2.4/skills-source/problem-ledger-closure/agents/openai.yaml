@@ -1,0 +1,4 @@
+interface:
+  display_name: "Problem Ledger Closure"
+  short_description: "Close problems through analysis, repair, and verification"
+  default_prompt: "Use $problem-ledger-closure to diagnose and close this problem with evidence."

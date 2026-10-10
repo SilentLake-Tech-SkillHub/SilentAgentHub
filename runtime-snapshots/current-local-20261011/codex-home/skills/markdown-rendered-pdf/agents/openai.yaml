@@ -1,0 +1,4 @@
+interface:
+  display_name: "Markdown Rendered PDF"
+  short_description: "Render Markdown to styled Chinese-safe PDFs"
+  default_prompt: "Use $markdown-rendered-pdf to batch convert markdown files into rendered PDFs and replace old PDFs when needed."

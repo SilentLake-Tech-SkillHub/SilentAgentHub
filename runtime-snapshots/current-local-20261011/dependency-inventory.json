@@ -1,0 +1,78 @@
+{
+  "plugins": {
+    "build-web-apps@openai-curated": {
+      "enabled": true
+    },
+    "documents@openai-primary-runtime": {
+      "enabled": true
+    },
+    "figma@openai-curated": {
+      "enabled": true
+    },
+    "github@openai-curated": {
+      "enabled": true
+    },
+    "google-drive@openai-curated": {
+      "enabled": true
+    },
+    "presentations@openai-primary-runtime": {
+      "enabled": true
+    },
+    "spreadsheets@openai-primary-runtime": {
+      "enabled": true
+    },
+    "vercel@openai-curated": {
+      "enabled": true
+    },
+    "gmail@openai-curated": {
+      "enabled": true
+    },
+    "outlook-email@openai-curated": {
+      "enabled": true
+    },
+    "build-macos-apps@openai-curated": {
+      "enabled": true
+    },
+    "slack@openai-curated": {
+      "enabled": true
+    },
+    "pdf@openai-primary-runtime": {
+      "enabled": true
+    },
+    "template-creator@openai-primary-runtime": {
+      "enabled": true
+    },
+    "visualize@openai-bundled": {
+      "enabled": true
+    },
+    "stripe@openai-curated": {
+      "enabled": true
+    },
+    "rental-viewing-status@personal": {
+      "enabled": true
+    },
+    "codex-app-tools@openai-bundled": {
+      "enabled": true
+    },
+    "browser@openai-bundled": {
+      "enabled": true
+    },
+    "unified-computer-use@openai-bundled": {
+      "enabled": true
+    },
+    "chrome@openai-bundled": {
+      "enabled": true
+    },
+    "computer-use@openai-bundled": {
+      "enabled": true
+    },
+    "computer-history@openai-bundled": {
+      "enabled": true
+    },
+    "code-review@openai-bundled": {
+      "enabled": true
+    }
+  },
+  "vendor_plugins_included": false,
+  "reason": "third party packages stay with their own distributions; no accounts, credentials or trusted_hash exported"
+}

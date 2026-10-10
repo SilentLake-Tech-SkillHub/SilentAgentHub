@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Review Closeout"
+  short_description: "Review correctness, regressions, safety, and change ownership"
+  default_prompt: "Use $code-review-closeout to review this task before it is closed."

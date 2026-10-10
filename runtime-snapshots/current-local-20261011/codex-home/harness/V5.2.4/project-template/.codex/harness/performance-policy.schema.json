@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "thresholds", "validationProfiles", "telemetry"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "version": {"type": "string", "minLength": 1},
+    "thresholds": {
+      "type": "object",
+      "required": ["hookWarnMs", "toolWarnMs", "unexplainedGapWarnMs", "automaticRetries"],
+      "properties": {
+        "hookWarnMs": {"type": "integer", "minimum": 100},
+        "toolWarnMs": {"type": "integer", "minimum": 1000},
+        "unexplainedGapWarnMs": {"type": "integer", "minimum": 1000},
+        "automaticRetries": {"type": "integer", "minimum": 0, "maximum": 1}
+      },
+      "additionalProperties": false
+    },
+    "validationProfiles": {
+      "type": "object",
+      "required": ["readonly", "simple_change", "complex_engineering", "production_release"],
+      "properties": {
+        "readonly": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "simple_change": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "complex_engineering": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "production_release": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      },
+      "additionalProperties": false
+    },
+    "telemetry": {
+      "type": "object",
+      "required": ["storeArguments", "storePrompt", "storeSecrets", "modelTiming"],
+      "properties": {
+        "storeArguments": {"const": false},
+        "storePrompt": {"const": false},
+        "storeSecrets": {"const": false},
+        "modelTiming": {"const": "unavailable"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

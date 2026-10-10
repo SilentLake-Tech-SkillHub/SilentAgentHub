@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reusable Asset Selector"
+  short_description: "Evaluate reusable code, templates, components, and SOPs"
+  default_prompt: "Use $reusable-asset-selector to decide which existing assets should be reused."

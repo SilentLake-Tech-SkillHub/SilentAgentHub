@@ -1,0 +1,4 @@
+interface:
+  display_name: "Requirement Clarification"
+  short_description: "Clarify product outcomes, scope, acceptance, and decisions"
+  default_prompt: "Use $requirement-clarification to turn this request into an actionable product contract."

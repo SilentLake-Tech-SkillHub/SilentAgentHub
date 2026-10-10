@@ -1,0 +1,4 @@
+interface:
+  display_name: "Knowledge Deposition"
+  short_description: "Prepare reusable knowledge candidates for user approval"
+  default_prompt: "Use $knowledge-deposition to prepare reusable knowledge candidates from this project."

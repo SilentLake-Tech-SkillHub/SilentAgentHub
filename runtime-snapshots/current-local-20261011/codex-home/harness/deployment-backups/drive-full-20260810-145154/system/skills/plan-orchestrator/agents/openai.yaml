@@ -1,0 +1,4 @@
+interface:
+  display_name: "Plan Orchestrator"
+  short_description: "Create reviewed living plans for complex engineering work"
+  default_prompt: "Use $plan-orchestrator to create the required reviewed plans.md for this task."

@@ -1,0 +1,188 @@
+{
+  "$schema": "./lifecycle-state-machine.schema.json",
+  "version": "1.0.0",
+  "initial": "intake",
+  "terminal": [
+    "archived",
+    "cancelled"
+  ],
+  "states": [
+    "intake",
+    "research",
+    "planning",
+    "awaiting_plan_review",
+    "approved",
+    "building",
+    "verifying",
+    "test_promoted",
+    "awaiting_acceptance",
+    "accepted",
+    "production_authorized",
+    "production_promoted",
+    "archived",
+    "blocked",
+    "paused",
+    "cancelled"
+  ],
+  "transitions": [
+    {
+      "from": "intake",
+      "to": "research"
+    },
+    {
+      "from": "intake",
+      "to": "planning"
+    },
+    {
+      "from": "research",
+      "to": "planning"
+    },
+    {
+      "from": "planning",
+      "to": "awaiting_plan_review"
+    },
+    {
+      "from": "awaiting_plan_review",
+      "to": "approved"
+    },
+    {
+      "from": "approved",
+      "to": "building"
+    },
+    {
+      "from": "building",
+      "to": "verifying"
+    },
+    {
+      "from": "verifying",
+      "to": "test_promoted"
+    },
+    {
+      "from": "test_promoted",
+      "to": "awaiting_acceptance"
+    },
+    {
+      "from": "awaiting_acceptance",
+      "to": "accepted"
+    },
+    {
+      "from": "accepted",
+      "to": "production_authorized"
+    },
+    {
+      "from": "production_authorized",
+      "to": "production_promoted"
+    },
+    {
+      "from": "production_promoted",
+      "to": "archived"
+    },
+    {
+      "from": "intake",
+      "to": "blocked"
+    },
+    {
+      "from": "research",
+      "to": "blocked"
+    },
+    {
+      "from": "planning",
+      "to": "blocked"
+    },
+    {
+      "from": "building",
+      "to": "blocked"
+    },
+    {
+      "from": "verifying",
+      "to": "blocked"
+    },
+    {
+      "from": "blocked",
+      "to": "research"
+    },
+    {
+      "from": "blocked",
+      "to": "planning"
+    },
+    {
+      "from": "blocked",
+      "to": "building"
+    },
+    {
+      "from": "blocked",
+      "to": "verifying"
+    },
+    {
+      "from": "intake",
+      "to": "paused"
+    },
+    {
+      "from": "research",
+      "to": "paused"
+    },
+    {
+      "from": "planning",
+      "to": "paused"
+    },
+    {
+      "from": "building",
+      "to": "paused"
+    },
+    {
+      "from": "verifying",
+      "to": "paused"
+    },
+    {
+      "from": "paused",
+      "to": "research"
+    },
+    {
+      "from": "paused",
+      "to": "planning"
+    },
+    {
+      "from": "paused",
+      "to": "building"
+    },
+    {
+      "from": "paused",
+      "to": "verifying"
+    },
+    {
+      "from": "intake",
+      "to": "cancelled"
+    },
+    {
+      "from": "planning",
+      "to": "cancelled"
+    },
+    {
+      "from": "awaiting_plan_review",
+      "to": "cancelled"
+    }
+  ],
+  "gates": {
+    "awaiting_plan_review->approved": [
+      "user_plan_approval"
+    ],
+    "verifying->test_promoted": [
+      "validation_passed",
+      "code_review_passed",
+      "git_test_push",
+      "test_deploy_verified"
+    ],
+    "awaiting_acceptance->accepted": [
+      "user_acceptance"
+    ],
+    "accepted->production_authorized": [
+      "explicit_production_authorization"
+    ],
+    "production_authorized->production_promoted": [
+      "git_production_push",
+      "production_deploy_verified",
+      "rollback_ready"
+    ]
+  }
+}
+

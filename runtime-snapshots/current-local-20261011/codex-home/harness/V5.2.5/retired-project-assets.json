@@ -1,0 +1,9 @@
+{
+  "version": "V5.2.5",
+  "paths": [
+    ".codex/hooks/runtime-performance.ps1",
+    ".codex/hooks/tests/performance-routing-e2e.ps1",
+    ".codex/harness/performance-policy.json",
+    ".codex/harness/performance-policy.schema.json"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "files", "maxDetailedTurnsPerOpenConversation", "terminalStates", "activeStates", "closedUnresolvedRequiresUserApproval", "readPolicy", "redactionRequired", "stopReinjectionLimit", "receivedStaleMinutes", "internalPromptRules", "trackedInProjectGit"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "version": {"type": "string", "minLength": 1},
+    "files": {
+      "type": "object",
+      "required": ["rules", "short", "long", "index", "transactions", "locks", "quarantine"],
+      "properties": {
+        "rules": {"const": "MEMORY.md"},
+        "short": {"const": "SHORT_MEMORY.md"},
+        "long": {"const": "LONG_MEMORY.md"},
+        "index": {"type": "string", "minLength": 1},
+        "transactions": {"type": "string", "minLength": 1},
+        "locks": {"type": "string", "minLength": 1},
+        "quarantine": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "maxDetailedTurnsPerOpenConversation": {"type": "integer", "minimum": 1, "maximum": 20},
+    "terminalStates": {"type": "array", "items": {"type": "string"}, "minItems": 3, "uniqueItems": true},
+    "activeStates": {"type": "array", "items": {"type": "string"}, "minItems": 3, "uniqueItems": true},
+    "closedUnresolvedRequiresUserApproval": {"const": true},
+    "readPolicy": {
+      "type": "object",
+      "required": ["short", "long"],
+      "properties": {
+        "short": {"const": "active_current_conversation"},
+        "long": {"const": "short_miss_or_explicit_trace"}
+      },
+      "additionalProperties": false
+    },
+    "redactionRequired": {"const": true},
+    "stopReinjectionLimit": {"const": 1},
+    "receivedStaleMinutes": {"type": "integer", "minimum": 60},
+    "internalPromptRules": {
+      "type": "object",
+      "required": ["denyPatterns"],
+      "properties": {
+        "denyPatterns": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true}
+      },
+      "additionalProperties": false
+    },
+    "trackedInProjectGit": {"type": "array", "items": {"enum": ["MEMORY.md", "SHORT_MEMORY.md", "LONG_MEMORY.md"]}, "minItems": 3, "uniqueItems": true}
+  },
+  "additionalProperties": false
+}

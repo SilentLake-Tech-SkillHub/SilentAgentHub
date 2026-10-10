@@ -1,0 +1,4 @@
+interface:
+  display_name: "doc-clarification"
+  short_description: "Harness V5 clarification ledger controller"
+  default_prompt: "Maintain clarification.md as a governed requirement intake ledger."

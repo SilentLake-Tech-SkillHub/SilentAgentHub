@@ -1,0 +1,351 @@
+{
+  "targetCodexHome": "<HOME>/.codex",
+  "allowedRoots": [
+    "<HOME>/.codex"
+  ],
+  "created": [],
+  "restore": [
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/current.json",
+      "target": "<HOME>/.codex/current.json"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/AGENTS.md",
+      "target": "<HOME>/.codex/AGENTS.md"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/harness/V5.2.5",
+      "target": "<HOME>/.codex/harness/V5.2.5"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/harness/V5.2.4",
+      "target": "<HOME>/.codex/harness/V5.2.4"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/browser-acceptance-screenshot",
+      "target": "<HOME>/.codex/skills/browser-acceptance-screenshot"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/code-review-closeout",
+      "target": "<HOME>/.codex/skills/code-review-closeout"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/decision-ledger",
+      "target": "<HOME>/.codex/skills/decision-ledger"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/deployment-router",
+      "target": "<HOME>/.codex/skills/deployment-router"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-acceptance",
+      "target": "<HOME>/.codex/skills/doc-acceptance"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-api",
+      "target": "<HOME>/.codex/skills/doc-api"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-architecture",
+      "target": "<HOME>/.codex/skills/doc-architecture"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-change-ownership",
+      "target": "<HOME>/.codex/skills/doc-change-ownership"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-clarification",
+      "target": "<HOME>/.codex/skills/doc-clarification"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-code-review",
+      "target": "<HOME>/.codex/skills/doc-code-review"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-construction-framework",
+      "target": "<HOME>/.codex/skills/doc-construction-framework"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-data-lineage",
+      "target": "<HOME>/.codex/skills/doc-data-lineage"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-data-model",
+      "target": "<HOME>/.codex/skills/doc-data-model"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-debug",
+      "target": "<HOME>/.codex/skills/doc-debug"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-decision",
+      "target": "<HOME>/.codex/skills/doc-decision"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-deployment",
+      "target": "<HOME>/.codex/skills/doc-deployment"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-design",
+      "target": "<HOME>/.codex/skills/doc-design"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-environment",
+      "target": "<HOME>/.codex/skills/doc-environment"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-git-promotion",
+      "target": "<HOME>/.codex/skills/doc-git-promotion"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-handoff",
+      "target": "<HOME>/.codex/skills/doc-handoff"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-history-archive",
+      "target": "<HOME>/.codex/skills/doc-history-archive"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-history-index",
+      "target": "<HOME>/.codex/skills/doc-history-index"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-hook-run-log",
+      "target": "<HOME>/.codex/skills/doc-hook-run-log"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-issue",
+      "target": "<HOME>/.codex/skills/doc-issue"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-knowledge-candidates",
+      "target": "<HOME>/.codex/skills/doc-knowledge-candidates"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-knowledge-hub",
+      "target": "<HOME>/.codex/skills/doc-knowledge-hub"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-knowledge-router",
+      "target": "<HOME>/.codex/skills/doc-knowledge-router"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-knowledge-sync",
+      "target": "<HOME>/.codex/skills/doc-knowledge-sync"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-llm-wiki-operations",
+      "target": "<HOME>/.codex/skills/doc-llm-wiki-operations"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-long-memory",
+      "target": "<HOME>/.codex/skills/doc-long-memory"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-memory-rules",
+      "target": "<HOME>/.codex/skills/doc-memory-rules"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-metrics",
+      "target": "<HOME>/.codex/skills/doc-metrics"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-module-plan",
+      "target": "<HOME>/.codex/skills/doc-module-plan"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-module-rules",
+      "target": "<HOME>/.codex/skills/doc-module-rules"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-operations",
+      "target": "<HOME>/.codex/skills/doc-operations"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-plan",
+      "target": "<HOME>/.codex/skills/doc-plan"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-product-acceptance",
+      "target": "<HOME>/.codex/skills/doc-product-acceptance"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-readme",
+      "target": "<HOME>/.codex/skills/doc-readme"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-release",
+      "target": "<HOME>/.codex/skills/doc-release"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-requirement-assets",
+      "target": "<HOME>/.codex/skills/doc-requirement-assets"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-requirement-pool",
+      "target": "<HOME>/.codex/skills/doc-requirement-pool"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-research",
+      "target": "<HOME>/.codex/skills/doc-research"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-research-summary",
+      "target": "<HOME>/.codex/skills/doc-research-summary"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-reuse-selection",
+      "target": "<HOME>/.codex/skills/doc-reuse-selection"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-risk",
+      "target": "<HOME>/.codex/skills/doc-risk"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-rnd-hub-operations",
+      "target": "<HOME>/.codex/skills/doc-rnd-hub-operations"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-router",
+      "target": "<HOME>/.codex/skills/doc-router"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-rule-candidates",
+      "target": "<HOME>/.codex/skills/doc-rule-candidates"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-scope-change",
+      "target": "<HOME>/.codex/skills/doc-scope-change"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-short-memory",
+      "target": "<HOME>/.codex/skills/doc-short-memory"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-skill-call-log",
+      "target": "<HOME>/.codex/skills/doc-skill-call-log"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-skill-selection",
+      "target": "<HOME>/.codex/skills/doc-skill-selection"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-skills-index",
+      "target": "<HOME>/.codex/skills/doc-skills-index"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-snapshot-restore",
+      "target": "<HOME>/.codex/skills/doc-snapshot-restore"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-sources",
+      "target": "<HOME>/.codex/skills/doc-sources"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-task-ledger",
+      "target": "<HOME>/.codex/skills/doc-task-ledger"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-validation",
+      "target": "<HOME>/.codex/skills/doc-validation"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/doc-version",
+      "target": "<HOME>/.codex/skills/doc-version"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/git-environment-promotion",
+      "target": "<HOME>/.codex/skills/git-environment-promotion"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/harness-router",
+      "target": "<HOME>/.codex/skills/harness-router"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/history-record-query",
+      "target": "<HOME>/.codex/skills/history-record-query"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/knowledge-deposition",
+      "target": "<HOME>/.codex/skills/knowledge-deposition"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/knowledge-query-router",
+      "target": "<HOME>/.codex/skills/knowledge-query-router"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/knowledge-sync-reconciler",
+      "target": "<HOME>/.codex/skills/knowledge-sync-reconciler"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/ledger-history-archiver",
+      "target": "<HOME>/.codex/skills/ledger-history-archiver"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/llm-wiki-maintenance",
+      "target": "<HOME>/.codex/skills/llm-wiki-maintenance"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/long-memory-retriever",
+      "target": "<HOME>/.codex/skills/long-memory-retriever"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/management-record-sync",
+      "target": "<HOME>/.codex/skills/management-record-sync"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/memory-turn-closeout",
+      "target": "<HOME>/.codex/skills/memory-turn-closeout"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/module-context-loader",
+      "target": "<HOME>/.codex/skills/module-context-loader"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/plan-orchestrator",
+      "target": "<HOME>/.codex/skills/plan-orchestrator"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/problem-ledger-closure",
+      "target": "<HOME>/.codex/skills/problem-ledger-closure"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/product-research",
+      "target": "<HOME>/.codex/skills/product-research"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/project-initialization",
+      "target": "<HOME>/.codex/skills/project-initialization"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/project-validation",
+      "target": "<HOME>/.codex/skills/project-validation"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/requirement-clarification",
+      "target": "<HOME>/.codex/skills/requirement-clarification"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/reusable-asset-selector",
+      "target": "<HOME>/.codex/skills/reusable-asset-selector"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/skill-library-router",
+      "target": "<HOME>/.codex/skills/skill-library-router"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/user-memory-recorder",
+      "target": "<HOME>/.codex/skills/user-memory-recorder"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/version-release-manager",
+      "target": "<HOME>/.codex/skills/version-release-manager"
+    },
+    {
+      "backup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154/system/skills/workflow-orchestrator",
+      "target": "<HOME>/.codex/skills/workflow-orchestrator"
+    }
+  ],
+  "version": "V5.2.5",
+  "installedAt": "2026-08-10T14:54:45.4173970+08:00"
+}

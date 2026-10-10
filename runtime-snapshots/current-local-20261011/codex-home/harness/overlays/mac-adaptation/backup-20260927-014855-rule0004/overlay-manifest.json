@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "mac-adaptation",
+  "baseVersion": "V5.2.5",
+  "baseAgentsSha256": "9E0F399BCE9055DE4251FF5DABB0FD012EEB2D71132B1C459BFFC679F333404C",
+  "createdAt": "2026-08-11T15:29:54+08:00",
+  "backupDir": "backup-20260811-152751",
+  "rationale": "V5.2.5 原包包含两类已复现缺陷：doc-plan 模板与 Plan 正则不兼容；Codex Plan collaboration mode 的只读约束与 Stop 强制 Memory 写入续跑冲突。后者会让 Plan 正常产出后反复触发 Stop continuation，表现为 Plan mode 卡住。本 overlay 修复格式/跨平台问题，并依据 Codex transcript 的真实 collaboration mode 在 Plan 轮跳过项目 Memory 写入与 Stop Memory 续跑；不增加全局 Hook 或非 Git 调度器。",
+  "verifyNote": "Verify-Harness 会把本清单内的文件报为 mismatch。判定方式：mismatch 集合 ⊆ 本清单 target 集合，且各文件当前 sha256 == sha256Patched，即视为通过。",
+  "entries": [
+    {
+      "id": "OVL-0001",
+      "target": "<CODEX_HOME>/skills/doc-plan/assets/template.md",
+      "artifact": "files/CODEX_HOME__skills__doc-plan__assets__template.md",
+      "backupArtifact": "backup-20260811-152751/doc-plan__assets__template.md",
+      "sha256Pristine": "44453511091481A7D1385890750F043CC1058BD69A08ED894613EFAC6C25E6FA",
+      "sha256Patched": "F08FF3D66E07B64FD55D41DBFF666125B0C263AE05A0BB5912E3E1F2F31BC222",
+      "inDriveManifest": true,
+      "defect": "模板 ## State 段给的是 Markdown 列表项占位符 `- 待填写`。plan-disclosure-runtime.ps1 -Event Register 用 ^State:\\s*awaiting_review$ 匹配独立行，列表项永远不匹配，Register 必抛 plan-not-awaiting-review。",
+      "fix": "改为 `State: <状态枚举>` 独立行占位符，并加入格式说明注释。"
+    },
+    {
+      "id": "OVL-0002",
+      "target": "<CODEX_HOME>/skills/doc-plan/SKILL.md",
+      "artifact": "files/CODEX_HOME__skills__doc-plan__SKILL.md",
+      "backupArtifact": "backup-20260811-152751/doc-plan__SKILL.md",
+      "sha256Pristine": "0F0B162DB7F8F00801E55F6DF45E098535E6748B48A5F368B432BA5D051532FE",
+      "sha256Patched": "78E4BFD46570906A0749DC22359129B55C9F60D12EA24F6AB817CA12003B2B6C",
+      "inDriveManifest": true,
+      "defect": "SKILL.md 要求调用 Register，但未规定 State 行的机器可读格式。",
+      "fix": "新增一条硬性格式要求：State 行必须独占一行并以 `State:` 开头。"
+    },
+    {
+      "id": "OVL-0003",
+      "target": "<PROJECT_ROOT>/.codex/hooks/plan-disclosure-runtime.ps1",
+      "artifact": "files/PROJECT__.codex__hooks__plan-disclosure-runtime.ps1",
+      "backupArtifact": "backup-20260811-152751/proj__plan-disclosure-runtime.ps1",
+      "sha256Pristine": "05F25E938437C2F55B0FA6DE979C50F9FA51381F8230CD3B9F70E6510A83DB26",
+      "sha256Patched": "3FEC3AB3E008B3B01DBAF6590F720CCEFD7DEA32830C3836CC2DCBDEECE6E469",
+      "inDriveManifest": true,
+      "defect": "State 行匹配过严，且 \\s 会跨行匹配；首版 Mac 补丁收紧为水平空白后又未消费 CRLF 的 \\r。",
+      "fix": "容忍列表项前缀/粗体/反引号/全角冒号；使用 [ \\t] 禁止跨行，并用 \\r?$ 同时接受 LF/CRLF。"
+    },
+    {
+      "id": "OVL-0004",
+      "target": "<PROJECT_ROOT>/.codex/hooks/stop-closeout-dispatcher.ps1",
+      "artifact": "files/PROJECT__.codex__hooks__stop-closeout-dispatcher.ps1",
+      "backupArtifact": "backup-20260811-152751/proj__stop-closeout-dispatcher.ps1",
+      "sha256Pristine": "E620EF24ED3DF1C1319B606627F654A9E84EF467CD42D13F76EE01281DC4E6E0",
+      "sha256PriorPatched": [
+        "F8E1408BC3997EDA37602ECD71A464001C27AE89CD0F1DD788155FFDA79D9978"
+      ],
+      "sha256Patched": "410C2CD81B08F363876B1B3D9DCA772736E7F49DF3CFC5855DD6FF3AB7E73FE0",
+      "inDriveManifest": true,
+      "defect": "draft 门禁与 Register 用了不同宽度的正则，`- State: draft` 可绕过 Stop 检查；此外 Stop 对 Plan collaboration mode 仍强制要求 Agent 写 Memory，和平台只读约束互相冲突并造成无限 continuation。",
+      "fix": "与 OVL-0003 同步放宽并收紧跨行，显式接受 LF/CRLF；Plan disclosure 校验通过后，真实 mode=plan 的轮次跳过 Memory/full-worktree Stop 收尾，避免只读冲突。"
+    },
+    {
+      "id": "OVL-0005",
+      "target": "<PROJECT_ROOT>/.codex/hooks/tests/memory-desktop-e2e.ps1",
+      "artifact": "files/PROJECT__.codex__hooks__tests__memory-desktop-e2e.ps1",
+      "backupArtifact": "backup-20260811-152751/proj__tests__memory-desktop-e2e.ps1",
+      "sha256Pristine": "69488CE222AFB77B2B12F1A7DEEA496409304A8A5B61340E26D28979415DD687",
+      "sha256Patched": "439BFB3E99BA8A4D1F6232FF2FE79E0796BC566F27C03E1012F14AB8D93EC6C0",
+      "inDriveManifest": true,
+      "defect": "fixture 写死 powershell.exe 与 $env:TEMP，并使用反斜杠路径字面量；三者在 macOS 上均不成立，脚本会在 Invoke-Hook 处直接抛异常。",
+      "fix": "改用当前 PowerShell 宿主可执行文件、[System.IO.Path]::GetTempPath() 与正斜杠路径；-ExecutionPolicy 仅在 Windows 下传入。"
+    },
+    {
+      "id": "OVL-0006",
+      "target": "<PROJECT_ROOT>/.codex/hooks/tests/plan-disclosure-e2e.ps1",
+      "artifact": "files/PROJECT__.codex__hooks__tests__plan-disclosure-e2e.ps1",
+      "backupArtifact": "backup-20260811-152751/proj__tests__plan-disclosure-e2e.ps1",
+      "sha256Pristine": "07F05E9C87F8DF15001E163DE46807FDE259D31C804B809E5361E31DBC9F194C",
+      "sha256Patched": "DF57B398A951956C3B5B5BC0C3E070A33A2A2CAB0CAB4C384B0F38744D42CD87",
+      "inDriveManifest": true,
+      "defect": "同 OVL-0005；另外越界路径用例写作 ..\\outside\\plans.md，在 macOS 上不含 / 分隔符，Resolve-BoundedPlan 不会判定为越界，断言 outside-root 必然失败。",
+      "fix": "同 OVL-0005；越界用例改为 ../outside/plans.md；增加 CRLF/list draft Stop 门禁回归。"
+    },
+    {
+      "id": "OVL-0007",
+      "target": "<PROJECT_ROOT>/.codex/hooks/common.ps1",
+      "artifact": "files/PROJECT__.codex__hooks__common.ps1",
+      "backupArtifact": "backup-20260811-152751/proj__common.ps1",
+      "sha256Pristine": "3880BEB01DE87772FCEC35D086D87E30D262582657BF3BEFE1904C5E3D7FCD7D",
+      "sha256Patched": "8CE3BD0E59888B320604D84C3D44B4E32ED11A79C3C27BC365823136455B222E",
+      "sha256PriorPatched": [
+        "0F202987BDE1E0A778954D6A37A3BA658B77C4CA1F85B2A0063A6C784ECE471D"
+      ],
+      "inDriveManifest": true,
+      "defect": "Codex 官方 Stop/UserPromptSubmit payload 不直接提供 collaboration_mode，原 Harness 无法区分 Plan 只读轮与 Default 工程轮。",
+      "fix": "增加 Get-HookCollaborationMode：优先读显式字段，否则用 turn_id 流式筛选完整 transcript_path 中的 task_started/turn_context，避免长对话把模式标记挤出固定尾部窗口。"
+    },
+    {
+      "id": "OVL-0008",
+      "target": "<PROJECT_ROOT>/.codex/hooks/user-prompt-dispatcher.ps1",
+      "artifact": "files/PROJECT__.codex__hooks__user-prompt-dispatcher.ps1",
+      "backupArtifact": "backup-20260811-152751/proj__user-prompt-dispatcher.ps1",
+      "sha256Pristine": "59D4ED3802D6F24085C6957B67E51FBAF7638D38BEF1E8C502DF4825E5A82342",
+      "sha256Patched": "9F7AF927F83456F23CFD882C2CB6FFE418FC3781B90547ABC44CE95940E9F874",
+      "inDriveManifest": true,
+      "defect": "Plan collaboration mode 的 UserPromptSubmit 仍修改 SHORT_MEMORY/memory-index，违反平台和用户的只读语义，并给 Stop 留下无法由 Plan Agent 关闭的 active turn。",
+      "fix": "真实 mode=plan 时保留 Query 路由上下文，但不捕获项目 Memory，并明确告知 Stop 不应要求 Memory 写入续跑。"
+    }
+  ],
+  "knownGap": "原包三个 fixture 没有从 doc-plan 出厂模板生成 Plan 再走 Register，也没有真实覆盖 Codex Plan collaboration mode 与 Stop/Memory 的只读冲突。Test-PlanTemplateRegression.ps1 覆盖模板链；Test-PlanModeReadonlyRegression.ps1 覆盖 transcript mode 检测、Plan Memory 零改动、Stop 放行及 Default 模式原行为。"
+}

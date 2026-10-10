@@ -1,0 +1,22 @@
+{
+  "$schema": "./performance-policy.schema.json",
+  "version": "1.0.0",
+  "thresholds": {
+    "hookWarnMs": 5000,
+    "toolWarnMs": 120000,
+    "unexplainedGapWarnMs": 300000,
+    "automaticRetries": 1
+  },
+  "validationProfiles": {
+    "readonly": ["targeted-readback"],
+    "simple_change": ["changed-file-parser", "targeted-smoke"],
+    "complex_engineering": ["changed-skill-validation", "changed-hook-parser", "targeted-e2e", "regression-e2e"],
+    "production_release": ["complex_engineering", "all-skill-validation", "all-hook-parser", "all-schema-validation", "manifest-hash", "isolated-install", "rollback-rehearsal"]
+  },
+  "telemetry": {
+    "storeArguments": false,
+    "storePrompt": false,
+    "storeSecrets": false,
+    "modelTiming": "unavailable"
+  }
+}

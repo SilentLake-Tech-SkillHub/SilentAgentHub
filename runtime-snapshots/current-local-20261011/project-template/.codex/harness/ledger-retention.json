@@ -1,0 +1,64 @@
+{
+  "$schema": "./ledger-retention.schema.json",
+  "version": "1.0.0",
+  "enabled": true,
+  "historyRoot": "流程管理/历史记录库",
+  "index": "流程管理/历史记录库/INDEX.md",
+  "transactions": ".codex/harness/history-transactions",
+  "readPolicy": "cold_explicit_or_trace",
+  "ledgers": [
+    {
+      "path": "流程管理/任务管理.md",
+      "idField": "任务编号",
+      "statusField": "状态",
+      "terminalStates": [
+        "已验收",
+        "已关闭",
+        "已取消"
+      ],
+      "archiveName": "任务管理.md"
+    },
+    {
+      "path": "流程管理/问题流水.md",
+      "idField": "问题编号",
+      "statusField": "当前状态",
+      "terminalStates": [
+        "已关闭"
+      ],
+      "archiveName": "问题流水.md"
+    },
+    {
+      "path": "流程管理/风险阻塞清单.md",
+      "idField": "风险编号",
+      "statusField": "状态",
+      "terminalStates": [
+        "已解除",
+        "已关闭",
+        "已接受"
+      ],
+      "archiveName": "风险阻塞.md"
+    },
+    {
+      "path": "产品管理/需求变更记录.md",
+      "idField": "需求编号",
+      "statusField": "决定",
+      "terminalStates": [
+        "不做",
+        "已关闭",
+        "已取消"
+      ],
+      "archiveName": "需求池.md"
+    },
+    {
+      "path": "流程管理/需求与范围变更记录.md",
+      "idField": "需求编号",
+      "statusField": "状态",
+      "terminalStates": [
+        "已验收",
+        "已关闭",
+        "已取消"
+      ],
+      "archiveName": "需求与范围变更.md"
+    }
+  ]
+}

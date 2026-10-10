@@ -1,0 +1,20 @@
+{
+    "version":  "V5.2.4",
+    "identity":  "production",
+    "installedAt":  "2026-07-16T03:50:49.6469581+08:00",
+    "codexVersion":  "codex-cli 0.135.0",
+    "packageRoot":  "<WINDOWS_HOME>\\.codex\\harness\\V5.2.4",
+    "manifest":  "<WINDOWS_HOME>\\.codex\\harness\\V5.2.4\\manifest.json",
+    "sourceGitHead":  "4ec5c5b1e020f50485ad4505da49552da833805b",
+    "agentsSha256":  "30237F116A8C8129532160AC73F30017A10E221CB87FB9DADC9B16348955C923",
+    "previousProduction":  {
+                               "version":  "V5.2.3",
+                               "packageRoot":  "<WINDOWS_HOME>\\.codex\\harness\\V5.2.3",
+                               "agentsSha256":  "4C6562033432BDE52FD4C212F3EDAAE64B0B296479D7E8AE976E9238317E2F2D"
+                           },
+    "skillCount":  81,
+    "skillSourceFileCount":  226,
+    "hookScriptCount":  23,
+    "hookTestCount":  3,
+    "rollbackPackage":  "<WINDOWS_HOME>\\.codex\\harness\\V5.2.3"
+}

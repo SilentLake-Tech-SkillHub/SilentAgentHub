@@ -1,0 +1,90 @@
+# SYSTEM-LEVEL AGENT RULES V5.2.5
+
+> 目标位置：Codex 系统根目录下的 `AGENTS.md`。2026-07-16 经用户批准精简生产 Hook；V5.2.5 保留 Query/Plan、主动 Memory 收尾、按风险验证和审批分级，将性能诊断降级为按需工具；V5.2.4 保留为直接回滚基线。
+> 本文件只保留跨项目入口、强制 Skill 路由和不可绕过门禁；模板、字段、目录职责、状态迁移和平台操作由 Skills、Hooks、Schema 与脚本承担。
+
+## 0. 总则
+
+- 用户主要以产品经理视角参与建设。汇报必须先说明产品结果、用户可见效果和失败原因，再说明必要的技术细节。
+- 页面设计、网页建设和功能测试必须在对话中显式提供修改或测试结果截图。
+- 每次任务先识别项目根、读取项目 `ROUTER.md`、保护用户已有改动，再按需加载文档、模块规则和 Skills。
+- `ROUTER.md` 只保存路径、用途、责任 Skill、状态和最近校验；不承载流程、模板、状态机或长篇规范。
+
+## 1. 初始化
+
+- Session 开始必须检查项目结构、Router、Git、安全文件、管理记录、启用模块和文档控制注册表；缺失时调用 `project-initialization`。
+- `project-initialization` 根据项目目标选择需要的模块和规范文档，并通过对应的单文档控制 Skill 创建或修复；不得把全部模板重新写进本文件。
+- 初始化必须建立“业务 Skill → 单文档控制 Skill → Markdown 流水证据 → Hook/Schema 完整性检查”的关系。
+- 每份受管文档保留人可读治理信息：记录时间、触发需求或事件、调用 Skills/plugins、当前状态、关联记录、本次结果和下一步。治理动作和状态判断由 Skill/脚本执行，Markdown 用于审阅与回溯。
+- 初始化必须在项目根创建 `MEMORY.md`、`SHORT_MEMORY.md`、`LONG_MEMORY.md`，由 Router 挂载并进入项目 Git；详细状态、脱敏、迁移和检索规则由 Memory Skills、Hooks 与策略文件控制。
+
+## 2. Skill 路由
+
+- 新增或变化的用户需求：调用 `requirement-clarification`，并由 `doc-clarification` 维护 `产品管理/clarification.md` 流水；澄清结论再按编号进入需求池、Decision、Plan、研究或任务。
+- 外部事实、竞品、页面、政策、价格、当前版本或真实交互：调用 `product-research`。
+- 功能维护或迭代：先调用 `module-context-loader`；缺陷同时调用 `problem-ledger-closure`；复杂工程进入 Plan。
+- 复杂工程：必须调用 `plan-orchestrator`，由 `doc-plan` 创建并维护 `流程管理/执行计划/<任务ID>_<任务名>/plans.md`。
+- 工程执行：先调用 `skill-library-router` 和 `reusable-asset-selector`，再按模块选择领域 Skill；完成后调用 `project-validation` 和 `code-review-closeout`。涉及页面时调用 `browser-acceptance-screenshot`。
+- Debug：调用 `problem-ledger-closure`；运维、部署或发布调用 `deployment-router`；版本和发布身份由 `version-release-manager` 维护。
+- Git 与环境推广：Verify 和 Final 阶段调用 `git-environment-promotion`；Vercel 项目按需调用 Vercel 的 CLI、部署、验证和可观测性 Skills。
+- 记录同步：调用 `management-record-sync`；Prompt、当前对话状态、上下文压缩或恢复调用 `user-memory-recorder`，SHORT miss 后才调用 `long-memory-retriever`。最终回复前必须主动调用 `memory-turn-closeout` 完成当前 turn；Stop 只作一次性兜底，不应成为正常收尾入口。
+- 研究与知识：必须先经 `知识管理/KnowledgeRouter.md` 路由，再调用 `product-research`、`knowledge-query-router`、`knowledge-deposition`、`llm-wiki-maintenance` 和 `knowledge-sync-reconciler`；快照或恢复按需调用 `google-drive-project-snapshot`。
+- 每份规范或流水文档必须由注册表指定的独立 `doc-*` Skill 管理。业务 Skill 负责语义，文档 Skill 负责创建、追加、字段校验和关联，Hook/Schema 负责确定性完整性检查。
+
+## 3. 产品与流程闭环
+
+完整闭环为：
+
+`用户需求 → requirement-clarification → clarification 流水与需求池 → 复杂度判断 → 用户共同讨论 Plan → Plan 审批 → 工程 Skills/plugins → smoke/模块/集成/E2E/eval/截图验证 → Verify 测试环境与 Git → 用户验收 → Final 生产环境与 Git → 发布、版本、知识和流水归档`。
+
+- 产品管理负责需求入口、澄清流水、做/Waitlist/不做的需求池、素材、建设框架、Design 和产品验收。
+- 流程管理负责 Plan、任务、Decision、进入开发后的范围状态、问题、Debug、风险、验证、验收、环境、Git 推广、发布、版本、规则候选和交接。
+- 代码管理负责架构引用、模块规划与规则、复用选型、代码仓、测试、eval、API、数据、部署等工程规范。
+- 知识管理负责研究、来源、摘要、Skills 索引、中台候选和双向同步。
+- `产品管理/需求变更记录.md` 只回答本轮做、Waitlist、不做、待澄清或重新评估；`流程管理/需求与范围变更记录.md` 只记录获批进入开发后的建设中、待验证、待验收、已验收等状态。两者用需求编号关联。
+- `clarification.md` 等流水文件不是可取消的中间产物：它们记录时间、用户需求、调用 Skills 和当前完成状态。脚本与 Skills 负责治理规则，文档负责留痕。
+- `ROUTER.md` 不是流程状态机，只提供各文件、模块、Skills 和外部挂载的位置索引。
+- 每轮真实用户 Prompt 以 UTF-8 解码、脱敏后写入 SHORT_MEMORY；Codex 内部/System/推荐 Prompt 必须隔离。`user-memory-recorder` 统一控制 SHORT/LONG 生命周期；SessionStart 只读当前活动 conversation；Stop 以官方续跑协议核对 Prompt 与正式证据。未关闭状态留在 SHORT，终态验证后迁入 LONG，普通任务不得默认读取 LONG。
+
+## 4. 不可绕过的门禁
+
+### 4.1 Plan
+
+以下任一条件成立即为复杂工程：跨模块、新功能或重构、架构调整、设计/前端/后端/数据/AI 联动、超过一个简单修改、高不确定性或高返工风险、用户明确要求 Plan/方案/分阶段推进。
+
+复杂工程必须先调用 `plan-orchestrator` 并创建 `plans.md`；Plan 首次建立或发生实质修改时，必须把当前 conversation/turn 与该 Plan 的路径和 Hash 显式绑定。Stop Hook 只校验当前 Query 的绑定，不得按全局 `awaiting_review` 或文件修改时间猜测 Plan。当前规划轮的最终回复必须显式完整输出本轮 Plan 正文和审批请求；如 Memory 同时需要收尾，必须在同一次 continuation 中完成，使完整 Plan 成为最终可见回复。只有用户明确批准后才能进入工程；“直接执行”“持续推进”或最终交付意图不能替代 Plan review。
+
+只有同时满足单模块、低风险、无架构或范围变化且验证路径明确的小改才能免 Plan；任务流水必须记录 `plan_required: false` 及理由。
+
+### 4.2 Verify 与 Final
+
+- 每次工程修改必须按 `readonly`、`simple_change`、`complex_engineering`、`production_release` 四档选择最小充分验证；只读问答不得运行全量 Skills/Hooks/Schema/安装/回滚，小改只验证受影响范围，生产发布才执行全量包与回滚。无法验证时明确记录未验证项、原因、替代检查和用户验证方法。
+- Verify 前必须完成代码 review、改动归属和验证证据；随后将本轮已验证范围提交并推送到已登记的测试 Git 分支/远端，部署测试环境并完成闭环验证。
+- Final 必须建立在用户验收和明确生产授权上；随后按批准策略 merge/tag/push，推广生产环境，执行生产 smoke/E2E/监控检查，并记录发布与回滚。
+- 远端、分支、环境、权限、回滚或授权缺失时不得推送或部署；记录阻塞点、候选方向和推荐方向。Hook 只能阻止不合格收尾，不能自动 commit、push、deploy 或替用户批准。
+
+### 4.3 安全与完成状态
+
+- 不得覆盖用户改动，不得执行 `git reset --hard`、强制 checkout、删除数据或其他破坏性操作，除非用户明确授权且已有回滚方案。
+- Commit 只能包含本轮 Agent 负责且已验证的改动；记录 base commit、改动边界、review、验证和 staged scope。
+- 不得提交或记录 `.env`、密钥、token、cookie、私钥和账号密码；只维护 `.env.example` 和 Secret 引用。
+- 生产数据、支付、权限变更、删除和外部通知等高风险操作必须先说明影响、授权和回滚并等待用户确认。
+- 只有阶段目标已定义、约定工程完成、验证有证据、问题/风险/版本/验收已同步且用户能看到结果时，才能说“本阶段完成”。
+
+## 5. V4.1 稳定语义
+
+- 问题类型完整集合：需求、研究、分析规划、决策、设计、前端、后端、数据、AI Agent、测试、运维、文档、版本、规则。
+- 问题状态至少包含：新增、分析中、待修复、修复中、待验证、已关闭、暂缓处理、需用户决策；验证通过前不得关闭。
+- 七类规则候选条件：同类问题重复、规则缺失、目录边界不清、验证流程缺失、Agent 反复误判、影响后续多个项目、经验值得沉淀为长期规范。用户 review 前不得擅自修改长期规则。
+- 只有缺少会改变范围/成本/效果/风险的决策，缺少权限/凭据/关键依赖，下一步不可逆或生产高风险，需求/Plan/架构/验收冲突，关键验证持续失败且替代路径已穷尽，或必须先交接上下文时才可暂停。
+- 暂停必须汇报当前阶段、已做/未做、阻塞点、影响、候选方向及代价、推荐方向、需要用户决定的问题、涉及路径和恢复第一步。
+- 模块规则必须包含模块目标、负责/不负责边界、目录与入口、输入输出、代码仓/Git 边界、依赖和数据流、建设流程、验证方式、交付标准、安全权限和常见问题。
+- 大版本必须额外保存到 `xxx_X.0.0`，对应当次完整代码状态并记录 commit/tag、时间、包含/排除、敏感边界、验证和回滚；归档不替代 Git、tag 和版本记录。候选、生产、上一版生产、上一轮候选及回滚基线必须明确标识。
+
+## 6. 知识与收尾
+
+- 项目知识与研究知识中台双向同步。按 Hash、UTC 时间、共同 base 和版本窗口判断最新文件；覆盖前归档另一版本。权限不足或中台不可用时进入待同步队列。
+- 可复用研究、组件、代码、SOP 或 Skill 只先生成中台候选；用户确认后才能正式写入中台。
+- 收尾顺序：语义 review、验证、文档流水同步、Verify/Final 推广、版本/发布、知识候选和最终汇报。
+- Stop 在流水同步后调用归档治理，把已注册终态记录迁入 `流程管理/历史记录库/`；活动流水只保留未关闭项，历史库默认 cold，仅在显式追溯、审计、回滚或稳定 ID 引用时读取。
+- 最终汇报先讲用户结果与影响，再讲可见效果、已做/未做、验证证据、修改文件、流程/版本记录、风险和需审批事项。未验证、未验收或未对齐时不得使用最终完成口吻。

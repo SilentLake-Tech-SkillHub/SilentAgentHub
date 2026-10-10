@@ -1,0 +1,19 @@
+{
+  "version": "V5.2.5",
+  "identity": "production",
+  "packageRoot": "<HOME>/.codex/harness/V5.2.5",
+  "manifest": "<HOME>/.codex/harness/V5.2.5/manifest.json",
+  "installedAt": "2026-08-10T14:54:45.3921340+08:00",
+  "agentsSha256": "AAA7892A9E00DAD1D32546304BC321F95A69FB601D55D1A0811F1E44B5B3A013",
+  "rollbackPackage": "<HOME>/.codex/harness/V5.2.4",
+  "deploymentBackup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154",
+  "lastIntegration": {
+    "name": "technical-design-authoring",
+    "version": "1.0.1",
+    "date": "2026-10-03",
+    "backup": "<HOME>/.codex/harness/deployment-backups/technical-design-integration-20261003",
+    "scope": "root rules and five Skills",
+    "sourceCommit": "7000f07",
+    "repository": "SilentLake-Tech-SkillHub/SilentAgentHub"
+  }
+}

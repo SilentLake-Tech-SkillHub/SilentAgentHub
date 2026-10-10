@@ -1,0 +1,31 @@
+{
+  "$schema": "./memory-policy.schema.json",
+  "version": "1.1.0",
+  "files": {
+    "rules": "MEMORY.md",
+    "short": "SHORT_MEMORY.md",
+    "long": "LONG_MEMORY.md",
+    "index": ".codex/harness/memory-index.json",
+    "transactions": ".codex/harness/memory-transactions",
+    "locks": ".codex/harness/memory-locks",
+    "quarantine": ".codex/harness/memory-quarantine.jsonl"
+  },
+  "maxDetailedTurnsPerOpenConversation": 5,
+  "terminalStates": ["completed", "cancelled", "superseded", "closed_unresolved"],
+  "activeStates": ["received", "working", "verifying", "needs_user", "blocked"],
+  "closedUnresolvedRequiresUserApproval": true,
+  "readPolicy": {
+    "short": "active_current_conversation",
+    "long": "short_miss_or_explicit_trace"
+  },
+  "redactionRequired": true,
+  "stopReinjectionLimit": 1,
+  "receivedStaleMinutes": 1440,
+  "internalPromptRules": {
+    "denyPatterns": [
+      "(?is)^#\\s*Overview\\s*\\n+Generate\\s+0\\s+to\\s+3\\s+hyperpersonalized\\s+suggestions",
+      "(?is)Generate\\s+0\\s+to\\s+3\\s+hyperpersonalized\\s+suggestions.*?#\\s*Response\\s+format"
+    ]
+  },
+  "trackedInProjectGit": ["MEMORY.md", "SHORT_MEMORY.md", "LONG_MEMORY.md"]
+}

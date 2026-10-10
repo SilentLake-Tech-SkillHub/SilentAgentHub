@@ -1,0 +1,10 @@
+{
+  "version": "V5.2.5",
+  "identity": "production",
+  "packageRoot": "<HOME>/.codex/harness/V5.2.5",
+  "manifest": "<HOME>/.codex/harness/V5.2.5/manifest.json",
+  "installedAt": "2026-08-10T14:54:45.3921340+08:00",
+  "agentsSha256": "9D9091F23CA4555E0FCA5FE3A05DC574534C1CE50B4B6C4CA115CA2175A96760",
+  "rollbackPackage": "<HOME>/.codex/harness/V5.2.4",
+  "deploymentBackup": "<HOME>/.codex/harness/deployment-backups/drive-full-20260810-145154"
+}

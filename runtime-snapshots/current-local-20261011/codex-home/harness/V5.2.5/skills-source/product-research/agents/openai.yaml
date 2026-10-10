@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Research"
+  short_description: "Research external facts and record source-backed findings"
+  default_prompt: "Use $product-research to investigate this question and preserve auditable sources."

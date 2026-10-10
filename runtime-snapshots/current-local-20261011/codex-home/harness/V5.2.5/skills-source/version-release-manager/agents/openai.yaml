@@ -1,0 +1,4 @@
+interface:
+  display_name: "Version Release Manager"
+  short_description: "Manage versions, archives, releases, and rollback identity"
+  default_prompt: "Use $version-release-manager to calculate and record this release safely."
